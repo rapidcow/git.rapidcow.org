@@ -62,7 +62,10 @@ git.rapidcow.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIClrgqnOq2wB7SGfaduFS0VExtm
 	one is available for the public to access).</p>
 	<p>This server employs a basic ACL for repository read/write access.
 	The identity for anonymous shell users is "guest@rapidcow.org", and
-	the identity for anonymous HTTPS users is "www-data@rapidcow.org".
+	the identity for anonymous HTTPS users is "www-data@rapidcow.org"
+	(<em>this is not implemented</em> and you may not push over HTTP
+	until I figure out how client certificates work, but this is the
+	plan at least).
 	While neither protocols forbid users to run git-receive-pack at a
 	transport level, repository ACLs are often (if not always) configured
 	to deny anonymous users of the permission to push refs (though it
