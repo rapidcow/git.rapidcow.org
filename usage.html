@@ -8,7 +8,7 @@
 <body>
 <main>
 	<h2>How to clone</h2>
-	<p>At the moment we support HTTP+SSL protocol on port 443:</p>
+	<p>At the moment HTTP+SSL protocol on port 443:</p>
 <pre>git clone https://git.rapidcow.org/pub/...
 </pre>
 	<p>Or anonymous SSH:</p>
@@ -17,9 +17,10 @@
 	<p>(Git protocol (port 9418) is unsupported at the moment - sorry!)</p>
 	<p>I have no plan to support raw HTTP; you will be re-directed
 	if you use port 80; sorry.  Raw HTTP traffic is too easy for
-	attackers to fake.  Good thing that the official Git binaries
-	today usually comes bundled with OpenSSL, so unless you are
-	bringing your own Git client, this shouldn't be an issue.</p>
+	attackers to fake, and I don't trust my ISP (and neither should
+	you have to).  Good thing that the official Git binaries today
+	usually comes bundled with OpenSSL, so unless you are rolling
+	your own Git client, this shouldn't be an issue.</p>
 	<p>If you like strict host key checking, you can compare
 	against the host keys fingerprints:</p>
 <pre>3072 SHA256:+B7J44cfJzl7XVq11IHCM92s5WIRXFV1ju6IuEQOQhc (RSA)
@@ -31,6 +32,16 @@
 git.rapidcow.org ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBD83Fj95OdFsHtmQqgpdNSvZSe2+f8isSehgqJToFQQUaVXEsQIdKj73hI8sffsfGWOgrLgb7KU1AAD0ciY8GL8=
 git.rapidcow.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIClrgqnOq2wB7SGfaduFS0VExtmkEN0Qa+9M3Acd5LiO
 </pre>
+	<p>Since I have published SSHFP records for the "git.rapidcow.org"
+	zone per <a href="https://www.ietf.org/rfc/rfc4255.txt">RFC 4255</a>, <!-- https://jpmens.net/2011/02/18/verifyhostkeydnsmaybe/ (XXX: read this?) -->
+	you may also pass the <b>VerifyHostKeyDNS=ask</b> option to <b>ssh</b>(1)
+	and have it verify against that.  This is assuming that you trust
+	that your DNS resolver will set the Authenticated Data (<i>ad</i>)
+	bit in good faith, though.  <a href="https://man.netbsd.org/delv.1"><b>delv</b>(1)</a>
+	from BIND 9 is an excellent tool for that:</p>
+	<p><code>$ <b>delv SSHFP git.rapidcow.org.</b></code></p>
+	<p>(Similar DNS records have not been added for "git.rdkw.org";
+	they will be added soon.)</p>
 	<p>Those of you who like shortcuts may like to hear that wherever
 	you type "git.rapidcow.org", you can type "git.rdkw.org" instead.
 	They share the same A/AAAA records, and thus point to the same
@@ -53,7 +64,7 @@ git.rapidcow.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIClrgqnOq2wB7SGfaduFS0VExtm
 </pre>
 	<p>becomes
 	<code><a href="/pub/school/wisc/sdc/fa-25/team/"
-	>https://git.rapidcow.org/pub/school/wisc/sdc/fa-25/team/</a></code>
+	>https://git.rapidcow.org/pub/school/wisc/sdc/fa-25/team/</a></code>.
 	<h2>Footnote on infrastructure</h2>
 	<p>Meta-references (<code>refs/info/*</code>) are a distributed and
 	auditable mechanism for changes made to the repository itself.
