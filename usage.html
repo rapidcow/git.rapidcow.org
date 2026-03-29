@@ -15,12 +15,12 @@
 	<p>(Git protocol (port 9418) is unsupported at the moment - sorry!)</p>
 	<p>I have no plan to support raw HTTP; you will be re-directed
 	if you use port 80; sorry.  Raw HTTP traffic is too easy for
-	attackers to fake, and I don't trust my ISP (and neither should
-	you have to).  Good thing that the official Git binaries today
-	usually comes bundled with OpenSSL, so unless you are rolling
+	attackers to fake.  Good thing that the official Git binaries
+	today come bundled with OpenSSL, so unless you are rolling
 	your own Git client, this shouldn't be an issue.</p>
-	<p>If you like strict host key checking, you can compare
-	against the host keys fingerprints:</p>
+	<p>If you have strict host key checking enabled (which you
+	should!), compare against (and paste, if <b>ssh</b>(1) prompts
+	you to) the following host keys fingerprints:</p>
 <pre>3072 SHA256:+B7J44cfJzl7XVq11IHCM92s5WIRXFV1ju6IuEQOQhc (RSA)
 256 SHA256:2/VJlJ9QkVl5KVmGU7kw+T9Y8nn5DtSPe6tykXHOLmw (ED25519)
 256 SHA256:FYpS3GI2zKCoCAzXvtq775wtzU7PajWlqPZoiC2uFpY (ECDSA)
