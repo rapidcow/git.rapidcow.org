@@ -8,19 +8,20 @@
 <body>
 <main>
 	<h2>How to clone</h2>
-	<p>At the moment you can do HTTP+SSL protocol on port 443:</p>
-	<p><code>$ <b>git clone https://git.rapidcow.org/pub/</b>...</code></p>
+	<p>At the moment we support HTTP+SSL protocol on port 443:</p>
+<pre>git clone https://git.rapidcow.org/pub/...
+</pre>
 	<p>Or anonymous SSH:</p>
-	<p><code>$ <b>git clone guest@git.rapidcow.org:pub/</b>...</code></p>
+<pre>git clone guest@git.rapidcow.org:pub/...
+</pre>
 	<p>(Git protocol (port 9418) is unsupported at the moment - sorry!)</p>
 	<p>I have no plan to support raw HTTP; you will be re-directed
 	if you use port 80; sorry.  Raw HTTP traffic is too easy for
 	attackers to fake.  Good thing that the official Git binaries
-	today come bundled with OpenSSL, so unless you are rolling
-	your own Git client, this shouldn't be an issue.</p>
-	<p>If you have strict host key checking enabled (which you
-	should!), compare against (and paste, if <b>ssh</b>(1) prompts
-	you to) the following host keys fingerprints:</p>
+	today usually comes bundled with OpenSSL, so unless you are
+	bringing your own Git client, this shouldn't be an issue.</p>
+	<p>If you like strict host key checking, you can compare
+	against the host keys fingerprints:</p>
 <pre>3072 SHA256:+B7J44cfJzl7XVq11IHCM92s5WIRXFV1ju6IuEQOQhc (RSA)
 256 SHA256:2/VJlJ9QkVl5KVmGU7kw+T9Y8nn5DtSPe6tykXHOLmw (ED25519)
 256 SHA256:FYpS3GI2zKCoCAzXvtq775wtzU7PajWlqPZoiC2uFpY (ECDSA)
@@ -30,27 +31,6 @@
 git.rapidcow.org ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBD83Fj95OdFsHtmQqgpdNSvZSe2+f8isSehgqJToFQQUaVXEsQIdKj73hI8sffsfGWOgrLgb7KU1AAD0ciY8GL8=
 git.rapidcow.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIClrgqnOq2wB7SGfaduFS0VExtmkEN0Qa+9M3Acd5LiO
 </pre>
-	<p>Since I have published SSHFP records for the "git.rapidcow.org"
-	zone per <a href="https://www.ietf.org/rfc/rfc4255.txt">RFC 4255</a>, <!-- https://jpmens.net/2011/02/18/verifyhostkeydnsmaybe/ (XXX: read this?) -->
-	you may also pass the <b>VerifyHostKeyDNS=ask</b> option to <b>ssh</b>(1)
-	and have it verify against that.  This is assuming that you trust
-	that your DNS resolver will set the Authenticated Data (<i>ad</i>)
-	bit in good faith, though.  <a href="https://man.netbsd.org/delv.1"><b>delv</b>(1)</a>
-	from BIND 9 is an excellent tool for that:</p>
-	<pre><code>$ <b>delv SSHFP git.rapidcow.org.</b>
-; fully validated
-git.rapidcow.org.	341	IN	CNAME	rapidcow.org.
-git.rapidcow.org.	341	IN	RRSIG	CNAME 13 3 3600 20260330040559 20260328020559 34505 rapidcow.org. eOdXPLBaSLCMINUUe4zyR+5L/y1MwmAAntvAu3D3+q21CxNSMbGBnIyu qLIJRt1xofyBQ7zH4vllIMre7VeZdg==
-rapidcow.org.		1799	IN	SSHFP	4 1 7ED90E294CF43EA668C9B4479D44CE2A5672FF4B
-rapidcow.org.		1799	IN	SSHFP	1 1 727C33848AF791CE59D639DAEA8838E548C44040
-rapidcow.org.		1799	IN	SSHFP	3 1 719128BC023EC1B9CDB6353FA27FBD6D7AAA0A32
-rapidcow.org.		1799	IN	SSHFP	1 2 3CAE3572D7A6C4E0D973F1285707E253CC4B7A9FB484006614828392 F312C884
-rapidcow.org.		1799	IN	SSHFP	3 2 59CA3FE456165FEFFA298C98F23CD28A90CD3782426C53A5755387C2 BA4084F4
-rapidcow.org.		1799	IN	SSHFP	4 2 DF5F25D711A3E1519B305AB3F51CDCDBF7B9DEE740298D22C0D2B0DC A1A36E1A
-rapidcow.org.		1799	IN	RRSIG	SSHFP 13 2 1799 20260330050018 20260328030018 34505 rapidcow.org. JAa5VF3mI2LuN8ds4rbg4lEOwan6Q4D5h3CrG2gDJHUBK93lKqqw+YRu Eu/J2Urxyo+ptSZdijKYXNQD2YwCEg==
-</code></pre>
-	<p>(Similar DNS records have not been added for "git.rdkw.org";
-	they will be added soon.)</p>
 	<p>Those of you who like shortcuts may like to hear that wherever
 	you type "git.rapidcow.org", you can type "git.rdkw.org" instead.
 	They share the same A/AAAA records, and thus point to the same
@@ -73,8 +53,8 @@ rapidcow.org.		1799	IN	RRSIG	SSHFP 13 2 1799 20260330050018 20260328030018 34505
 </pre>
 	<p>becomes
 	<code><a href="/pub/school/wisc/sdc/fa-25/team/"
-	>https://git.rapidcow.org/pub/school/wisc/sdc/fa-25/team/</a></code>.
-	<h2>Assorted notes</h2>
+	>https://git.rapidcow.org/pub/school/wisc/sdc/fa-25/team/</a></code>
+	<h2>Footnote on infrastructure</h2>
 	<p>Meta-references (<code>refs/info/*</code>) are a distributed and
 	auditable mechanism for changes made to the repository itself.
 	Such an auditing trail for repositories hosted on this server is
