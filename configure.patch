@@ -1,0 +1,11 @@
+--- a/configure
++++ b/configure
+@@ -155,7 +155,7 @@
+ 	[ '-DF', N__('Manifest, from current directory'), sub { $Dd{F} } ],
+ 	[ '-De', N__('Directory marker'), sub { $Dd{e} } ],
+ 	[ '-Dclean', N__('Clean rule template'), sub { $Dd{clean} } ],
+-	[ "-Dskel", "", sub { $Dd{skel} } ],
++	[ "-Dskel", "Template directory", sub { $Dd{skel} } ],
+ );
+ our @OPTHELP = (
+ 	[ "-Osite_url", N__("Absolute base URL"), sub { $Od{site_url} } ],
