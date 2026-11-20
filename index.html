@@ -18,7 +18,7 @@
 	<ul class="entries">
 		[%- FOREACH x IN home.roots %]
 		<li class="dir">
-			<a class="name" href="[% uri(x.path) %]">[% x.name | html %]<span class="slash">/</span></a>
+			<a class="name" href="[% locate(x.path _ '/index.html') %]">[% x.name | html %]<span class="slash">/</span></a>
 			<span class="blurb">[% x.intro | html %]</span>
 			[% when(x.active, 'when active') %]
 		</li>

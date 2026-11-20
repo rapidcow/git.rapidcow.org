@@ -18,7 +18,7 @@
 		padding-block: 1.25rem .75rem;
 		border-bottom: 1px solid var(--line);
 
-		& .brand {
+		& .host {
 			font: 650 1rem var(--font-mono);
 			color: var(--ink);
 			text-decoration: none;
@@ -26,7 +26,7 @@
 			&:hover { color: var(--accent); }
 		}
 
-		& .crumbs {
+		& .dirs {
 			display: flex;
 			flex-wrap: wrap;
 			gap: 0 .4rem;
@@ -60,6 +60,6 @@
 	}
 
 	@media print {
-		header.site .crumbs, footer.site { display: none; }
+		header.site .dirs, footer.site { display: none; }
 	}
 }

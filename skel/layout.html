@@ -22,11 +22,11 @@
 </head>
 <body>
 <header class="site">
-	<a class="brand" href="[% locate('') %]">git.rapidcow.org</a>
+	<a class="host" href="[% locate('') %]">git.rapidcow.org</a>
 	[%- IF here %]
-	<nav class="crumbs" aria-label="Breadcrumb">
+	<nav class="dirs" aria-label="Breadcrumb">
 		[%- FOREACH c IN crumbs %]
-		<a href="[% uri(c.path) %]">[% c.name | html %]</a>
+		<a href="[% locate(c.path _ '/index.html') %]">[% c.name | html %]</a>
 		[%- END %]
 		<span aria-current="page">[% here | html %]</span>
 	</nav>
