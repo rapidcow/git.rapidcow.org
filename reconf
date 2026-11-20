@@ -1,0 +1,2 @@
+#!/bin/sh
+siteconf -if -Sa=. -P web -Osite_url=https://git.rapidcow.org/ -MRdKw::WwW::GenGenLib::Template::Provider
