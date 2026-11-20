@@ -1,0 +1,65 @@
+/* HAVE: skel/css/layout/page.css: */
+@layer layout {
+	body {
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+	}
+
+	header.site, main, footer.site {
+		width: min(100% - 2 * var(--gap), var(--measure));
+		margin-inline: auto;
+	}
+
+	header.site {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: .25rem 1rem;
+		padding-block: 1.25rem .75rem;
+		border-bottom: 1px solid var(--line);
+
+		& .brand {
+			font: 650 1rem var(--font-mono);
+			color: var(--ink);
+			text-decoration: none;
+
+			&:hover { color: var(--accent); }
+		}
+
+		& .crumbs {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0 .4rem;
+			font-size: .9rem;
+			color: var(--ink-dim);
+
+			& a { color: inherit; }
+			& > * + *::before { content: "/"; margin-right: .4rem; opacity: .5; }
+			& [aria-current] { color: var(--ink); }
+		}
+	}
+
+	main { padding-block: 2rem 3rem; }
+
+	main > article {
+		display: grid;
+		gap: 1.75rem;
+
+		& > section { display: grid; gap: .6rem; }
+	}
+
+	footer.site {
+		padding-block: 1rem 2rem;
+		border-top: 1px solid var(--line);
+		font-size: .85rem;
+		color: var(--ink-dim);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: .25rem 1rem;
+	}
+
+	@media print {
+		header.site .crumbs, footer.site { display: none; }
+	}
+}

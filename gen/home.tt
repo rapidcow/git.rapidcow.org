@@ -1,0 +1,171 @@
+[%# GENERATED: gen-repos: the home page's data -%]
+[% home = {
+	'nrepos' => 21,
+	'pushes' => [
+		{
+			'more' => 0,
+			'path' => 'our/package/homebrew',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'fresh',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795148361
+		},
+		{
+			'more' => 0,
+			'path' => 'our/package/homebrew',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'fresh',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795135907
+		},
+		{
+			'more' => 0,
+			'path' => 'pub/project/siteconf',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'master',
+					'note' => '(+1)',
+					'type' => 'branch'
+				},
+				{
+					'kind' => 'updated',
+					'name' => 'template-provider/v0.00_00',
+					'note' => '',
+					'type' => 'tag'
+				}
+			],
+			'time' => 1795135805
+		},
+		{
+			'more' => 0,
+			'path' => 'our/package/homebrew',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'fresh',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795134685
+		},
+		{
+			'more' => 0,
+			'path' => 'our/package/homebrew',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'fresh',
+					'note' => '(+2)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795134083
+		},
+		{
+			'more' => 0,
+			'path' => 'our/package/homebrew',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'fresh',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795132267
+		},
+		{
+			'more' => 0,
+			'path' => 'our/package/homebrew',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'fresh',
+					'note' => '(+2)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795131425
+		},
+		{
+			'more' => 0,
+			'path' => 'pub/project/siteconf',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'master',
+					'note' => '(+1)',
+					'type' => 'branch'
+				},
+				{
+					'kind' => 'updated',
+					'name' => 'siteconf/v0.03_00',
+					'note' => '',
+					'type' => 'tag'
+				}
+			],
+			'time' => 1795095720
+		}
+	],
+	'recent' => [
+		{
+			'active' => 1795148361,
+			'blurb' => 'homebrew',
+			'path' => 'our/package/homebrew'
+		},
+		{
+			'active' => 1795135805,
+			'blurb' => 'just conf',
+			'path' => 'pub/project/siteconf'
+		},
+		{
+			'active' => 1794995808,
+			'blurb' => 'javadoc.rapidcow.org',
+			'path' => 'pub/www/site/javadoc'
+		},
+		{
+			'active' => 1794994572,
+			'blurb' => 'foss.rapidcow.org',
+			'path' => 'pub/www/site/foss'
+		},
+		{
+			'active' => 1794914509,
+			'blurb' => 'rapidcow.neocities.org',
+			'path' => 'pub/www/site/neocities'
+		},
+		{
+			'active' => 1794507246,
+			'blurb' => 'freebsd',
+			'path' => 'our/package/freebsd'
+		}
+	],
+	'roots' => [
+		{
+			'active' => 1795148361,
+			'count' => 3,
+			'intro' => 'Shared projects: not necessarily ready for production. A directory here is a project (or group) of that name.',
+			'name' => 'our',
+			'path' => 'our'
+		},
+		{
+			'active' => 1795135805,
+			'count' => 18,
+			'intro' => 'Public projects.',
+			'name' => 'pub',
+			'path' => 'pub'
+		}
+	],
+	'updated' => 1795148361
+} -%]

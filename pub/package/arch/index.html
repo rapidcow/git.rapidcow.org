@@ -1,0 +1,32 @@
+[%
+ # HAVE: pub/package/arch/index.html
+ # NEED: skel/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1774698930,
+	'crumbs' => [
+		{
+			'name' => 'pub',
+			'path' => 'pub'
+		},
+		{
+			'name' => 'package',
+			'path' => 'pub/package'
+		}
+	],
+	'entries' => [
+		{
+			'active' => 1774698930,
+			'count' => 4,
+			'kind' => 'dir',
+			'name' => 'main',
+			'path' => 'pub/package/arch/main'
+		}
+	],
+	'intro' => '',
+	'name' => 'arch',
+	'path' => 'pub/package/arch',
+	'updated' => 1774698930
+} -%]
+[% PROCESS skel/dir.html -%]

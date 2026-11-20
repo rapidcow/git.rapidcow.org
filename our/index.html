@@ -1,0 +1,23 @@
+[%
+ # HAVE: our/index.html
+ # NEED: skel/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1795148361,
+	'crumbs' => [],
+	'entries' => [
+		{
+			'active' => 1795148361,
+			'count' => 3,
+			'kind' => 'dir',
+			'name' => 'package',
+			'path' => 'our/package'
+		}
+	],
+	'intro' => 'Shared projects: not necessarily ready for production. A directory here is a project (or group) of that name.',
+	'name' => 'our',
+	'path' => 'our',
+	'updated' => 1795148361
+} -%]
+[% PROCESS skel/dir.html -%]

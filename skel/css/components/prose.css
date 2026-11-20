@@ -1,0 +1,26 @@
+/* HAVE: skel/css/components/prose.css: */
+/* Hand-written pages: home, usage. */
+@layer components {
+	main.prose, .prose {
+		display: grid;
+		gap: 1rem;
+		align-content: start;
+
+		& h2 { margin-top: 1rem; }
+		& ul, & ol { padding-left: 1.25rem; display: grid; gap: .25rem; }
+		& pre { font-size: .8rem; }
+	}
+
+	.lede {
+		font-size: 1.1rem;
+		color: var(--ink-dim);
+		max-width: 60ch;
+
+		& p + p { margin-top: .6rem; }
+	}
+
+	.note { color: var(--ink-dim); font-size: .85rem; }
+	.dim { color: var(--ink-dim); }
+
+	time.when { white-space: nowrap; }
+}

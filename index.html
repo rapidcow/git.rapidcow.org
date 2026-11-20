@@ -1,17 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
 [%
  # HAVE: index.html
+ # NEED: skel/layout.html
+ # NEED: skel/macros.html
+ # NEED: gen/home.tt
 -%]
-<head>
-	<meta charset="UTF-8">
-	<link rel="canonical" href="https://git.rapidcow.org/">
-	<title>git.rapidcow.org</title>
-</head>
-<body>
-<main>
+[% PROCESS gen/home.tt -%]
+[% PROCESS skel/macros.html -%]
+[% WRAPPER skel/layout.html
+	title = 'git.rapidcow.org'
+	canonical = ''
+	updated = home.updated -%]
+<div class="prose">
 	<p>Welcome to git.rapidcow.org (or git.rdkw.org)!</p>
 	<p>If you're new here, read the <a href="usage">tutorial</a>.</p>
+
+	<h2>Repositories</h2>
+	<ul class="entries">
+		[%- FOREACH x IN home.roots %]
+		<li class="dir">
+			<a class="name" href="[% uri(x.path) %]">[% x.name | html %]<span class="slash">/</span></a>
+			<span class="blurb">[% x.intro | html %]</span>
+			[% when(x.active, 'when active') %]
+		</li>
+		[%- END %]
+	</ul>
+
+	<div class="pulse">
+		<section>
+			<h2>Recently active</h2>
+			<ol class="plain">
+				[%- FOREACH r IN home.recent %]
+				<li><a class="repo-name" href="[% uri(r.path) %]">[% r.path | html %]</a>
+					[% when(r.active, 'when active') %]</li>
+				[%- END %]
+			</ol>
+		</section>
+		<section>
+			<h2>Recent pushes</h2>
+			<ol class="plain">
+				[%- FOREACH e IN home.pushes %]
+				<li><a class="repo-name" href="[% uri(e.path) %]">[% e.path.replace('^.*/', '') | html %]</a>
+					[%- FOREACH x IN e.refs.slice(0, 1) %]
+					<code>[% x.name | html %]</code>[% x.note ? ' ' _ x.note : '' | html %]
+					[%- END %]
+					[% when(e.time) %]</li>
+				[%- END %]
+			</ol>
+		</section>
+	</div>
+
+	<h2>Elsewhere</h2>
 	<p>I also upload repositories to
 	<a href="https://codeberg.org/rapidcow">Codeberg</a>,
 	<a href="https://git.sr.ht/~rapidcow">SourceHut</a>,
@@ -25,6 +63,5 @@
 	   title="name is an md5sum of my email :)"
 	   >repo.or.cz</a>.
         I'm all over the place! :P)</p>
-</main>
-</body>
-</html>
+</div>
+[% END -%]

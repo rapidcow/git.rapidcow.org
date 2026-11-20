@@ -8,3 +8,54 @@ pub/school/wisc/sdc/fa-25/team/index.html \
 
 robots.txt:
 	cd -- ${A:Q} && cp -- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}
+
+style.css: ${a}/skel/css/main.css bundle-css
+	cd -- ${A:Q} && ${^X:Q} bundle-css ${a:Q}/${<:Q} > ${B:Q}/${b:Q}/${@:Q}
+
+app.js: ${a}/skel/app.js
+	cd -- ${A:Q} && cp -- ${a:Q}/${<:Q} ${B:Q}/${b:Q}/${@:Q}
+
+# BEGIN gen-repos (generated; do not edit)
+our/index.html \
+our/package/artix/index.html \
+our/package/freebsd/index.html \
+our/package/homebrew/index.html \
+our/package/index.html \
+pub/index.html \
+pub/lib/index.html \
+pub/lib/perl5/Algo-BSearch/index.html \
+pub/lib/perl5/IPC-Unix/index.html \
+pub/lib/perl5/List-Search/index.html \
+pub/lib/perl5/index.html \
+pub/package/arch/index.html \
+pub/package/arch/main/ed/index.html \
+pub/package/arch/main/git/index.html \
+pub/package/arch/main/index.html \
+pub/package/arch/main/systemd/index.html \
+pub/package/arch/main/vi/index.html \
+pub/package/artix/index.html \
+pub/package/artix/world/git/index.html \
+pub/package/artix/world/index.html \
+pub/package/homebrew/fresh/index.html \
+pub/package/homebrew/index.html \
+pub/package/index.html \
+pub/project/archive/bridge/index.html \
+pub/project/archive/index.html \
+pub/project/index.html \
+pub/project/perspective/index.html \
+pub/project/siteconf/index.html \
+pub/project/trivnote/index.html \
+pub/school/index.html \
+pub/school/wisc/index.html \
+pub/school/wisc/sdc/fa-25/index.html \
+pub/school/wisc/sdc/index.html \
+pub/www/index.html \
+pub/www/site/foss/index.html \
+pub/www/site/index.html \
+pub/www/site/javadoc/index.html \
+pub/www/site/man/index.html \
+pub/www/site/neocities/index.html \
+	: render
+	cd -- ${A:Q} && ${^X:Q} render -B ${B:Q} \
+		-- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}
+# END gen-repos

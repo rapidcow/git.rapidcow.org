@@ -1,0 +1,57 @@
+/* HAVE: skel/css/components/listing.css: */
+/* Directory listings and the home page's repo lists. */
+@layer components {
+	.entries {
+		display: grid;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		background: var(--surface);
+		overflow: hidden;
+
+		& > li {
+			display: grid;
+			grid-template-columns: minmax(8rem, 14rem) 1fr auto;
+			align-items: baseline;
+			gap: .25rem 1rem;
+			padding: .7rem 1rem;
+
+			& + li { border-top: 1px solid var(--line); }
+			&:hover { background: color-mix(in srgb, var(--accent) 6%, var(--surface)); }
+		}
+
+		& .name {
+			font: 600 .95rem var(--font-mono);
+			text-decoration: none;
+			overflow-wrap: anywhere;
+
+			& .slash { opacity: .45; }
+		}
+
+		& .blurb {
+			color: var(--ink-dim);
+			font-size: .9rem;
+			overflow-wrap: anywhere;
+
+			&.none { font-style: italic; opacity: .7; }
+		}
+
+		& time { font-size: .8rem; color: var(--ink-dim); }
+
+		& .dir .name { color: var(--ink); }
+
+		@media (max-width: 36rem) {
+			& > li { grid-template-columns: 1fr auto; }
+			& .blurb { grid-column: 1 / -1; grid-row: 2; }
+		}
+	}
+
+	.pulse {
+		display: grid;
+		gap: .75rem;
+		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+
+		& section { display: grid; gap: .5rem; align-content: start; }
+		& ol { display: grid; gap: .35rem; font-size: .9rem; }
+		& .repo-name { font: 600 .9rem var(--font-mono); }
+	}
+}

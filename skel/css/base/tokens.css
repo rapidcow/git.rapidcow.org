@@ -1,0 +1,39 @@
+/* HAVE: skel/css/base/tokens.css: */
+@layer tokens {
+	:root {
+		color-scheme: light dark;
+
+		--bg:        #fbfaf7;
+		--surface:   #ffffff;
+		--ink:       #1d2127;
+		--ink-dim:   #5d6672;
+		--line:      #e3e0d8;
+		--accent:    #b4441c;
+		--accent-ink: #ffffff;
+		--code-bg:   #f1eee6;
+		--ok:        #2f7d4f;
+		--warn:      #9a6a00;
+		--bad:       #b3261e;
+
+		--font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+		--font-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+
+		--measure: 46rem;
+		--gap: 1rem;
+		--radius: .5rem;
+
+		@media (prefers-color-scheme: dark) {
+			--bg:       #15171a;
+			--surface:  #1c1f24;
+			--ink:      #e7e5df;
+			--ink-dim:  #9aa3ad;
+			--line:     #2c3037;
+			--accent:   #ee8a5e;
+			--accent-ink: #15171a;
+			--code-bg:  #23272d;
+			--ok:       #6ec28f;
+			--warn:     #e0b04a;
+			--bad:      #f2857e;
+		}
+	}
+}

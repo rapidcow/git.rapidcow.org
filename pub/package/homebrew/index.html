@@ -1,0 +1,32 @@
+[%
+ # HAVE: pub/package/homebrew/index.html
+ # NEED: skel/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1774845249,
+	'crumbs' => [
+		{
+			'name' => 'pub',
+			'path' => 'pub'
+		},
+		{
+			'name' => 'package',
+			'path' => 'pub/package'
+		}
+	],
+	'entries' => [
+		{
+			'active' => 1774845249,
+			'blurb' => 'The rapidcow/fresh TAP',
+			'kind' => 'repo',
+			'name' => 'fresh',
+			'path' => 'pub/package/homebrew/fresh'
+		}
+	],
+	'intro' => '',
+	'name' => 'homebrew',
+	'path' => 'pub/package/homebrew',
+	'updated' => 1774845249
+} -%]
+[% PROCESS skel/dir.html -%]

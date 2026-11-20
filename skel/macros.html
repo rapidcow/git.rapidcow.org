@@ -1,0 +1,14 @@
+[%
+ # HAVE: skel/macros.html
+ # Shared MACROs.  PROCESS this once per page.
+-%]
+[% USE date -%]
+[%# Timestamps are Unix epochs (UTC); never local time. -%]
+[% MACRO iso(t) GET date.format(t, '%Y-%m-%dT%H:%M:%SZ', 'C', 1) -%]
+[% MACRO day(t) GET date.format(t, '%Y-%m-%d', 'C', 1) -%]
+[% MACRO stamp(t) GET date.format(t, '%Y-%m-%d %H:%M UTC', 'C', 1) -%]
+[%# The text is a plain date, which app.js upgrades to "3 hours ago". -%]
+[% MACRO when(t, cls) BLOCK -%]
+<time class="[% cls || 'when' %]" datetime="[% iso(t) %]" title="[% stamp(t) %]">[% day(t) %]</time>
+[%- END -%]
+[% MACRO uri(path) GET locate('/' _ path _ '/') -%]

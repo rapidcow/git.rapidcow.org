@@ -1,0 +1,32 @@
+[%
+ # HAVE: pub/package/artix/index.html
+ # NEED: skel/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1794471345,
+	'crumbs' => [
+		{
+			'name' => 'pub',
+			'path' => 'pub'
+		},
+		{
+			'name' => 'package',
+			'path' => 'pub/package'
+		}
+	],
+	'entries' => [
+		{
+			'active' => 1794471345,
+			'count' => 1,
+			'kind' => 'dir',
+			'name' => 'world',
+			'path' => 'pub/package/artix/world'
+		}
+	],
+	'intro' => '',
+	'name' => 'artix',
+	'path' => 'pub/package/artix',
+	'updated' => 1794471345
+} -%]
+[% PROCESS skel/dir.html -%]

@@ -1,5 +1,6 @@
 MY/
 Makefile
+site/
 *.old
 *.orig
 *.rej

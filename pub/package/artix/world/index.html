@@ -1,0 +1,36 @@
+[%
+ # HAVE: pub/package/artix/world/index.html
+ # NEED: skel/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1794471345,
+	'crumbs' => [
+		{
+			'name' => 'pub',
+			'path' => 'pub'
+		},
+		{
+			'name' => 'package',
+			'path' => 'pub/package'
+		},
+		{
+			'name' => 'artix',
+			'path' => 'pub/package/artix'
+		}
+	],
+	'entries' => [
+		{
+			'active' => 1794471345,
+			'blurb' => 'gitea.archlinux.org/packages/git',
+			'kind' => 'repo',
+			'name' => 'git',
+			'path' => 'pub/package/artix/world/git'
+		}
+	],
+	'intro' => '',
+	'name' => 'world',
+	'path' => 'pub/package/artix/world',
+	'updated' => 1794471345
+} -%]
+[% PROCESS skel/dir.html -%]

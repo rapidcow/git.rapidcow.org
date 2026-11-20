@@ -1,0 +1,42 @@
+[%
+ # HAVE: our/package/index.html
+ # NEED: skel/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1795148361,
+	'crumbs' => [
+		{
+			'name' => 'our',
+			'path' => 'our'
+		}
+	],
+	'entries' => [
+		{
+			'active' => 1794507185,
+			'blurb' => 'artix + alpine',
+			'kind' => 'repo',
+			'name' => 'artix',
+			'path' => 'our/package/artix'
+		},
+		{
+			'active' => 1794507246,
+			'blurb' => 'freebsd',
+			'kind' => 'repo',
+			'name' => 'freebsd',
+			'path' => 'our/package/freebsd'
+		},
+		{
+			'active' => 1795148361,
+			'blurb' => 'homebrew',
+			'kind' => 'repo',
+			'name' => 'homebrew',
+			'path' => 'our/package/homebrew'
+		}
+	],
+	'intro' => '',
+	'name' => 'package',
+	'path' => 'our/package',
+	'updated' => 1795148361
+} -%]
+[% PROCESS skel/dir.html -%]

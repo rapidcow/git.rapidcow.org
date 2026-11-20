@@ -1,0 +1,51 @@
+[%
+ # HAVE: pub/index.html
+ # NEED: skel/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1795135805,
+	'crumbs' => [],
+	'entries' => [
+		{
+			'active' => 1793836369,
+			'count' => 3,
+			'kind' => 'dir',
+			'name' => 'lib',
+			'path' => 'pub/lib'
+		},
+		{
+			'active' => 1794471345,
+			'count' => 6,
+			'kind' => 'dir',
+			'name' => 'package',
+			'path' => 'pub/package'
+		},
+		{
+			'active' => 1795135805,
+			'count' => 4,
+			'kind' => 'dir',
+			'name' => 'project',
+			'path' => 'pub/project'
+		},
+		{
+			'active' => 1781573784,
+			'count' => 1,
+			'kind' => 'dir',
+			'name' => 'school',
+			'path' => 'pub/school'
+		},
+		{
+			'active' => 1794995808,
+			'count' => 4,
+			'kind' => 'dir',
+			'name' => 'www',
+			'path' => 'pub/www'
+		}
+	],
+	'intro' => 'Public projects.',
+	'name' => 'pub',
+	'path' => 'pub',
+	'updated' => 1795135805
+} -%]
+[% PROCESS skel/dir.html -%]

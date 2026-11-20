@@ -1,0 +1,53 @@
+[%
+ # HAVE: pub/www/site/index.html
+ # NEED: skel/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1794995808,
+	'crumbs' => [
+		{
+			'name' => 'pub',
+			'path' => 'pub'
+		},
+		{
+			'name' => 'www',
+			'path' => 'pub/www'
+		}
+	],
+	'entries' => [
+		{
+			'active' => 1794994572,
+			'blurb' => 'foss.rapidcow.org',
+			'kind' => 'repo',
+			'name' => 'foss',
+			'path' => 'pub/www/site/foss'
+		},
+		{
+			'active' => 1794995808,
+			'blurb' => 'javadoc.rapidcow.org',
+			'kind' => 'repo',
+			'name' => 'javadoc',
+			'path' => 'pub/www/site/javadoc'
+		},
+		{
+			'active' => 1794506742,
+			'blurb' => 'man pages',
+			'kind' => 'repo',
+			'name' => 'man',
+			'path' => 'pub/www/site/man'
+		},
+		{
+			'active' => 1794914509,
+			'blurb' => 'rapidcow.neocities.org',
+			'kind' => 'repo',
+			'name' => 'neocities',
+			'path' => 'pub/www/site/neocities'
+		}
+	],
+	'intro' => '',
+	'name' => 'site',
+	'path' => 'pub/www/site',
+	'updated' => 1794995808
+} -%]
+[% PROCESS skel/dir.html -%]

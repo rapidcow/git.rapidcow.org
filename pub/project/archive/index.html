@@ -1,0 +1,32 @@
+[%
+ # HAVE: pub/project/archive/index.html
+ # NEED: skel/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1792783281,
+	'crumbs' => [
+		{
+			'name' => 'pub',
+			'path' => 'pub'
+		},
+		{
+			'name' => 'project',
+			'path' => 'pub/project'
+		}
+	],
+	'entries' => [
+		{
+			'active' => 1792783281,
+			'blurb' => 'apple notes reverse engineering (among other things)',
+			'kind' => 'repo',
+			'name' => 'bridge',
+			'path' => 'pub/project/archive/bridge'
+		}
+	],
+	'intro' => '',
+	'name' => 'archive',
+	'path' => 'pub/project/archive',
+	'updated' => 1792783281
+} -%]
+[% PROCESS skel/dir.html -%]

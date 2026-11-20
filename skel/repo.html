@@ -1,0 +1,99 @@
+[%
+ # HAVE: skel/repo.html
+ # NEED: skel/layout.html
+ # NEED: skel/macros.html
+ #
+ # Repository homepage.  Expects `r' (see gen-repos).
+-%]
+[% PROCESS skel/macros.html -%]
+[% WRAPPER skel/layout.html
+	title = r.path
+	here = r.name
+	crumbs = r.crumbs
+	updated = r.updated
+	canonical = r.path _ '/' -%]
+<article class="repo">
+	<h1><span class="dir">[% r.dir | html %]/</span>[% r.name | html %]</h1>
+	[%- IF r.desc_html %]
+	<div class="lede">
+[% r.desc_html %]
+	</div>
+	[%- ELSIF r.desc %]
+	<p class="lede">[% r.desc | html %]</p>
+	[%- END %]
+
+	<section class="clone">
+		<h2>Clone</h2>
+<pre><code>git clone [% O.site_url.remove('/$') %]/[% r.path | html %].git
+[%- IF r.guest_ssh %]
+git clone guest@[% O.site_url.replace('^https?://', '').remove('/$') %]:[% r.path | html %].git
+[%- END %]
+</code></pre>
+	</section>
+
+	<section class="facts">
+		<h2>Overview</h2>
+		<dl>
+			[%- IF r.tip %]
+			<dt>Latest commit</dt>
+			<dd><span class="subject">[% r.tip.subject | html %]</span>
+				<span class="meta"><code>[% r.tip.sha | html %]</code>
+				on <code>[% r.branch | html %]</code>,
+				[% when(r.tip.time) %]</span></dd>
+			[%- ELSE %]
+			<dt>Latest commit</dt>
+			<dd class="meta">None yet (empty repository)</dd>
+			[%- END %]
+			<dt>Last active</dt>
+			<dd>[% when(r.active, 'when active') %]</dd>
+			<dt>Branches</dt>
+			<dd>[% r.nbranches %]</dd>
+			<dt>Tags</dt>
+			<dd>[% r.ntags %]</dd>
+		</dl>
+	</section>
+
+	[%- IF r.events.size %]
+	<section class="events">
+		<h2>Recent pushes</h2>
+		<ol>
+			[%- FOREACH e IN r.events %]
+			<li>[% when(e.time) %]
+				[%- FOREACH x IN e.refs %]
+				<span class="ref [% x.kind %]"><span class="verb">[% x.kind %]</span>
+					[% x.type == 'tag' ? 'tag' : '' %] <code>[% x.name | html %]</code>
+					[%- IF x.note %] <span class="note">[% x.note | html %]</span>[% END %]</span>
+				[%- END %]
+				[%- IF e.more %] <span class="note">+ [% e.more %] other ref[% e.more == 1 ? '' : 's' %]</span>[% END %]
+			</li>
+			[%- END %]
+		</ol>
+	</section>
+	[%- END %]
+
+	[%- IF r.tags.size %]
+	<section class="tags">
+		<h2>Tags</h2>
+		<ul class="chips">
+			[%- FOREACH t IN r.tags %]
+			<li><code>[% t.name | html %]</code> [% when(t.time) %]</li>
+			[%- END %]
+		</ul>
+		[%- IF r.ntags > r.tags.size %]
+		<p class="note">Showing the latest [% r.tags.size %] of [% r.ntags %].</p>
+		[%- END %]
+	</section>
+	[%- END %]
+
+	[%- IF r.branches.size > 1 %]
+	<section class="branches">
+		<h2>Branches</h2>
+		<ul class="chips">
+			[%- FOREACH b IN r.branches %]
+			<li><code>[% b.name | html %]</code> [% when(b.time) %]</li>
+			[%- END %]
+		</ul>
+	</section>
+	[%- END %]
+</article>
+[% END -%]

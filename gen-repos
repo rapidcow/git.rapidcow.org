@@ -1,0 +1,573 @@
+#!/usr/bin/env perl
+# HAVE: gen-repos
+#
+# gen-repos - generate the pages of the repository index
+#
+# Walks the bare repositories on the server (over ssh), keeps the
+# ones that git-http-backend will serve -- those with an explicit
+# git-daemon-export-ok -- and writes, for each of them and for each
+# directory above them, a small TT source file ("stub") whose data
+# is inlined, plus the MANIFEST and Makefile.in entries that make
+# siteconf build them.  Then it builds the site (unless -n).
+#
+# Everything is derived from the repositories.  Most of it from
+# their meta-ref (refs/info/rdk-self): a commit per change to the
+# repository, whose tree is a snapshot of the files around the
+# object store, and whose message says who pushed what.  Since the
+# meta-ref only ever moves forward, its SHA is the cache key: same
+# SHA, nothing happened, nothing to fetch.
+#
+# What is NOT copied out of the meta-ref: client addresses, host
+# names, ACL entries (config), and any administrative commit.  The
+# site shows ref updates and nothing else about who did them.
+#
+# Usage:
+#
+#    ./gen-repos [-nc] [-v]
+#
+#    -n   do not build (stop after writing sources and rules)
+#    -c   work from the cache only: no ssh.  Handy for iterating
+#         on skel/ templates.
+#    -v   say what is fetched
+#
+# Environment: GEN_REPOS_SSH for the ssh command (default `ssh').
+#
+use utf8;
+use 5.010;
+use strict;
+use warnings;
+
+use Cwd qw( abs_path );
+use Encode ();
+use File::Basename qw( dirname );
+use File::Path qw( make_path );
+use File::Spec;
+use FindBin ();
+use Getopt::Long qw( GetOptions );
+use IPC::Open2 qw( open2 );
+use JSON::PP ();
+use MIME::Base64 qw( decode_base64 );
+
+# ------------------------------------------------------------------
+# Configuration.  Paths are as the server spells them, and are also
+# the URL paths here (minus the ".git").
+# ------------------------------------------------------------------
+my $HOST  = 'git.rapidcow.org';
+# Only these are even looked at.  Anything else on the server
+# (usr/, net/, other our/*) stays off the site until added here.
+my @ROOTS = qw( pub our/package );
+# Intro text of a top-level listing.
+my %INTRO = (
+	pub => 'Public projects.',
+	our => 'Shared projects: not necessarily ready for production. '
+		. 'A directory here is a project (or group) of that name.',
+);
+my $SENTINEL = 'GENERATED: gen-repos';
+my $CACHE    = 'gen/cache.json';
+my $HOME     = 'gen/home.tt';
+my $MARK_B   = '# BEGIN gen-repos (generated; do not edit)';
+my $MARK_E   = '# END gen-repos';
+my $UNNAMED  = qr/\AUnnamed repository; edit this file/;
+
+# How much to keep, so one busy repo can't bloat its page.
+my $MAX_EVENTS   = 8;
+my $MAX_TAGS     = 12;
+my $MAX_BRANCHES = 20;
+my $LOG_DEPTH    = 60;   # meta-ref commits read per repo
+
+# Keys written as bare numbers into the TT sources; everything else
+# is a string (which matters: "0123456" is not a number).
+my %NUMERIC = map { $_ => 1 } qw(
+	time active updated count nbranches ntags more guest_ssh nrepos );
+
+my ($opt_n, $opt_c, $opt_v);
+GetOptions('n' => \$opt_n, 'c' => \$opt_c, 'v' => \$opt_v)
+	or die "usage: $0 [-nc] [-v]\n";
+
+chdir $FindBin::Bin or die "chdir $FindBin::Bin: $!\n";
+binmode STDERR, ':encoding(UTF-8)';
+
+# ------------------------------------------------------------------
+# The server side.  A POSIX sh script, read-only, fed through ssh.
+# It prints lines of TAB-separated fields; multi-line values are
+# base64, so no repository text can forge a record.
+# ------------------------------------------------------------------
+my $REMOTE = <<'SH';
+set -u
+field() { printf '%s\t' "$1"; base64 | tr -d '\n'; printf '\n'; }
+root=$(getent passwd git | cut -d: -f6)
+cd "$root" || exit 1
+mode=$1; shift
+meta() { git --git-dir="$1" rev-parse -q --verify 'refs/info/rdk-self^{commit}' 2>/dev/null; }
+
+case $mode in
+list)
+	for ns; do
+		[ -d "$ns" ] && find "$ns" -type d -name '*.git' -prune -print
+	done | sort | while IFS= read -r r; do
+		[ -f "$r/git-daemon-export-ok" ] && [ -f "$r/HEAD" ] || continue
+		printf '%s\t%s\n' "$r" "$(meta "$r")"
+	done
+	;;
+fetch)
+	for r; do
+		printf 'REPO\t%s\n' "$r"
+		g="--git-dir=$r"
+		m=$(meta "$r") || m=
+		printf %s "$m" | field meta
+		if [ -n "$m" ]; then
+			git "$g" cat-file blob "$m:description.html" 2>/dev/null | field descr_html
+			git "$g" cat-file blob "$m:description" 2>/dev/null | field descr
+			# Effective permission of the anonymous ssh user: its own
+			# entry if it has one (even an empty one), else the default.
+			if p=$(git "$g" config --blob "$m:config" --get 'shell.guest@rapidcow.org.permission' 2>/dev/null)
+			then :
+			else p=$(git "$g" config --blob "$m:config" --get 'shell.permission' 2>/dev/null) || p=
+			fi
+			printf %s "$p" | field perm
+			git "$g" log -n "$LOG_DEPTH" --format='%ct%x1f%s%x1f%b%x1e' refs/info/rdk-self 2>/dev/null | field log
+		else
+			cat "$r/description" 2>/dev/null | field descr
+		fi
+		git "$g" symbolic-ref -q HEAD 2>/dev/null | field head
+		git "$g" for-each-ref --format='%(refname)%09%(creatordate:unix)' refs/heads refs/tags 2>/dev/null | field refs
+		git "$g" log -1 --format='%h%x09%ct%x09%s' HEAD 2>/dev/null | field tip
+	done
+	;;
+esac
+SH
+
+sub ssh_run {
+	my ($mode, @args) = @_;
+	my @cmd = (split(' ', $ENV{GEN_REPOS_SSH} // 'ssh'), '-o', 'BatchMode=yes',
+		$HOST, 'LOG_DEPTH=' . $LOG_DEPTH, 'sh', '-s', '--', $mode, @args);
+	my $pid = open2(my $out, my $in, @cmd);
+	binmode $in, ':raw';
+	binmode $out, ':raw';
+	print {$in} $REMOTE;
+	close $in;
+	my @lines = <$out>;
+	waitpid $pid, 0;
+	$? == 0 or die "$0: ssh $mode failed (status $?)\n";
+	chomp @lines;
+	return @lines;
+}
+
+# ------------------------------------------------------------------
+# Cache
+# ------------------------------------------------------------------
+my $json = JSON::PP->new->utf8->canonical->pretty;
+my %cache;
+if (-e $CACHE) {
+	open my $fh, '<:raw', $CACHE or die "$CACHE: $!\n";
+	local $/;
+	my $c = $json->decode(<$fh>);
+	%cache = %{ $c->{repos} } if ref $c eq 'HASH' && ($c->{version} // 0) == 1;
+}
+
+# ------------------------------------------------------------------
+# Discover and fetch
+# ------------------------------------------------------------------
+my %repo;    # path (no .git) => data
+if ($opt_c) {
+	%repo = map { $_ => $cache{$_}{repo} } keys %cache;
+	say STDERR scalar(keys %repo), " repositories from the cache";
+} else {
+	my %meta;
+	for my $line (ssh_run(list => @ROOTS)) {
+		my ($dir, $m) = split /\t/, $line, 2;
+		# These names go through ssh, nginx and TT; be strict.
+		my $part = qr/[A-Za-z0-9][A-Za-z0-9._+-]*/;
+		unless ($dir =~ m{\A$part(?:/$part)+\.git\z} && $dir !~ m{\.git/}) {
+			warn "W: skipping odd repository name: $dir\n";
+			next;
+		}
+		(my $path = $dir) =~ s/\.git\z//;
+		$meta{$path} = $m // '';
+	}
+	my @stale = grep { !length $meta{$_} || ($cache{$_}{meta} // '') ne $meta{$_} }
+		sort keys %meta;
+	say STDERR scalar(keys %meta), " visible repositories, ",
+		scalar(@stale), " to fetch";
+	my %raw;
+	if (@stale) {
+		if ($opt_v) { say STDERR "  fetching $_" for @stale }
+		my $cur;
+		for my $line (ssh_run(fetch => map { "$_.git" } @stale)) {
+			my ($k, $v) = split /\t/, $line, 2;
+			if ($k eq 'REPO') {
+				($cur = $v) =~ s/\.git\z//;
+			} else {
+				$raw{$cur}{$k} = decode_base64($v // '');
+			}
+		}
+	}
+	for my $path (keys %meta) {
+		if (exists $raw{$path}) {
+			$repo{$path} = build_repo($path, $raw{$path});
+		} else {
+			$repo{$path} = $cache{$path}{repo};
+		}
+	}
+	%cache = map { $_ => { meta => $meta{$_}, repo => $repo{$_} } } keys %repo;
+	put($CACHE, $json->encode({ version => 1, repos => \%cache }));
+}
+@ARGV = ();
+
+# ------------------------------------------------------------------
+# Turn what the server said into what the site shows.
+# ------------------------------------------------------------------
+sub text {
+	my ($b) = @_;
+	my $s = Encode::decode('UTF-8', $b // '', Encode::FB_DEFAULT());
+	$s =~ s/\A\s+//;
+	$s =~ s/\s+\z//;
+	$s;
+}
+
+sub blurb {
+	my ($plain, $html) = @_;
+	my $s = length $plain ? $plain : $html;
+	$s =~ s/<[^>]*>//g if !length $plain;
+	$s =~ s/&nbsp;/ /g;
+	$s =~ s/&lt;/</g; $s =~ s/&gt;/>/g;
+	$s =~ s/&quot;/"/g; $s =~ s/&#39;/'/g; $s =~ s/&amp;/&/g;
+	($s) = grep { length } map { s/\s+/ /gr =~ s/\A | \z//gr } split /\n\s*\n|\n/, $s;
+	$s //= '';
+	$s = substr($s, 0, 139) . "\x{2026}" if length $s > 140;
+	$s;
+}
+
+sub build_repo {
+	my ($path, $raw) = @_;
+	my ($dir, $name) = $path =~ m{\A(.*)/([^/]+)\z};
+	my %r = (path => $path, name => $name, dir => $dir);
+
+	my $descr = text($raw->{descr});
+	$descr = '' if $descr =~ $UNNAMED;
+	my $html = text($raw->{descr_html});
+	$r{desc} = $descr;
+	$r{desc_html} = $html;
+	$r{blurb} = blurb($descr, $html);
+
+	# refs: branches and tags
+	my (@branches, @tags);
+	for my $l (split /\n/, text($raw->{refs})) {
+		my ($ref, $t) = split /\t/, $l;
+		if ($ref =~ s{\Arefs/heads/}{}) { push @branches, { name => $ref, time => $t + 0 } }
+		elsif ($ref =~ s{\Arefs/tags/}{}) { push @tags, { name => $ref, time => $t + 0 } }
+	}
+	my $newest = sub { $b->{time} <=> $a->{time} || $a->{name} cmp $b->{name} };
+	@branches = sort $newest @branches;
+	@tags = sort $newest @tags;
+	$r{nbranches} = scalar @branches;
+	$r{ntags} = scalar @tags;
+	$r{branches} = [ @branches[0 .. ($#branches < $MAX_BRANCHES - 1 ? $#branches : $MAX_BRANCHES - 1)] ];
+	$r{tags} = [ @tags[0 .. ($#tags < $MAX_TAGS - 1 ? $#tags : $MAX_TAGS - 1)] ];
+
+	(my $head = text($raw->{head})) =~ s{\Arefs/heads/}{};
+	$r{branch} = $head;
+	if (length text($raw->{tip})) {
+		my ($sha, $t, $subj) = split /\t/, text($raw->{tip}), 3;
+		$r{tip} = { sha => $sha, time => $t + 0, subject => $subj // '' };
+	}
+
+	# The meta-ref log: pushes only, and only what is safe to show.
+	my @events;
+	my $active;
+	my $updated;
+	for my $c (split /\x1e/, $raw->{log} // '') {
+		$c =~ s/\A\n//;
+		my ($t, $subj, $body) = split /\x1f/, $c, 3;
+		next unless defined $body;
+		$updated //= $t + 0;
+		next unless $subj =~ /\AReceive pack/;
+		my ($kind, @refs, $more);
+		for my $l (split /\n/, Encode::decode('UTF-8', $body, Encode::FB_DEFAULT())) {
+			if ($l =~ /\A(updated|created|deleted):\s*\z/) {
+				$kind = $1;
+			} elsif (defined $kind
+				&& $l =~ m{\A  refs/(\w+)/(\S+)(?: \S+)?(?: \(([-+0-9]+)\))?\s*\z}) {
+				my ($type, $n, $note) = ($1, $2, $3);
+				if ($type eq 'heads' || $type eq 'tags') {
+					push @refs, { kind => $kind,
+						type => $type eq 'tags' ? 'tag' : 'branch',
+						name => $n, note => defined $note ? "($note)" : '' };
+				} elsif ($type ne 'notes' && $type ne 'info') {
+					$more++;
+				}
+			} elsif ($l !~ /\A   / && $l =~ /\S/) {
+				undef $kind;    # Submitted-by:, From:, Host:, ...
+			}
+		}
+		$active //= $t + 0;
+		next unless @refs || $more;
+		push @events, { time => $t + 0, refs => [ @refs[0 .. ($#refs < 5 ? $#refs : 5)] ],
+			more => ($more // 0) + (@refs > 6 ? @refs - 6 : 0) }
+			if @events < $MAX_EVENTS;
+	}
+	$r{events} = \@events;
+	# Fall back for a repository that has no meta-ref (or no
+	# pushes) to whatever the refs say.
+	my $fallback = (sort { $b <=> $a } map { $_->{time} } @branches, @tags)[0] // 0;
+	$r{updated} = $updated // $fallback;
+	$r{active} = $active // $r{updated};
+
+	my $perm = text($raw->{perm});
+	$r{guest_ssh} = $perm =~ /r/ ? 1 : 0;
+	return \%r;
+}
+
+# ------------------------------------------------------------------
+# The tree of pages.
+# ------------------------------------------------------------------
+my (%page, %dir);    # path => ...
+
+for my $path (sort keys %repo) {
+	my $r = $repo{$path};
+	my @p = split m{/}, $path;
+	my @crumbs;
+	for my $i (0 .. $#p - 1) {
+		my $d = join '/', @p[0 .. $i];
+		push @crumbs, { name => $p[$i], path => $d };
+		my $e = $dir{$d} //= { path => $d, name => $p[$i], entries => {}, count => 0,
+			active => 0, updated => 0 };
+		$e->{count}++;
+		$e->{active} = $r->{active} if $r->{active} > $e->{active};
+		$e->{updated} = $r->{updated} if $r->{updated} > $e->{updated};
+		my $child = $i < $#p - 1 ? join('/', @p[0 .. $i + 1]) : $path;
+		$e->{entries}{$child} = $i < $#p - 1 ? 'dir' : 'repo';
+	}
+	$r->{crumbs} = \@crumbs;
+}
+for my $d (values %dir) {
+	if ($repo{ $d->{path} }) {
+		warn "W: $d->{path} is both a repository and a directory; the repository wins\n";
+	}
+	my @e;
+	for my $c (keys %{ $d->{entries} }) {
+		my ($name) = $c =~ m{([^/]+)\z};
+		if ($d->{entries}{$c} eq 'dir') {
+			my $s = $dir{$c};
+			push @e, { kind => 'dir', name => $name, path => $c,
+				count => $s->{count}, active => $s->{active} };
+		} else {
+			my $r = $repo{$c};
+			push @e, { kind => 'repo', name => $name, path => $c,
+				blurb => $r->{blurb}, active => $r->{active} };
+		}
+	}
+	@e = sort { ($a->{kind} eq 'repo') <=> ($b->{kind} eq 'repo')
+		|| lc $a->{name} cmp lc $b->{name} || $a->{name} cmp $b->{name} } @e;
+	$d->{entries} = \@e;
+	my @p = split m{/}, $d->{path};
+	$d->{crumbs} = [ map { { name => $p[$_], path => join '/', @p[0 .. $_] } } 0 .. $#p - 1 ];
+	$d->{intro} = $INTRO{ $d->{path} } // '';
+}
+
+# ------------------------------------------------------------------
+# Serialize as a TT hash literal.  Strings are single-quoted, so
+# nothing in a description can be interpolated; and "%]" is split
+# so no string can close the directive it is in.
+# ------------------------------------------------------------------
+sub tt_str {
+	my ($s) = @_;
+	$s =~ s/\\/\\\\/g;
+	$s =~ s/'/\\'/g;
+	$s =~ s/%\]/%' _ ']/g;
+	return "'$s'";
+}
+
+sub tt {
+	my ($v, $key, $ind) = @_;
+	$ind //= '';
+	my $in = "$ind\t";
+	if (ref $v eq 'HASH') {
+		my @k = sort keys %$v;
+		return '{}' unless @k;
+		return "{\n" . join(",\n", map { "$in" . tt_str($_) . ' => ' . tt($v->{$_}, $_, $in) } @k)
+			. "\n$ind}";
+	}
+	if (ref $v eq 'ARRAY') {
+		return '[]' unless @$v;
+		return "[\n" . join(",\n", map { "$in" . tt($_, $key, $in) } @$v) . "\n$ind]";
+	}
+	return defined $key && $NUMERIC{$key} ? ($v // 0) + 0 : tt_str($v // '');
+}
+
+# ------------------------------------------------------------------
+# Write sources.
+# ------------------------------------------------------------------
+sub put {
+	my ($file, $content) = @_;
+	my $bytes = Encode::encode('UTF-8', $content);
+	if (open my $fh, '<:raw', $file) {
+		local $/;
+		my $old = <$fh>;
+		return 0 if $old eq $bytes;
+	}
+	make_path(dirname($file));
+	open my $fh, '>:raw', $file or die "$file: $!\n";
+	print {$fh} $bytes;
+	close $fh or die "$file: $!\n";
+	return 1;
+}
+
+sub is_ours {
+	my ($file) = @_;
+	open my $fh, '<:raw', $file or return 0;
+	for (1 .. 8) {
+		defined(my $l = <$fh>) or last;
+		return 1 if index($l, $SENTINEL) >= 0;
+	}
+	0;
+}
+
+sub stub {
+	my ($file, $var, $data, $template) = @_;
+	return <<"EOT";
+[%
+ # HAVE: $file
+ # NEED: skel/$template.html
+ # $SENTINEL (edits will be lost)
+-%]
+[% $var = @{[ tt($data) ]} -%]
+[% PROCESS skel/$template.html -%]
+EOT
+}
+
+my %want;    # source file => 1
+my %kept;    # hand-written pages we did not touch
+my $changed = 0;
+sub emit {
+	my ($path, $var, $data, $template) = @_;
+	my $file = "$path/index.html";
+	if (-e $file && !is_ours($file)) {
+		$kept{$file} = 1;
+		return;
+	}
+	$want{$file} = 1;
+	$changed += put($file, stub($file, $var, $data, $template));
+}
+
+emit($_, r => $repo{$_}, 'repo') for sort keys %repo;
+for my $p (sort keys %dir) {
+	next if $repo{$p};
+	my %d = %{ $dir{$p} };
+	delete $d{count};
+	emit($p, d => { %d, updated => $dir{$p}{updated} }, 'dir');
+}
+
+# ------------------------------------------------------------------
+# The home page's data.
+# ------------------------------------------------------------------
+{
+	my @roots = sort { $a->{path} cmp $b->{path} } grep { $_->{path} !~ m{/} } values %dir;
+	my @recent = (sort { $b->{active} <=> $a->{active} || $a->{path} cmp $b->{path} }
+		values %repo)[0 .. 5];
+	my @pushes;
+	for my $r (values %repo) {
+		push @pushes, map { { %$_, path => $r->{path} } } @{ $r->{events} };
+	}
+	@pushes = sort { $b->{time} <=> $a->{time} || $a->{path} cmp $b->{path} } @pushes;
+	@pushes = @pushes[0 .. ($#pushes < 7 ? $#pushes : 7)];
+	my $updated = 0;
+	for (values %repo) { $updated = $_->{updated} if $_->{updated} > $updated }
+	my $home = {
+		updated => $updated,
+		nrepos => scalar(keys %repo),
+		roots => [ map { { path => $_->{path}, name => $_->{name}, count => $_->{count},
+			active => $_->{active}, intro => $_->{intro} } } @roots ],
+		recent => [ map { { path => $_->{path}, blurb => $_->{blurb}, active => $_->{active} } }
+			grep { defined } @recent ],
+		pushes => \@pushes,
+	};
+	$changed += put($HOME, "[%# $SENTINEL: the home page's data -%]\n[% home = " . tt($home) . " -%]\n");
+}
+
+# ------------------------------------------------------------------
+# Remove what we generated before and no longer want (a repository
+# that went away, or lost its export-ok).  Only files that say they
+# are ours are ever removed.
+# ------------------------------------------------------------------
+my @removed;
+for my $top (do { my %t; grep { !$t{$_}++ } map { (split m{/})[0] } @ROOTS }) {
+	next unless -d $top;
+	my @todo = ($top);
+	while (defined(my $d = shift @todo)) {
+		opendir my $dh, $d or next;
+		for my $e (sort grep { !/\A\.\.?\z/ } readdir $dh) {
+			my $f = "$d/$e";
+			if (-d $f && !-l $f) { push @todo, $f }
+			elsif ($e eq 'index.html' && !$want{$f} && !$kept{$f} && is_ours($f)) {
+				unlink $f or die "unlink $f: $!\n";
+				push @removed, $f;
+			}
+		}
+	}
+}
+for my $f (@removed) {
+	say STDERR "removing stale $f";
+	my $out = "site/$f";
+	unlink $out;
+	# Prune directories that are empty but for our markers.
+	for (my $d = dirname($f); $d ne '.'; $d = dirname($d)) {
+		for my $base ('', 'site/') {
+			my $p = "$base$d";
+			next unless -d $p;
+			opendir my $dh, $p or next;
+			my @left = grep { !/\A\.\.?\z/ && $_ ne '.ok' } readdir $dh;
+			closedir $dh;
+			next if @left;
+			unlink "$p/.ok";
+			rmdir $p;
+		}
+	}
+}
+
+# ------------------------------------------------------------------
+# MANIFEST and Makefile.in: the part between the markers is ours.
+# ------------------------------------------------------------------
+sub splice_region {
+	my ($file, $region) = @_;
+	open my $fh, '<:encoding(UTF-8)', $file or die "$file: $!\n";
+	local $/;
+	my $text = <$fh>;
+	close $fh;
+	my $b = quotemeta $MARK_B;
+	my $e = quotemeta $MARK_E;
+	if ($text =~ /^$b\n.*?^$e\n/ms) {
+		$text =~ s/^$b\n.*?^$e\n/$region/ms;
+	} else {
+		$text =~ s/\n*\z/\n\n/;
+		$text .= $region;
+	}
+	return put($file, $text);
+}
+
+my @pages = sort keys %want;
+{
+	my $region = "$MARK_B\n" . join('', map { "\tNEED $_\n" } @pages) . "$MARK_E\n";
+	$changed += splice_region('MANIFEST', $region);
+}
+{
+	my $rule = @pages
+		? join(" \\\n", @pages) . " \\\n"
+			. "\t: render\n"
+			. "\tcd -- \${A:Q} && \${^X:Q} render -B \${B:Q} \\\n"
+			. "\t\t-- \${a:Q}/\${.IMPSRC:Q} \${B:Q}/\${b:Q}/\${.TARGET:Q}\n"
+		: '';
+	$changed += splice_region('Makefile.in', "$MARK_B\n$rule$MARK_E\n");
+}
+
+say STDERR "kept hand-written: $_" for sort keys %kept;
+say STDERR $changed ? "$changed file(s) changed" : "no changes";
+
+# ------------------------------------------------------------------
+# Build.
+# ------------------------------------------------------------------
+unless ($opt_n) {
+	system($ENV{SITECONF} // 'siteconf', '-g', '-G', 'make') == 0
+		or die "$0: siteconf -g failed\n";
+	system('make') == 0 or die "$0: make failed\n";
+}

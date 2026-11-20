@@ -1,0 +1,28 @@
+[%
+ # HAVE: pub/school/index.html
+ # NEED: skel/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1781573784,
+	'crumbs' => [
+		{
+			'name' => 'pub',
+			'path' => 'pub'
+		}
+	],
+	'entries' => [
+		{
+			'active' => 1781573784,
+			'count' => 1,
+			'kind' => 'dir',
+			'name' => 'wisc',
+			'path' => 'pub/school/wisc'
+		}
+	],
+	'intro' => '',
+	'name' => 'school',
+	'path' => 'pub/school',
+	'updated' => 1781573784
+} -%]
+[% PROCESS skel/dir.html -%]

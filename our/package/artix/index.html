@@ -1,0 +1,33 @@
+[%
+ # HAVE: our/package/artix/index.html
+ # NEED: skel/repo.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% r = {
+	'active' => 1794507185,
+	'blurb' => 'artix + alpine',
+	'branch' => 'fresh',
+	'branches' => [],
+	'crumbs' => [
+		{
+			'name' => 'our',
+			'path' => 'our'
+		},
+		{
+			'name' => 'package',
+			'path' => 'our/package'
+		}
+	],
+	'desc' => 'artix + alpine',
+	'desc_html' => '',
+	'dir' => 'our/package',
+	'events' => [],
+	'guest_ssh' => 1,
+	'name' => 'artix',
+	'nbranches' => 0,
+	'ntags' => 0,
+	'path' => 'our/package/artix',
+	'tags' => [],
+	'updated' => 1794507185
+} -%]
+[% PROCESS skel/repo.html -%]

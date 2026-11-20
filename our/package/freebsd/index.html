@@ -1,0 +1,33 @@
+[%
+ # HAVE: our/package/freebsd/index.html
+ # NEED: skel/repo.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% r = {
+	'active' => 1794507246,
+	'blurb' => 'freebsd',
+	'branch' => 'fresh',
+	'branches' => [],
+	'crumbs' => [
+		{
+			'name' => 'our',
+			'path' => 'our'
+		},
+		{
+			'name' => 'package',
+			'path' => 'our/package'
+		}
+	],
+	'desc' => 'freebsd',
+	'desc_html' => '',
+	'dir' => 'our/package',
+	'events' => [],
+	'guest_ssh' => 1,
+	'name' => 'freebsd',
+	'nbranches' => 0,
+	'ntags' => 0,
+	'path' => 'our/package/freebsd',
+	'tags' => [],
+	'updated' => 1794507246
+} -%]
+[% PROCESS skel/repo.html -%]

@@ -1,0 +1,7 @@
+/* HAVE: skel/css/base/index.css: */
+/* NEED: skel/css/base/reset.css: */
+/* NEED: skel/css/base/tokens.css: */
+/* NEED: skel/css/base/type.css: */
+@import "reset.css";
+@import "tokens.css";
+@import "type.css";

@@ -1,0 +1,2696 @@
+{
+   "repos" : {
+      "our/package/artix" : {
+         "meta" : "32e230570ff5cf6ffef6902fbb98f09f9c32eb77",
+         "repo" : {
+            "active" : 1794507185,
+            "blurb" : "artix + alpine",
+            "branch" : "fresh",
+            "branches" : [],
+            "desc" : "artix + alpine",
+            "desc_html" : "",
+            "dir" : "our/package",
+            "events" : [],
+            "guest_ssh" : 1,
+            "name" : "artix",
+            "nbranches" : 0,
+            "ntags" : 0,
+            "path" : "our/package/artix",
+            "tags" : [],
+            "updated" : 1794507185
+         }
+      },
+      "our/package/freebsd" : {
+         "meta" : "1ae0e43ddd1af6310b806121ff79329e7659c41f",
+         "repo" : {
+            "active" : 1794507246,
+            "blurb" : "freebsd",
+            "branch" : "fresh",
+            "branches" : [],
+            "desc" : "freebsd",
+            "desc_html" : "",
+            "dir" : "our/package",
+            "events" : [],
+            "guest_ssh" : 1,
+            "name" : "freebsd",
+            "nbranches" : 0,
+            "ntags" : 0,
+            "path" : "our/package/freebsd",
+            "tags" : [],
+            "updated" : 1794507246
+         }
+      },
+      "our/package/homebrew" : {
+         "meta" : "0b00d8f74f6642e8b2f7b6c3445ec9d50366d585",
+         "repo" : {
+            "active" : 1795148361,
+            "blurb" : "homebrew",
+            "branch" : "fresh",
+            "branches" : [
+               {
+                  "name" : "fresh",
+                  "time" : 1795142214
+               }
+            ],
+            "desc" : "homebrew",
+            "desc_html" : "",
+            "dir" : "our/package",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "fresh",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795148361
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "fresh",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795135907
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "fresh",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795134685
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "fresh",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795134083
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "fresh",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795132267
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "fresh",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795131425
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "fresh",
+                        "note" : "(+21)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794507021
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "homebrew",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "our/package/homebrew",
+            "tags" : [],
+            "tip" : {
+               "sha" : "1cab3e9",
+               "subject" : "merge codesets/textdomain into gengenlib",
+               "time" : 1795142214
+            },
+            "updated" : 1795148361
+         }
+      },
+      "pub/lib/perl5/Algo-BSearch" : {
+         "meta" : "20ccabf7cd96162004668215c8d5c3135a321e36",
+         "repo" : {
+            "active" : 1793591906,
+            "blurb" : "Algo::BSearch",
+            "branch" : "master",
+            "branches" : [
+               {
+                  "name" : "master",
+                  "time" : 1793566034
+               }
+            ],
+            "desc" : "Algo::BSearch\n\npreviously Sort::Search - binary search on contiguous sorted ranges",
+            "desc_html" : "",
+            "dir" : "pub/lib/perl5",
+            "events" : [
+               {
+                  "more" : 2,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "v0.00_00",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "v0.00_44",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1793591906
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(-288+288)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793591896
+               },
+               {
+                  "more" : 2,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+44)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "v0.00_00",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "v0.00_44",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1793568606
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+5)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1790366313
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+9)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1789105628
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1781771629
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+9)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1781770214
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1781642079
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "Algo-BSearch",
+            "nbranches" : 1,
+            "ntags" : 2,
+            "path" : "pub/lib/perl5/Algo-BSearch",
+            "tags" : [
+               {
+                  "name" : "v0.00_44",
+                  "time" : 1793566140
+               },
+               {
+                  "name" : "v0.00_00",
+                  "time" : 1793563303
+               }
+            ],
+            "tip" : {
+               "sha" : "5e6f1f8",
+               "subject" : "this can be done",
+               "time" : 1793566034
+            },
+            "updated" : 1793773669
+         }
+      },
+      "pub/lib/perl5/IPC-Unix" : {
+         "meta" : "63d8fe953ad50962ae40a6aa1d79ec43e9dceb38",
+         "repo" : {
+            "active" : 1793836369,
+            "blurb" : "meow",
+            "branch" : "master",
+            "branches" : [
+               {
+                  "name" : "master",
+                  "time" : 1793836324
+               }
+            ],
+            "desc" : "meow",
+            "desc_html" : "",
+            "dir" : "pub/lib/perl5",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "v0.00_00",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1793836369
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "master",
+                        "note" : "(+38)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "v0.00_00",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1793773771
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "IPC-Unix",
+            "nbranches" : 1,
+            "ntags" : 1,
+            "path" : "pub/lib/perl5/IPC-Unix",
+            "tags" : [
+               {
+                  "name" : "v0.00_00",
+                  "time" : 1793836324
+               }
+            ],
+            "tip" : {
+               "sha" : "e7e274a",
+               "subject" : "ignore ourselves",
+               "time" : 1793836324
+            },
+            "updated" : 1793836369
+         }
+      },
+      "pub/lib/perl5/List-Search" : {
+         "meta" : "b7d1f32b60fbe775e31ffe01fb31622c4bb1d1a2",
+         "repo" : {
+            "active" : 1780972777,
+            "blurb" : "List-Search dist by EVDB",
+            "branch" : "master",
+            "branches" : [
+               {
+                  "name" : "master",
+                  "time" : 1780971225
+               }
+            ],
+            "desc" : "List-Search dist by EVDB",
+            "desc_html" : "",
+            "dir" : "pub/lib/perl5",
+            "events" : [
+               {
+                  "more" : 1,
+                  "refs" : [],
+                  "time" : 1780972777
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "0.44",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1780972636
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1780971662
+               },
+               {
+                  "more" : 1,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "0.4",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1780969708
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1780148992
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "0.4-TRIAL",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1780109272
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1780108097
+               },
+               {
+                  "more" : 1,
+                  "refs" : [],
+                  "time" : 1780008821
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "List-Search",
+            "nbranches" : 1,
+            "ntags" : 7,
+            "path" : "pub/lib/perl5/List-Search",
+            "tags" : [
+               {
+                  "name" : "0.44",
+                  "time" : 1780971316
+               },
+               {
+                  "name" : "0.4",
+                  "time" : 1780959583
+               },
+               {
+                  "name" : "0.4-TRIAL",
+                  "time" : 1780109006
+               },
+               {
+                  "name" : "0.3_1",
+                  "time" : 1779336273
+               },
+               {
+                  "name" : "0.2",
+                  "time" : 1779260482
+               },
+               {
+                  "name" : "0.3",
+                  "time" : 1779260482
+               },
+               {
+                  "name" : "0.1",
+                  "time" : 1779260481
+               }
+            ],
+            "tip" : {
+               "sha" : "6f90e9e",
+               "subject" : "Bump version to 0.44 JUST for this fiasco",
+               "time" : 1780971225
+            },
+            "updated" : 1780972777
+         }
+      },
+      "pub/package/arch/main/ed" : {
+         "meta" : "37b2bc1d657645cb7a69629eb801095cba98587b",
+         "repo" : {
+            "active" : 1774698930,
+            "blurb" : "gitlab.archlinux.org/archlinux/packaging/packages/ed",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "main",
+                  "time" : 1767471305
+               }
+            ],
+            "desc" : "gitlab.archlinux.org/archlinux/packaging/packages/ed",
+            "desc_html" : "",
+            "dir" : "pub/package/arch/main",
+            "events" : [
+               {
+                  "more" : 40,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+52)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "1.0-1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "1.1-1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "1.10-1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "1.11-1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "1.12-1",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1774698930
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "ed",
+            "nbranches" : 1,
+            "ntags" : 45,
+            "path" : "pub/package/arch/main/ed",
+            "tags" : [
+               {
+                  "name" : "1.22.4-1",
+                  "time" : 1767471308
+               },
+               {
+                  "name" : "1.22.3-1",
+                  "time" : 1764502264
+               },
+               {
+                  "name" : "1.22.2-1",
+                  "time" : 1755628182
+               },
+               {
+                  "name" : "1.22.1-1",
+                  "time" : 1754437990
+               },
+               {
+                  "name" : "1.22-1",
+                  "time" : 1753390579
+               },
+               {
+                  "name" : "1.21.1-1",
+                  "time" : 1742897943
+               },
+               {
+                  "name" : "1.21-1",
+                  "time" : 1736364419
+               },
+               {
+                  "name" : "1.20.2-2",
+                  "time" : 1714775419
+               },
+               {
+                  "name" : "1.20.2-1",
+                  "time" : 1714156784
+               },
+               {
+                  "name" : "1.20.1-1",
+                  "time" : 1708255471
+               },
+               {
+                  "name" : "1.20-1",
+                  "time" : 1705785344
+               },
+               {
+                  "name" : "1.19-1",
+                  "time" : 1673690657
+               }
+            ],
+            "tip" : {
+               "sha" : "151219b",
+               "subject" : "upgpkg: 1.22.4-1",
+               "time" : 1767471305
+            },
+            "updated" : 1774698930
+         }
+      },
+      "pub/package/arch/main/git" : {
+         "meta" : "3eeb12ec01a32bc267970b719b88952e3fb14925",
+         "repo" : {
+            "active" : 1774698639,
+            "blurb" : "gitlab.archlinux.org/archlinux/packaging/packages/git",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "rc/0",
+                  "time" : 1773798913
+               },
+               {
+                  "name" : "main",
+                  "time" : 1770052776
+               }
+            ],
+            "desc" : "gitlab.archlinux.org/archlinux/packaging/packages/git",
+            "desc_html" : "",
+            "dir" : "pub/package/arch/main",
+            "events" : [
+               {
+                  "more" : 271,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "1.7.0-1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "1.7.0.1-1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "1.7.0.2-1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "1.7.0.3-1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "1.7.0.4-1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "1.7.0.5-1",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1774698639
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+359)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "rc/0",
+                        "note" : "(+360)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1774698618
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "git",
+            "nbranches" : 2,
+            "ntags" : 277,
+            "path" : "pub/package/arch/main/git",
+            "tags" : [
+               {
+                  "name" : "2.53.0-1",
+                  "time" : 1770052782
+               },
+               {
+                  "name" : "2.52.0-2",
+                  "time" : 1763761239
+               },
+               {
+                  "name" : "2.52.0-1",
+                  "time" : 1763404281
+               },
+               {
+                  "name" : "2.51.2-2",
+                  "time" : 1761587902
+               },
+               {
+                  "name" : "2.51.2-1",
+                  "time" : 1761580921
+               },
+               {
+                  "name" : "2.51.1-2",
+                  "time" : 1760972658
+               },
+               {
+                  "name" : "2.51.1-1",
+                  "time" : 1760593754
+               },
+               {
+                  "name" : "2.51.0-1",
+                  "time" : 1755540899
+               },
+               {
+                  "name" : "2.50.1-3",
+                  "time" : 1752488474
+               },
+               {
+                  "name" : "2.50.1-2",
+                  "time" : 1752486832
+               },
+               {
+                  "name" : "2.50.1-1",
+                  "time" : 1751994303
+               },
+               {
+                  "name" : "2.50.0-1",
+                  "time" : 1750099529
+               }
+            ],
+            "tip" : {
+               "sha" : "c6127e8",
+               "subject" : "upgpkg: 2.53.0-1: New upstream release",
+               "time" : 1770052776
+            },
+            "updated" : 1774698639
+         }
+      },
+      "pub/package/arch/main/systemd" : {
+         "meta" : "bc87034b97c41f249e8df79e67e2ebe24eef2b19",
+         "repo" : {
+            "active" : 1774698793,
+            "blurb" : "gitlab.archlinux.org/archlinux/packaging/packages/systemd",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "rc/0",
+                  "time" : 1773799112
+               },
+               {
+                  "name" : "main",
+                  "time" : 1773780169
+               }
+            ],
+            "desc" : "gitlab.archlinux.org/archlinux/packaging/packages/systemd",
+            "desc_html" : "",
+            "dir" : "pub/package/arch/main",
+            "events" : [
+               {
+                  "more" : 490,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+760)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "rc/0",
+                        "note" : "(+788)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "183-1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "183-2",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "183-3",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "183-4",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1774698793
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "systemd",
+            "nbranches" : 2,
+            "ntags" : 494,
+            "path" : "pub/package/arch/main/systemd",
+            "tags" : [
+               {
+                  "name" : "260-1",
+                  "time" : 1773780498
+               },
+               {
+                  "name" : "259.5-1",
+                  "time" : 1773421179
+               },
+               {
+                  "name" : "259.4-1",
+                  "time" : 1773336527
+               },
+               {
+                  "name" : "259.3-1",
+                  "time" : 1772635097
+               },
+               {
+                  "name" : "259.2-1",
+                  "time" : 1772189994
+               },
+               {
+                  "name" : "259.1-1",
+                  "time" : 1770401231
+               },
+               {
+                  "name" : "259-2",
+                  "time" : 1767720893
+               },
+               {
+                  "name" : "259-1",
+                  "time" : 1766039595
+               },
+               {
+                  "name" : "258.3-1",
+                  "time" : 1765549866
+               },
+               {
+                  "name" : "258.2-2",
+                  "time" : 1762766485
+               },
+               {
+                  "name" : "258.2-1",
+                  "time" : 1762520481
+               },
+               {
+                  "name" : "258.1-1",
+                  "time" : 1760368344
+               }
+            ],
+            "tip" : {
+               "sha" : "ec8ef41",
+               "subject" : "upgpkg: 260-1: new upstream release",
+               "time" : 1773780169
+            },
+            "updated" : 1774698793
+         }
+      },
+      "pub/package/arch/main/vi" : {
+         "meta" : "094647f7e9c5cfdcb31fb8217cf56fe910fc8dc1",
+         "repo" : {
+            "active" : 1774698875,
+            "blurb" : "gitlab.archlinux.org/archlinux/packaging/packages/vi",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "heirloom-ex-vi",
+                  "time" : 1769612650
+               },
+               {
+                  "name" : "main",
+                  "time" : 1769247941
+               }
+            ],
+            "desc" : "gitlab.archlinux.org/archlinux/packaging/packages/vi",
+            "desc_html" : "",
+            "dir" : "pub/package/arch/main",
+            "events" : [
+               {
+                  "more" : 15,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "heirloom-ex-vi",
+                        "note" : "(+42)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+43)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "050325-2",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "050325-3",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "050325-4",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "1-050325-1",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1774698875
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "vi",
+            "nbranches" : 2,
+            "ntags" : 19,
+            "path" : "pub/package/arch/main/vi",
+            "tags" : [
+               {
+                  "name" : "1-070224-6",
+                  "time" : 1665018828
+               },
+               {
+                  "name" : "1-070224-5",
+                  "time" : 1620637862
+               },
+               {
+                  "name" : "1-070224-4",
+                  "time" : 1573668589
+               },
+               {
+                  "name" : "1-070224-3",
+                  "time" : 1528085603
+               },
+               {
+                  "name" : "1-070224-2",
+                  "time" : 1441568078
+               },
+               {
+                  "name" : "1-070224-1",
+                  "time" : 1430590444
+               },
+               {
+                  "name" : "1-050325-4",
+                  "time" : 1404050929
+               },
+               {
+                  "name" : "1-050325-3",
+                  "time" : 1353091306
+               },
+               {
+                  "name" : "1-050325-2",
+                  "time" : 1320449235
+               },
+               {
+                  "name" : "1-050325-1",
+                  "time" : 1302093323
+               },
+               {
+                  "name" : "050325-4",
+                  "time" : 1297264324
+               },
+               {
+                  "name" : "050325-3",
+                  "time" : 1267990679
+               }
+            ],
+            "tip" : {
+               "sha" : "b9b982a",
+               "subject" : "Add nvchecker config",
+               "time" : 1769247941
+            },
+            "updated" : 1774698875
+         }
+      },
+      "pub/package/artix/world/git" : {
+         "meta" : "45b5337f85e3bab0fcdfff334761a17ee6f9dc33",
+         "repo" : {
+            "active" : 1794471345,
+            "blurb" : "gitea.archlinux.org/packages/git",
+            "branch" : "master",
+            "branches" : [
+               {
+                  "name" : "rc/0",
+                  "time" : 1777366951
+               },
+               {
+                  "name" : "master",
+                  "time" : 1770311138
+               }
+            ],
+            "desc" : "gitea.archlinux.org/packages/git",
+            "desc_html" : "",
+            "dir" : "pub/package/artix/world",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "rc/0",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794471345
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "rc/0",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1774700235
+               },
+               {
+                  "more" : 7,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "master",
+                        "note" : "(+138)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "rc/0",
+                        "note" : "(+145)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "2.49.0-2",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "2.50.0-1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "2.50.1-1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "2.50.1-3",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1774698429
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "git",
+            "nbranches" : 2,
+            "ntags" : 11,
+            "path" : "pub/package/artix/world/git",
+            "tags" : [
+               {
+                  "name" : "2.53.0-1",
+                  "time" : 1770072185
+               },
+               {
+                  "name" : "2.52.0-2",
+                  "time" : 1763825083
+               },
+               {
+                  "name" : "2.52.0-1",
+                  "time" : 1763595590
+               },
+               {
+                  "name" : "2.51.2-2",
+                  "time" : 1761596162
+               },
+               {
+                  "name" : "2.51.1-2",
+                  "time" : 1761076486
+               },
+               {
+                  "name" : "2.51.1-1",
+                  "time" : 1760818249
+               },
+               {
+                  "name" : "2.51.0-1",
+                  "time" : 1755622536
+               },
+               {
+                  "name" : "2.50.1-3",
+                  "time" : 1752844046
+               },
+               {
+                  "name" : "2.50.1-1",
+                  "time" : 1752072121
+               },
+               {
+                  "name" : "2.50.0-1",
+                  "time" : 1750354345
+               },
+               {
+                  "name" : "2.49.0-2",
+                  "time" : 1747082273
+               }
+            ],
+            "tip" : {
+               "sha" : "22b3635",
+               "subject" : "[world-gremlins] -> [world] 'git-2.53.0-1' move",
+               "time" : 1770311138
+            },
+            "updated" : 1794471345
+         }
+      },
+      "pub/package/homebrew/fresh" : {
+         "meta" : "e42c2ba2e3d6e37e570cf79761a3ecfc8f831f1b",
+         "repo" : {
+            "active" : 1774845249,
+            "blurb" : "The rapidcow/fresh TAP",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "main",
+                  "time" : 1774843756
+               }
+            ],
+            "desc" : "The rapidcow/fresh TAP",
+            "desc_html" : "",
+            "dir" : "pub/package/homebrew",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+3)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1774845249
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1774841935
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1774841753
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+12)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1774342891
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "fresh",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/package/homebrew/fresh",
+            "tags" : [],
+            "tip" : {
+               "sha" : "17dd818",
+               "subject" : "a third option?!!",
+               "time" : 1774843756
+            },
+            "updated" : 1774845249
+         }
+      },
+      "pub/project/archive/bridge" : {
+         "meta" : "ae975a712146f2fc754dbea8796c77da246c808b",
+         "repo" : {
+            "active" : 1792783281,
+            "blurb" : "apple notes reverse engineering (among other things)",
+            "branch" : "master",
+            "branches" : [
+               {
+                  "name" : "master",
+                  "time" : 1792780813
+               },
+               {
+                  "name" : "git-annex",
+                  "time" : 1791880114
+               }
+            ],
+            "desc" : "apple notes reverse engineering (among other things)",
+            "desc_html" : "",
+            "dir" : "pub/project/archive",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+5)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1792783281
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(-1+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1792768106
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1792767797
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1792767337
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+30)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1792764717
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "git-annex",
+                        "note" : "(+5)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1791912264
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+21)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1791911647
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1791846749
+               }
+            ],
+            "guest_ssh" : 0,
+            "name" : "bridge",
+            "nbranches" : 2,
+            "ntags" : 0,
+            "path" : "pub/project/archive/bridge",
+            "tags" : [],
+            "tip" : {
+               "sha" : "59607bc",
+               "subject" : "No idea here either",
+               "time" : 1792780813
+            },
+            "updated" : 1792783281
+         }
+      },
+      "pub/project/perspective" : {
+         "meta" : "a8f518b89a64baea6049de075f32c83a4b69013b",
+         "repo" : {
+            "active" : 1793142506,
+            "blurb" : "The Perspective Project",
+            "branch" : "master",
+            "branches" : [
+               {
+                  "name" : "master",
+                  "time" : 1793142276
+               }
+            ],
+            "desc" : "The Perspective Project",
+            "desc_html" : "",
+            "dir" : "pub/project",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(-1+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793142506
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793142465
+               },
+               {
+                  "more" : 4,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "master",
+                        "note" : "(+130)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "testpypi/0.2.0",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "testpypi/0.2.0a1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "v0.0",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "v0.1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "deleted",
+                        "name" : "psp/master",
+                        "note" : "(-130)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793097870
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "deleted",
+                        "name" : "psp/0.0",
+                        "note" : "(-1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793097406
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "psp/master",
+                        "note" : "(-1+130)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "psp/v0.0",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1793097382
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "psp/testpypi/0.2.0",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "psp/testpypi/0.2.0a1",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "psp/v0.1",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1793097369
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "psp/0.0",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "psp/master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "psp/v0.0",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1792810259
+               }
+            ],
+            "guest_ssh" : 0,
+            "name" : "perspective",
+            "nbranches" : 1,
+            "ntags" : 4,
+            "path" : "pub/project/perspective",
+            "tags" : [
+               {
+                  "name" : "v0.1",
+                  "time" : 1792835265
+               },
+               {
+                  "name" : "testpypi/0.2.0a1",
+                  "time" : 1792831931
+               },
+               {
+                  "name" : "testpypi/0.2.0",
+                  "time" : 1792831904
+               },
+               {
+                  "name" : "v0.0",
+                  "time" : 1792818236
+               }
+            ],
+            "tip" : {
+               "sha" : "ebbb78e",
+               "subject" : "plan!",
+               "time" : 1793142276
+            },
+            "updated" : 1794114749
+         }
+      },
+      "pub/project/siteconf" : {
+         "meta" : "9502c5035d60f0678d894a72c2c5f837fdc956a2",
+         "repo" : {
+            "active" : 1795135805,
+            "blurb" : "just conf",
+            "branch" : "master",
+            "branches" : [
+               {
+                  "name" : "master",
+                  "time" : 1795135687
+               }
+            ],
+            "desc" : "just conf",
+            "desc_html" : "",
+            "dir" : "pub/project",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "template-provider/v0.00_00",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1795135805
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "siteconf/v0.03_00",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1795095720
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "siteconf-l10n/v0.00_00",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "siteconf/v0.03_00",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1795094646
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+3)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "siteconf-l10n/v0.00_00",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "siteconf/v0.03_00",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1795094037
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795092782
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "codesets/v0.00_00",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1795092763
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "siteconf/v0.03_00",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1795090178
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "siteconf/v0.03_00",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1795089534
+               }
+            ],
+            "guest_ssh" : 0,
+            "name" : "siteconf",
+            "nbranches" : 1,
+            "ntags" : 36,
+            "path" : "pub/project/siteconf",
+            "tags" : [
+               {
+                  "name" : "siteconf/v0.03_00",
+                  "time" : 1795095659
+               },
+               {
+                  "name" : "siteconf-l10n/v0.00_00",
+                  "time" : 1795094614
+               },
+               {
+                  "name" : "codesets/v0.00_00",
+                  "time" : 1795092066
+               },
+               {
+                  "name" : "gengenlib/v0.01_00",
+                  "time" : 1795006717
+               },
+               {
+                  "name" : "template-provider/v0.00_00",
+                  "time" : 1794981275
+               },
+               {
+                  "name" : "genlib/v0.03_00",
+                  "time" : 1794980734
+               },
+               {
+                  "name" : "textdomain/v0.00_00",
+                  "time" : 1794920753
+               },
+               {
+                  "name" : "engine/v0.03_00",
+                  "time" : 1794310483
+               },
+               {
+                  "name" : "engine/v0.02_03",
+                  "time" : 1794285960
+               },
+               {
+                  "name" : "v0.02_03",
+                  "time" : 1794285960
+               },
+               {
+                  "name" : "genlib/v0.02_03",
+                  "time" : 1794263791
+               },
+               {
+                  "name" : "gengenlib/v0.00_03",
+                  "time" : 1794245415
+               }
+            ],
+            "tip" : {
+               "sha" : "5e15c23",
+               "subject" : "t/provider.t: please do not interpolate externally",
+               "time" : 1795135687
+            },
+            "updated" : 1795135805
+         }
+      },
+      "pub/project/trivnote" : {
+         "meta" : "b129faf81fb09fa78ed7e27d7a886047ca0335b0",
+         "repo" : {
+            "active" : 1794170074,
+            "blurb" : "my notes app :] (android only for now)",
+            "branch" : "master",
+            "branches" : [
+               {
+                  "name" : "libexpr/0.1.0",
+                  "time" : 1794169875
+               },
+               {
+                  "name" : "master",
+                  "time" : 1794169774
+               },
+               {
+                  "name" : "libexpr/0.0.0",
+                  "time" : 1792053166
+               }
+            ],
+            "desc" : "my notes app :] (android only for now)",
+            "desc_html" : "",
+            "dir" : "pub/project",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "libexpr/0.1.0",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "android/0.0.0",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "libexpr/0.0.0",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1794170074
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "libexpr/0.1.0",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "libexpr/v0.1.0",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1793351283
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "libexpr/0.1.0",
+                        "note" : "(+28)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+12)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "libexpr/v0.1.0",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1793349775
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+9)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793238918
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "libexpr/0.1.0",
+                        "note" : "(+5)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793224762
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+38)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793224735
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "libexpr/0.1.0",
+                        "note" : "(+40)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+42)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793095520
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "libexpr/0.1.0",
+                        "note" : "(-10+10)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(-42+42)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1792789847
+               }
+            ],
+            "guest_ssh" : 0,
+            "name" : "trivnote",
+            "nbranches" : 3,
+            "ntags" : 5,
+            "path" : "pub/project/trivnote",
+            "tags" : [
+               {
+                  "name" : "libexpr/v0.1.0",
+                  "time" : 1793351227
+               },
+               {
+                  "name" : "libexpr/v0.0.0",
+                  "time" : 1792614188
+               },
+               {
+                  "name" : "android/v0.0.0",
+                  "time" : 1792614122
+               },
+               {
+                  "name" : "libexpr/0.0.0",
+                  "time" : 1790464837
+               },
+               {
+                  "name" : "android/0.0.0",
+                  "time" : 1790464093
+               }
+            ],
+            "tip" : {
+               "sha" : "66b2b60",
+               "subject" : "xterm alone is fine",
+               "time" : 1794169774
+            },
+            "updated" : 1794170074
+         }
+      },
+      "pub/school/wisc/sdc/fa-25/team" : {
+         "meta" : "9265fa73020f7f97a1bb8b9f3ce618d91d85b8f6",
+         "repo" : {
+            "active" : 1781573784,
+            "blurb" : "https://github.com/SDC-Fall-2025/Team-17.git",
+            "branch" : "master",
+            "branches" : [
+               {
+                  "name" : "master",
+                  "time" : 1778825928
+               },
+               {
+                  "name" : "ship/vercel",
+                  "time" : 1770742267
+               },
+               {
+                  "name" : "gh-pages",
+                  "time" : 1766521702
+               },
+               {
+                  "name" : "sync/edit",
+                  "time" : 1765475587
+               },
+               {
+                  "name" : "mod/cgi-bin",
+                  "time" : 1765475339
+               },
+               {
+                  "name" : "edit",
+                  "time" : 1765475138
+               },
+               {
+                  "name" : "test/vercel",
+                  "time" : 1764324690
+               },
+               {
+                  "name" : "list/master",
+                  "time" : 1763692302
+               },
+               {
+                  "name" : "bip/club-radar",
+                  "time" : 1762542176
+               },
+               {
+                  "name" : "icmp/htdocs",
+                  "time" : 1762263854
+               },
+               {
+                  "name" : "bip/minecraft-cv",
+                  "time" : 1761926794
+               },
+               {
+                  "name" : "bip/task-manager",
+                  "time" : 1761596791
+               }
+            ],
+            "desc" : "https://github.com/SDC-Fall-2025/Team-17.git",
+            "desc_html" : "",
+            "dir" : "pub/school/wisc/sdc/fa-25",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1781573784
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(-1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1781573714
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1781573529
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(-1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1781573332
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1781223094
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(-1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1781223088
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1781127683
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(-2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1781127662
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "team",
+            "nbranches" : 12,
+            "ntags" : 0,
+            "path" : "pub/school/wisc/sdc/fa-25/team",
+            "tags" : [],
+            "tip" : {
+               "sha" : "281dc2e",
+               "subject" : "clubradar.endfindme.com is gone",
+               "time" : 1778825928
+            },
+            "updated" : 1781573784
+         }
+      },
+      "pub/www/site/foss" : {
+         "meta" : "45038d215aa81d61ba17e0ac8ea90fed5a101318",
+         "repo" : {
+            "active" : 1794994572,
+            "blurb" : "foss.rapidcow.org",
+            "branch" : "gh-pages",
+            "branches" : [
+               {
+                  "name" : "gh-pages",
+                  "time" : 1794994553
+               }
+            ],
+            "desc" : "foss.rapidcow.org",
+            "desc_html" : "",
+            "dir" : "pub/www/site",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794994572
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+3)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794983971
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794923892
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794923693
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794914415
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794911484
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794910998
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+3)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794909516
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "foss",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/www/site/foss",
+            "tags" : [],
+            "tip" : {
+               "sha" : "13e4dab",
+               "subject" : "this chomp is actually not necessary",
+               "time" : 1794994553
+            },
+            "updated" : 1794994572
+         }
+      },
+      "pub/www/site/javadoc" : {
+         "meta" : "a24632b9299274b8d89e96ca6133a98a4bb6e28e",
+         "repo" : {
+            "active" : 1794995808,
+            "blurb" : "javadoc.rapidcow.org",
+            "branch" : "gh-pages",
+            "branches" : [
+               {
+                  "name" : "gh-pages",
+                  "time" : 1794995767
+               }
+            ],
+            "desc" : "javadoc.rapidcow.org",
+            "desc_html" : "",
+            "dir" : "pub/www/site",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794995808
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794995678
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794914459
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794912177
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794911662
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794909680
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+6)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794885090
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794604976
+               }
+            ],
+            "guest_ssh" : 0,
+            "name" : "javadoc",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/www/site/javadoc",
+            "tags" : [],
+            "tip" : {
+               "sha" : "1cabc15",
+               "subject" : "check the docs directory",
+               "time" : 1794995767
+            },
+            "updated" : 1794995808
+         }
+      },
+      "pub/www/site/man" : {
+         "meta" : "25981176b6b9971331d5fed0f2e1ce7a09bc4d0b",
+         "repo" : {
+            "active" : 1794506742,
+            "blurb" : "man pages",
+            "branch" : "gh-pages",
+            "branches" : [
+               {
+                  "name" : "gh-pages",
+                  "time" : 1793602424
+               }
+            ],
+            "desc" : "man pages",
+            "desc_html" : "",
+            "dir" : "pub/www/site",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794506742
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "man",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/www/site/man",
+            "tags" : [],
+            "tip" : {
+               "sha" : "0fe8a51",
+               "subject" : "Import html/man from www.git",
+               "time" : 1793602424
+            },
+            "updated" : 1794603050
+         }
+      },
+      "pub/www/site/neocities" : {
+         "meta" : "13bb72633eeb686f05d7bede38d06e7c5cf43f7e",
+         "repo" : {
+            "active" : 1794914509,
+            "blurb" : "rapidcow.neocities.org",
+            "branch" : "master",
+            "branches" : [
+               {
+                  "name" : "master",
+                  "time" : 1794914492
+               },
+               {
+                  "name" : "main/2025-01-03",
+                  "time" : 1794006035
+               },
+               {
+                  "name" : "main/2025-02-02",
+                  "time" : 1793834782
+               },
+               {
+                  "name" : "git-annex",
+                  "time" : 1793829603
+               },
+               {
+                  "name" : "main/2024-11-10",
+                  "time" : 1731229416
+               },
+               {
+                  "name" : "main/2024-11-09",
+                  "time" : 1731214348
+               }
+            ],
+            "desc" : "rapidcow.neocities.org",
+            "desc_html" : "",
+            "dir" : "pub/www/site",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794914509
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+9)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794912743
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+10)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794912485
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+4)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794163214
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+54)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "main/2024-11-09",
+                        "note" : "(+2)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "main/2024-11-10",
+                        "note" : "(+8)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "main/2025-01-03",
+                        "note" : "(+50)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "main/2025-02-02",
+                        "note" : "(+101)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794006201
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+4)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793845304
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+24)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "git-annex",
+                        "note" : "(+5)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793837092
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+3)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793775012
+               }
+            ],
+            "guest_ssh" : 0,
+            "name" : "neocities",
+            "nbranches" : 6,
+            "ntags" : 7,
+            "path" : "pub/www/site/neocities",
+            "tags" : [
+               {
+                  "name" : "2025-02-02",
+                  "time" : 1738524616
+               },
+               {
+                  "name" : "2024-11-09",
+                  "time" : 1738472875
+               },
+               {
+                  "name" : "2025-01-03",
+                  "time" : 1738439323
+               },
+               {
+                  "name" : "2025-01-03_PATCH_1",
+                  "time" : 1738436590
+               },
+               {
+                  "name" : "2025-01-03_ORIG",
+                  "time" : 1735916542
+               },
+               {
+                  "name" : "2024-11-10",
+                  "time" : 1735795872
+               },
+               {
+                  "name" : "NEOCITIES",
+                  "time" : 1735794837
+               }
+            ],
+            "tip" : {
+               "sha" : "4f9bc75",
+               "subject" : "revert sloppy code",
+               "time" : 1794914492
+            },
+            "updated" : 1794914509
+         }
+      }
+   },
+   "version" : 1
+}

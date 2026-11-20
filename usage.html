@@ -1,15 +1,12 @@
-<!DOCTYPE html>
 [%
  # HAVE: usage.html
+ # NEED: skel/layout.html
 -%]
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<link rel="canonical" href="https://git.rapidcow.org/usage">
-	<title>Tutorial!</title>
-</head>
-<body>
-<main>
+[% WRAPPER skel/layout.html
+	title = 'Tutorial!'
+	here = 'Tutorial'
+	canonical = 'usage' -%]
+<div class="prose">
 	<h2>How to clone</h2>
 	<p>At the moment we support HTTP+SSL protocol on port 443:</p>
 <pre>git clone https://git.rapidcow.org/pub/...
@@ -74,6 +71,5 @@ on your machine.  (For an on-line version, you can read <a href="https://manpage
 	transport level, repository ACLs are often (if not always) configured
 	to deny anonymous users of the permission to push refs (though it
 	should be clear why such ACLs are in place. :)</p>
-</main>
-</body>
-</html>
+</div>
+[% END -%]

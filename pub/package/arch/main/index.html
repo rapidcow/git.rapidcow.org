@@ -1,0 +1,57 @@
+[%
+ # HAVE: pub/package/arch/main/index.html
+ # NEED: skel/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1774698930,
+	'crumbs' => [
+		{
+			'name' => 'pub',
+			'path' => 'pub'
+		},
+		{
+			'name' => 'package',
+			'path' => 'pub/package'
+		},
+		{
+			'name' => 'arch',
+			'path' => 'pub/package/arch'
+		}
+	],
+	'entries' => [
+		{
+			'active' => 1774698930,
+			'blurb' => 'gitlab.archlinux.org/archlinux/packaging/packages/ed',
+			'kind' => 'repo',
+			'name' => 'ed',
+			'path' => 'pub/package/arch/main/ed'
+		},
+		{
+			'active' => 1774698639,
+			'blurb' => 'gitlab.archlinux.org/archlinux/packaging/packages/git',
+			'kind' => 'repo',
+			'name' => 'git',
+			'path' => 'pub/package/arch/main/git'
+		},
+		{
+			'active' => 1774698793,
+			'blurb' => 'gitlab.archlinux.org/archlinux/packaging/packages/systemd',
+			'kind' => 'repo',
+			'name' => 'systemd',
+			'path' => 'pub/package/arch/main/systemd'
+		},
+		{
+			'active' => 1774698875,
+			'blurb' => 'gitlab.archlinux.org/archlinux/packaging/packages/vi',
+			'kind' => 'repo',
+			'name' => 'vi',
+			'path' => 'pub/package/arch/main/vi'
+		}
+	],
+	'intro' => '',
+	'name' => 'main',
+	'path' => 'pub/package/arch/main',
+	'updated' => 1774698930
+} -%]
+[% PROCESS skel/dir.html -%]

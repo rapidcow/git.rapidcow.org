@@ -1,0 +1,49 @@
+[%
+ # HAVE: pub/project/index.html
+ # NEED: skel/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1795135805,
+	'crumbs' => [
+		{
+			'name' => 'pub',
+			'path' => 'pub'
+		}
+	],
+	'entries' => [
+		{
+			'active' => 1792783281,
+			'count' => 1,
+			'kind' => 'dir',
+			'name' => 'archive',
+			'path' => 'pub/project/archive'
+		},
+		{
+			'active' => 1793142506,
+			'blurb' => 'The Perspective Project',
+			'kind' => 'repo',
+			'name' => 'perspective',
+			'path' => 'pub/project/perspective'
+		},
+		{
+			'active' => 1795135805,
+			'blurb' => 'just conf',
+			'kind' => 'repo',
+			'name' => 'siteconf',
+			'path' => 'pub/project/siteconf'
+		},
+		{
+			'active' => 1794170074,
+			'blurb' => 'my notes app :] (android only for now)',
+			'kind' => 'repo',
+			'name' => 'trivnote',
+			'path' => 'pub/project/trivnote'
+		}
+	],
+	'intro' => '',
+	'name' => 'project',
+	'path' => 'pub/project',
+	'updated' => 1795135805
+} -%]
+[% PROCESS skel/dir.html -%]

@@ -2,4 +2,48 @@ MAKE site
 	NEED index.html
 	NEED robots.txt
 	NEED usage.html
+	NEED style.css
+	NEED app.js
 	NEED pub/school/wisc/sdc/fa-25/team/index.html
+
+# BEGIN gen-repos (generated; do not edit)
+	NEED our/index.html
+	NEED our/package/artix/index.html
+	NEED our/package/freebsd/index.html
+	NEED our/package/homebrew/index.html
+	NEED our/package/index.html
+	NEED pub/index.html
+	NEED pub/lib/index.html
+	NEED pub/lib/perl5/Algo-BSearch/index.html
+	NEED pub/lib/perl5/IPC-Unix/index.html
+	NEED pub/lib/perl5/List-Search/index.html
+	NEED pub/lib/perl5/index.html
+	NEED pub/package/arch/index.html
+	NEED pub/package/arch/main/ed/index.html
+	NEED pub/package/arch/main/git/index.html
+	NEED pub/package/arch/main/index.html
+	NEED pub/package/arch/main/systemd/index.html
+	NEED pub/package/arch/main/vi/index.html
+	NEED pub/package/artix/index.html
+	NEED pub/package/artix/world/git/index.html
+	NEED pub/package/artix/world/index.html
+	NEED pub/package/homebrew/fresh/index.html
+	NEED pub/package/homebrew/index.html
+	NEED pub/package/index.html
+	NEED pub/project/archive/bridge/index.html
+	NEED pub/project/archive/index.html
+	NEED pub/project/index.html
+	NEED pub/project/perspective/index.html
+	NEED pub/project/siteconf/index.html
+	NEED pub/project/trivnote/index.html
+	NEED pub/school/index.html
+	NEED pub/school/wisc/index.html
+	NEED pub/school/wisc/sdc/fa-25/index.html
+	NEED pub/school/wisc/sdc/index.html
+	NEED pub/www/index.html
+	NEED pub/www/site/foss/index.html
+	NEED pub/www/site/index.html
+	NEED pub/www/site/javadoc/index.html
+	NEED pub/www/site/man/index.html
+	NEED pub/www/site/neocities/index.html
+# END gen-repos

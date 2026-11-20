@@ -1,0 +1,36 @@
+[%
+ # HAVE: skel/dir.html
+ # NEED: skel/layout.html
+ # NEED: skel/macros.html
+ #
+ # Directory listing.  Expects `d' (see gen-repos).
+-%]
+[% PROCESS skel/macros.html -%]
+[% WRAPPER skel/layout.html
+	title = d.path _ '/'
+	here = d.name
+	crumbs = d.crumbs
+	updated = d.updated
+	canonical = d.path _ '/' -%]
+<article class="listing">
+	<h1>[% d.path | html %]/</h1>
+	[%- IF d.intro %]
+	<p class="lede">[% d.intro | html %]</p>
+	[%- END %]
+	<ul class="entries">
+		[%- FOREACH e IN d.entries %]
+		<li class="[% e.kind %]">
+			<a class="name" href="[% uri(e.path) %]">[% e.name | html %]<span class="slash">/</span></a>
+			[%- IF e.kind == 'dir' %]
+			<span class="blurb">[% e.count %] repositor[% e.count == 1 ? 'y' : 'ies' %]</span>
+			[%- ELSIF e.blurb %]
+			<span class="blurb">[% e.blurb | html %]</span>
+			[%- ELSE %]
+			<span class="blurb none">no description</span>
+			[%- END %]
+			[% when(e.active, 'when active') %]
+		</li>
+		[%- END %]
+	</ul>
+</article>
+[% END -%]

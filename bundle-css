@@ -1,0 +1,34 @@
+#!/usr/bin/env perl
+# HAVE: bundle-css
+#
+# bundle-css FILE - write FILE with its @import "x.css"; lines
+# replaced by the (recursively bundled) contents of x.css, which
+# is found relative to the file that imports it.  Only plain
+# string imports are understood; that is all we write.
+use strict;
+use warnings;
+use File::Basename qw( dirname );
+use File::Spec;
+
+@ARGV == 1 or die "usage: $0 file\n";
+
+my %open;
+sub bundle {
+	my ($file) = @_;
+	$open{$file}++ and die "$0: import cycle at $file\n";
+	open my $fh, '<:encoding(UTF-8)', $file or die "$0: $file: $!\n";
+	my $dir = dirname($file);
+	my $out = '';
+	while (my $line = <$fh>) {
+		if ($line =~ /^\s*\@import\s+(?:"([^"]+)"|'([^']+)')\s*;\s*$/) {
+			$out .= bundle(File::Spec->catfile($dir, defined $1 ? $1 : $2));
+		} else {
+			$out .= $line;
+		}
+	}
+	delete $open{$file};
+	$out;
+}
+
+binmode STDOUT, ':encoding(UTF-8)';
+print bundle($ARGV[0]);

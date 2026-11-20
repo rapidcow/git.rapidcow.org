@@ -1,0 +1,45 @@
+[%
+ # HAVE: skel/layout.html
+ # NEED: skel/macros.html
+ #
+ # WRAPPER for every page.  Parameters:
+ #   title      <title>
+ #   here       label of this page in the breadcrumbs (none for home)
+ #   crumbs     [ { name, path } ... ] from the root, excluding this page
+ #   canonical  path of this page from the root, as served ('' for home)
+ #   updated    epoch of the last change; omit for hand-written pages
+-%]
+[% PROCESS skel/macros.html -%]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="canonical" href="[% O.site_url.remove('/$') %]/[% canonical %]">
+	<link rel="stylesheet" href="[% locate('/style.css') %]">
+	<script src="[% locate('/app.js') %]" defer></script>
+	<title>[% title | html %]</title>
+</head>
+<body>
+<header class="site">
+	<a class="brand" href="[% locate('/') %]">git.rapidcow.org</a>
+	[%- IF here %]
+	<nav class="crumbs" aria-label="Breadcrumb">
+		[%- FOREACH c IN crumbs %]
+		<a href="[% uri(c.path) %]">[% c.name | html %]</a>
+		[%- END %]
+		<span aria-current="page">[% here | html %]</span>
+	</nav>
+	[%- END %]
+</header>
+<main>
+[% content %]
+</main>
+<footer class="site">
+	[%- IF updated %]
+	<p>Updated <time class="when" datetime="[% iso(updated) %]" title="[% stamp(updated) %]">[% stamp(updated) %]</time></p>
+	[%- END %]
+	<p><a href="[% locate('/usage') %]">How to clone</a> &middot; <a href="[% locate('/') %]">Home</a></p>
+</footer>
+</body>
+</html>

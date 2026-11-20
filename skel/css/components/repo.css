@@ -1,0 +1,66 @@
+/* HAVE: skel/css/components/repo.css: */
+@layer components {
+	.repo {
+		& h1 {
+			font-family: var(--font-mono);
+			font-size: 1.5rem;
+			overflow-wrap: anywhere;
+
+			& .dir { color: var(--ink-dim); font-weight: 400; }
+		}
+
+		& .facts dl {
+			display: grid;
+			grid-template-columns: max-content 1fr;
+			gap: .35rem 1.5rem;
+
+			& dt { color: var(--ink-dim); }
+			& dd { min-width: 0; }
+			& .meta { color: var(--ink-dim); font-size: .85rem; display: block; }
+			& .subject { overflow-wrap: anywhere; }
+		}
+
+		& .events ol {
+			display: grid;
+			gap: .4rem;
+			padding-left: 0;
+			list-style: none;
+
+			& > li {
+				display: flex;
+				flex-wrap: wrap;
+				gap: .25rem .6rem;
+				align-items: baseline;
+				padding-left: .8rem;
+				border-left: 2px solid var(--line);
+
+				&:first-child { border-left-color: var(--accent); }
+			}
+
+			& time { color: var(--ink-dim); font-size: .85rem; min-width: 7rem; }
+			& .verb { color: var(--ink-dim); font-size: .85rem; }
+			& .created .verb { color: var(--ok); }
+			& .deleted .verb { color: var(--bad); }
+			& .note { font-size: .8rem; }
+		}
+
+		& .chips {
+			display: flex;
+			flex-wrap: wrap;
+			gap: .4rem;
+
+			& > li {
+				display: inline-flex;
+				gap: .5rem;
+				align-items: baseline;
+				padding: .15rem .6rem;
+				border: 1px solid var(--line);
+				border-radius: 999px;
+				background: var(--surface);
+
+				& code { background: none; padding: 0; }
+				& time { font-size: .75rem; color: var(--ink-dim); }
+			}
+		}
+	}
+}

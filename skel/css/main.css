@@ -1,0 +1,17 @@
+/* HAVE: skel/css/main.css: */
+/* NEED: skel/css/base/index.css: */
+/* NEED: skel/css/layout/index.css: */
+/* NEED: skel/css/components/index.css: */
+/*
+ * git.rapidcow.org
+ *
+ * Modules nest through @import and are bundled into one style.css
+ * by ./bundle-css, so the browser fetches a single file.  Each
+ * module lives in its own cascade layer; the order is set here.
+ * Rules use native CSS nesting.
+ */
+@layer reset, tokens, base, layout, components;
+
+@import "base/index.css";
+@import "layout/index.css";
+@import "components/index.css";

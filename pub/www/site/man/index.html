@@ -1,0 +1,60 @@
+[%
+ # HAVE: pub/www/site/man/index.html
+ # NEED: skel/repo.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% r = {
+	'active' => 1794506742,
+	'blurb' => 'man pages',
+	'branch' => 'gh-pages',
+	'branches' => [
+		{
+			'name' => 'gh-pages',
+			'time' => 1793602424
+		}
+	],
+	'crumbs' => [
+		{
+			'name' => 'pub',
+			'path' => 'pub'
+		},
+		{
+			'name' => 'www',
+			'path' => 'pub/www'
+		},
+		{
+			'name' => 'site',
+			'path' => 'pub/www/site'
+		}
+	],
+	'desc' => 'man pages',
+	'desc_html' => '',
+	'dir' => 'pub/www/site',
+	'events' => [
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'created',
+					'name' => 'gh-pages',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1794506742
+		}
+	],
+	'guest_ssh' => 1,
+	'name' => 'man',
+	'nbranches' => 1,
+	'ntags' => 0,
+	'path' => 'pub/www/site/man',
+	'tags' => [],
+	'tip' => {
+		'sha' => '0fe8a51',
+		'subject' => 'Import html/man from www.git',
+		'time' => 1793602424
+	},
+	'updated' => 1794603050
+} -%]
+[% PROCESS skel/repo.html -%]
