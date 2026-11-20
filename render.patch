@@ -1,14 +1,16 @@
 --- a/render
 +++ b/render
-@@ -36,6 +36,7 @@
+@@ -35,7 +35,9 @@
+ use strict;
  use warnings;
  
++use Digest::SHA;
  use Encode ();
 +use File::Spec;
  use RdKw::I18N::CodeSets ();
  use RdKw::L10N::TextDomain ':module' => 'RdKw::WwW::SiteConf::L10N';
  
-@@ -116,15 +117,37 @@
+@@ -116,15 +118,39 @@
  my $location = file2uri($target);
  
  #
@@ -44,10 +46,12 @@
  	location => $location,
  	target => $target,
 +	crumbs => \@crumbs,
++	# our own
++	get_version => \&get_version,
  	file2uri => \&file2uri,
  	uri2file => \&uri2file,
  );
-@@ -168,6 +191,7 @@
+@@ -168,6 +194,7 @@
  	DEFINITION => $D,
  	ENCODING => 'UTF-8',
  	INCLUDE_PATH => [ '.', $D->{a} ],
@@ -55,7 +59,7 @@
  })
  	or die "[TT] ", RdKw::WwW::GenGenLib::Template::Provider->error(), "\n";
  my $tt = Template->new({
-@@ -180,3 +204,20 @@
+@@ -180,3 +207,48 @@
  	or die "[TT] ", $tt->error(), "\n";
  
  exit 0;  # goodbye!
@@ -75,4 +79,32 @@
 +			{( $1 eq "index" ? "" : $1 )}eig && !length $uri;
 +	}
 +	$uri;
++}
++
++# Version the built bytes of a declared resource (NEED it in the header):
++# get_version('${B}/${b}/x.css'), or as written out.
++#
++# Peers are OK
++sub get_version
++{
++	@_ == 1 or die Template::Exception->new(usage => "[% get_version(FILE) %]");
++	my ($name) = @_;
++	my $hash = eval {
++		my $path = File::Spec->canonpath(subs_deps($D, $name, { strict => 1 }));
++		my $aka = ($name eq $path) ? "" : " (aka `$name')";
++		# (as it is, not looked for in INCLUDE_PATH)
++		my $error;
++		($path, $error) = $provider->access($path);
++		defined $error and die "Access denied: $error\n";
++		defined $path or die "File `$name'$aka not found\n";
++		open my $fh, '<:raw', $cs->to_fs($path, { prog => 'get_version' })
++			or die "open `$path' (aka `$name'): $!\n";
++		my $digest = Digest::SHA->new(1);
++		$digest->addfile($fh);
++		close $fh or die "close `$path' (aka `$name'): $!\n";
++		(my $hash = $digest->b64digest()) =~ tr'+/='-_.';
++		$hash;
++	};
++	defined $hash or die Template::Exception->new(get_version => $@);
++	$hash;
 +}

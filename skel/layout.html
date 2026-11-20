@@ -1,6 +1,8 @@
 [%
  # HAVE: ${skel}/layout.html
  # NEED: ${skel}/macros.html
+ # NEED: ${B}/${b}/style.css
+ # NEED: ${B}/${b}/app.js
  #
  # WRAPPER for every page.  Parameters:
  #   title      <title>
@@ -16,8 +18,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="canonical" href="[% locate('//' _ canonical) %]">
-	<link rel="stylesheet" href="[% locate('style.css') %]">
-	<script src="[% locate('app.js') %]" defer></script>
+	<link rel="stylesheet" href="[% locate('style.css') %][% h = get_version("${D.B}/${D.b}/style.css"); "?v=$h" IF h %]">
+	<script src="[% locate('app.js') %][% h = get_version("${D.B}/${D.b}/app.js"); "?v=$h" IF h %]" defer></script>
 	<title>[% title | html %]</title>
 </head>
 <body>
