@@ -56,7 +56,13 @@ sub bundle {
 	my $out = '';
 	while (my $line = <$fh>) {
 		if ($line =~ /^\s*\@import\s+(?:"([^"]+)"|'([^']+)')\s*;\s*$/) {
-			$out .= bundle(File::Spec->catfile($dir, defined $1 ? $1 : $2));
+			my $kfp = defined $1 ? $1 : $2;
+			my $kid = bundle(File::Spec->catfile($dir, $kfp));
+			(my $kqp = $kfp) =~ s/([[:cntrl:]\*\"])/
+				ord($1) eq '"' ? '\"' : sprintf('\%03o', ord($1))
+				/eg;
+			$out .= qq[/* \@import "$kqp"; */\n];
+			$out .= $kid;
 		} else {
 			$out .= $line;
 		}
