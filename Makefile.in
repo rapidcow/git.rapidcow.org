@@ -2,14 +2,14 @@
 index.html \
 usage.html \
 pub/school/wisc/sdc/fa-25/team/index.html \
-	: ${A}/render
+	: render
 	cd -- ${A:Q} && ${^X:Q} render -B ${B:Q} \
 		-- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}
 
 robots.txt:
 	cd -- ${A:Q} && cp -- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}
 
-style.css: ${A}/bundle-css
+style.css: bundle-css
 	cd -- ${A:Q} && ${^X:Q} bundle-css -B ${B:Q} -- ${a:Q}/${.IMPSRC:Q} > ${B:Q}/${b:Q}/${.TARGET:Q}
 
 app.js:
@@ -55,7 +55,7 @@ pub/www/site/index.html \
 pub/www/site/javadoc/index.html \
 pub/www/site/man/index.html \
 pub/www/site/neocities/index.html \
-	: ${A}/render
+	: render
 	cd -- ${A:Q} && ${^X:Q} render -B ${B:Q} \
 		-- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}
 # END gen-repos
