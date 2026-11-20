@@ -7,19 +7,19 @@
 -%]
 [% PROCESS "${D.skel}/macros.html" -%]
 [% WRAPPER "${D.skel}/layout.html"
-	title = d.path _ '/'
+	title = (d.dir ? d.dir _ '/' : '') _ d.name _ '/'
 	here = d.name
 	updated = d.updated
-	canonical = d.path _ '/' -%]
+	canonical = d.path -%]
 <article class="listing">
-	<h1>[% d.path | html %]/</h1>
+	<h1>[% d.dir ? d.dir _ '/' : '' | html %][% d.name | html %]/</h1>
 	[%- IF d.intro %]
 	<p class="lede">[% d.intro | html %]</p>
 	[%- END %]
 	<ul class="entries">
 		[%- FOREACH e IN d.entries %]
 		<li class="[% e.kind %]">
-			<a class="name" href="[% locate(e.file) %]">[% e.name | html %]<span class="slash">/</span></a>
+			<a class="name" href="[% locate(e.path) %]">[% e.name | html %]<span class="slash">/</span></a>
 			[%- IF e.kind == 'dir' %]
 			<span class="blurb">[% e.count %] repositor[% e.count == 1 ? 'y' : 'ies' %]</span>
 			[%- ELSIF e.blurb %]

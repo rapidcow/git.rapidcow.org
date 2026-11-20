@@ -7,10 +7,10 @@
 -%]
 [% PROCESS "${D.skel}/macros.html" -%]
 [% WRAPPER "${D.skel}/layout.html"
-	title = r.path
+	title = r.dir _ '/' _ r.name
 	here = r.name
 	updated = r.updated
-	canonical = r.path _ '/' -%]
+	canonical = r.path -%]
 <article class="repo">
 	<h1><span class="dir">[% r.dir | html %]/</span>[% r.name | html %]</h1>
 	[%- IF r.desc_html %]
@@ -23,9 +23,9 @@
 
 	<section class="clone">
 		<h2>Clone</h2>
-<pre><code>git clone [% O.site_url.remove('/$') %]/[% r.path | html %].git
+<pre><code>git clone [% O.site_url.remove('/$') %]/[% r.dir | html %]/[% r.name | html %].git
 [%- IF r.guest_ssh %]
-git clone guest@[% O.site_url.replace('^https?://', '').remove('/$') %]:[% r.path | html %].git
+git clone guest@[% O.site_url.replace('^https?://', '').remove('/$') %]:[% r.dir | html %]/[% r.name | html %].git
 [%- END %]
 </code></pre>
 	</section>

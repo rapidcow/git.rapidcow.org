@@ -346,11 +346,11 @@ for my $d (values %dir) {
 		my ($name) = $c =~ m{([^/]+)\z};
 		if ($d->{entries}{$c} eq 'dir') {
 			my $s = $dir{$c};
-			push @e, { kind => 'dir', name => $name, path => $c, file => "$c/index.html",
+			push @e, { kind => 'dir', name => $name, path => "$c/index.html",
 				count => $s->{count}, active => $s->{active} };
 		} else {
 			my $r = $repo{$c};
-			push @e, { kind => 'repo', name => $name, path => $c, file => "$c/index.html",
+			push @e, { kind => 'repo', name => $name, path => "$c/index.html",
 				blurb => $r->{blurb}, active => $r->{active} };
 		}
 	}
@@ -445,12 +445,16 @@ sub emit {
 	$changed += put($file, stub($file, $var, $data, $template));
 }
 
-emit($_, r => $repo{$_}, 'repo') for sort keys %repo;
+# In what we hand to the templates, `path' is the URI path of the
+# page's file, ready for [% locate(x.path) %]; `dir' and `name' say
+# where it lives.  (Here in this script it is the repository path.)
+emit($_, r => { %{ $repo{$_} }, path => "$_/index.html" }, 'repo') for sort keys %repo;
 for my $p (sort keys %dir) {
 	next if $repo{$p};
 	my %d = %{ $dir{$p} };
 	delete $d{count};
-	emit($p, d => { %d, updated => $dir{$p}{updated} }, 'dir');
+	emit($p, d => { %d, dir => $p =~ m{(.*)/} ? $1 : '', path => "$p/index.html",
+		updated => $dir{$p}{updated} }, 'dir');
 }
 
 # ------------------------------------------------------------------
@@ -462,7 +466,7 @@ for my $p (sort keys %dir) {
 		values %repo)[0 .. 5];
 	my @pushes;
 	for my $r (values %repo) {
-		push @pushes, map { { %$_, path => $r->{path}, file => "$r->{path}/index.html" } } @{ $r->{events} };
+		push @pushes, map { { %$_, path => "$r->{path}/index.html", name => $r->{name} } } @{ $r->{events} };
 	}
 	@pushes = sort { $b->{time} <=> $a->{time} || $a->{path} cmp $b->{path} } @pushes;
 	@pushes = @pushes[0 .. ($#pushes < 7 ? $#pushes : 7)];
@@ -471,9 +475,9 @@ for my $p (sort keys %dir) {
 	my $home = {
 		updated => $updated,
 		nrepos => scalar(keys %repo),
-		roots => [ map { { path => $_->{path}, file => "$_->{path}/index.html", name => $_->{name}, count => $_->{count},
+		roots => [ map { { path => "$_->{path}/index.html", name => $_->{name}, count => $_->{count},
 			active => $_->{active}, intro => $_->{intro} } } @roots ],
-		recent => [ map { { path => $_->{path}, file => "$_->{path}/index.html", blurb => $_->{blurb}, active => $_->{active} } }
+		recent => [ map { { path => "$_->{path}/index.html", dir => $_->{dir}, name => $_->{name}, blurb => $_->{blurb}, active => $_->{active} } }
 			grep { defined } @recent ],
 		pushes => \@pushes,
 	};

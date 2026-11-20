@@ -5,19 +5,19 @@
 -%]
 [% d = {
 	'active' => 1795148361,
+	'dir' => '',
 	'entries' => [
 		{
 			'active' => 1795148361,
 			'count' => 3,
-			'file' => 'our/package/index.html',
 			'kind' => 'dir',
 			'name' => 'package',
-			'path' => 'our/package'
+			'path' => 'our/package/index.html'
 		}
 	],
 	'intro' => 'Shared projects: not necessarily ready for production. A directory here is a project (or group) of that name.',
 	'name' => 'our',
-	'path' => 'our',
+	'path' => 'our/index.html',
 	'updated' => 1795148361
 } -%]
 [% PROCESS "${D.skel}/dir.html" -%]

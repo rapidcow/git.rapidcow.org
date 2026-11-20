@@ -3,9 +3,9 @@
 	'nrepos' => 21,
 	'pushes' => [
 		{
-			'file' => 'our/package/homebrew/index.html',
 			'more' => 0,
-			'path' => 'our/package/homebrew',
+			'name' => 'homebrew',
+			'path' => 'our/package/homebrew/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
@@ -17,9 +17,9 @@
 			'time' => 1795148361
 		},
 		{
-			'file' => 'our/package/homebrew/index.html',
 			'more' => 0,
-			'path' => 'our/package/homebrew',
+			'name' => 'homebrew',
+			'path' => 'our/package/homebrew/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
@@ -31,9 +31,9 @@
 			'time' => 1795135907
 		},
 		{
-			'file' => 'pub/project/siteconf/index.html',
 			'more' => 0,
-			'path' => 'pub/project/siteconf',
+			'name' => 'siteconf',
+			'path' => 'pub/project/siteconf/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
@@ -51,9 +51,9 @@
 			'time' => 1795135805
 		},
 		{
-			'file' => 'our/package/homebrew/index.html',
 			'more' => 0,
-			'path' => 'our/package/homebrew',
+			'name' => 'homebrew',
+			'path' => 'our/package/homebrew/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
@@ -65,9 +65,9 @@
 			'time' => 1795134685
 		},
 		{
-			'file' => 'our/package/homebrew/index.html',
 			'more' => 0,
-			'path' => 'our/package/homebrew',
+			'name' => 'homebrew',
+			'path' => 'our/package/homebrew/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
@@ -79,9 +79,9 @@
 			'time' => 1795134083
 		},
 		{
-			'file' => 'our/package/homebrew/index.html',
 			'more' => 0,
-			'path' => 'our/package/homebrew',
+			'name' => 'homebrew',
+			'path' => 'our/package/homebrew/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
@@ -93,9 +93,9 @@
 			'time' => 1795132267
 		},
 		{
-			'file' => 'our/package/homebrew/index.html',
 			'more' => 0,
-			'path' => 'our/package/homebrew',
+			'name' => 'homebrew',
+			'path' => 'our/package/homebrew/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
@@ -107,9 +107,9 @@
 			'time' => 1795131425
 		},
 		{
-			'file' => 'pub/project/siteconf/index.html',
 			'more' => 0,
-			'path' => 'pub/project/siteconf',
+			'name' => 'siteconf',
+			'path' => 'pub/project/siteconf/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
@@ -131,56 +131,60 @@
 		{
 			'active' => 1795148361,
 			'blurb' => 'homebrew',
-			'file' => 'our/package/homebrew/index.html',
-			'path' => 'our/package/homebrew'
+			'dir' => 'our/package',
+			'name' => 'homebrew',
+			'path' => 'our/package/homebrew/index.html'
 		},
 		{
 			'active' => 1795135805,
 			'blurb' => 'just conf',
-			'file' => 'pub/project/siteconf/index.html',
-			'path' => 'pub/project/siteconf'
+			'dir' => 'pub/project',
+			'name' => 'siteconf',
+			'path' => 'pub/project/siteconf/index.html'
 		},
 		{
 			'active' => 1794995808,
 			'blurb' => 'javadoc.rapidcow.org',
-			'file' => 'pub/www/site/javadoc/index.html',
-			'path' => 'pub/www/site/javadoc'
+			'dir' => 'pub/www/site',
+			'name' => 'javadoc',
+			'path' => 'pub/www/site/javadoc/index.html'
 		},
 		{
 			'active' => 1794994572,
 			'blurb' => 'foss.rapidcow.org',
-			'file' => 'pub/www/site/foss/index.html',
-			'path' => 'pub/www/site/foss'
+			'dir' => 'pub/www/site',
+			'name' => 'foss',
+			'path' => 'pub/www/site/foss/index.html'
 		},
 		{
 			'active' => 1794914509,
 			'blurb' => 'rapidcow.neocities.org',
-			'file' => 'pub/www/site/neocities/index.html',
-			'path' => 'pub/www/site/neocities'
+			'dir' => 'pub/www/site',
+			'name' => 'neocities',
+			'path' => 'pub/www/site/neocities/index.html'
 		},
 		{
 			'active' => 1794507246,
 			'blurb' => 'freebsd',
-			'file' => 'our/package/freebsd/index.html',
-			'path' => 'our/package/freebsd'
+			'dir' => 'our/package',
+			'name' => 'freebsd',
+			'path' => 'our/package/freebsd/index.html'
 		}
 	],
 	'roots' => [
 		{
 			'active' => 1795148361,
 			'count' => 3,
-			'file' => 'our/index.html',
 			'intro' => 'Shared projects: not necessarily ready for production. A directory here is a project (or group) of that name.',
 			'name' => 'our',
-			'path' => 'our'
+			'path' => 'our/index.html'
 		},
 		{
 			'active' => 1795135805,
 			'count' => 18,
-			'file' => 'pub/index.html',
 			'intro' => 'Public projects.',
 			'name' => 'pub',
-			'path' => 'pub'
+			'path' => 'pub/index.html'
 		}
 	],
 	'updated' => 1795148361
