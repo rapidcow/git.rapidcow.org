@@ -2,7 +2,7 @@
 #
 # configure -- written by `siteconf -i' version 0.03_00.
 #
-# options: -Sa=. -Dskel=skel -Dlib=lib -Dgen=gen -P web -Osite_url=https://git.rapidcow.org/ -MRdKw::WwW::GenGenLib::Template::Provider
+# options: -Sa=. -Dskel=skel -Dlib=lib -Dgen=gen -Dgitweb_base_url=https://gitlab.com/rapidcow/git.rapidcow.org/-/blob/main/ -P web -Osite_url=https://git.rapidcow.org/ -MRdKw::WwW::GenGenLib::Template::Provider
 #
 
 use utf8;
@@ -137,6 +137,7 @@ our %Dd = (
 	clean => "clean",
 	e => ".ok",
 	gen => "gen",
+	gitweb_base_url => "https://gitlab.com/rapidcow/git.rapidcow.org/-/blob/main/",
 	lib => "lib",
 	skel => "skel",
 );
@@ -158,6 +159,7 @@ our @VARHELP = (
 	[ '-De', N__('Directory marker'), sub { $Dd{e} } ],
 	[ '-Dclean', N__('Clean rule template'), sub { $Dd{clean} } ],
 	[ "-Dgen", "Generated data directory", sub { $Dd{gen} } ],
+	[ "-Dgitweb_base_url", "Source browser base URL", sub { $Dd{gitweb_base_url} } ],
 	[ "-Dlib", "Library directory (CSS modules, scripts)", sub { $Dd{lib} } ],
 	[ "-Dskel", "Template directory", sub { $Dd{skel} } ],
 );

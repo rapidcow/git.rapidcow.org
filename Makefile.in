@@ -1,3 +1,6 @@
+${c}/git-version.tt: ${a} git-version-gen
+	cd -- ${A:Q} && ./git-version-gen > ${B:Q}/${c:Q}/git-version.tt
+
 
 index.html \
 usage.html \

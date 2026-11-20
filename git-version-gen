@@ -1,0 +1,16 @@
+#!/bin/sh
+# Emit Template Toolkit assignments; run from the source tree.
+set -eu
+version=$(git rev-parse --short HEAD)
+dirty=0
+if [ -n "$(git status --porcelain --untracked-files=normal)" ]; then
+	dirty=1
+	version=$version-dirty
+fi
+# Data refreshes should not change the site's code date.
+updated=$(git log -1 --format=%ct -- . ':(exclude)gen/**')
+case $updated in
+	''|*[!0-9]*) updated=0 ;;
+esac
+printf '[%% git_version = "%s"; git_dirty = %s; git_updated = %s; %%]\n' \
+	"$version" "$dirty" "$updated"

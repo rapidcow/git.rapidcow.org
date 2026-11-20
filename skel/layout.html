@@ -1,6 +1,7 @@
 [%
  # HAVE: ${skel}/layout.html
  # NEED: ${skel}/macros.html
+ # NEED: ${B}/${c}/git-version.tt
  # NEED: ${B}/${b}/style.css
  # NEED: ${B}/${b}/app.js
  #
@@ -12,6 +13,7 @@
  #   updated    epoch of the last change; omit for hand-written pages
 -%]
 [% PROCESS "${D.skel}/macros.html" -%]
+[% PROCESS "${D.B}/${D.c}/git-version.tt" -%]
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,6 +47,11 @@
 	[%- IF updated %]
 	<p>Updated <time class="when" datetime="[% iso(updated) %]" title="[% stamp(updated) %]">[% stamp(updated) %]</time></p>
 	[%- END %]
+	<p>Git build <code>[% git_version %]</code> &middot;
+	[%- IF git_dirty %] Read source
+	[%- ELSE %] <a href="[% D.gitweb_base_url _ location | html %]">Read source</a>
+	[%- END %]
+	[%- IF git_updated %] &middot; [% when(git_updated) %][% END %]</p>
 	<p><a href="[% locate('usage.html') %]">How to clone</a> &middot; <a href="[% locate('index.html') %]">Home</a></p>
 </footer>
 </body>
