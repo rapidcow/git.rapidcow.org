@@ -1,2 +1,64 @@
 #!/bin/sh
-siteconf -if -Sa=. -Dskel -P web -Osite_url=https://git.rapidcow.org/ -MRdKw::WwW::GenGenLib::Template::Provider
+# from www-org
+
+set -e
+files="configure render"
+root="../../.."
+siteconf () {
+command siteconf -if -Sa=. -Dskel -P web \
+	-Osite_url=https://git.rapidcow.org/ \
+	-MRdKw::WwW::GenGenLib::Template::Provider
+}
+
+s=0
+while getopts s o
+do
+	case $o in
+	s) s=1;;
+	*)
+		echo "usage: $0 [-s]" >&2
+		exit 2
+		;;
+	esac
+done
+
+tmp="$(mktemp -d "${TMPDIR:-/tmp}/reconf.XXXXXX")"
+trap 'rm -rf "$tmp"' EXIT HUP INT TERM
+
+( cd "${tmp}" && siteconf; )
+
+for f in ${files}
+do
+	cp -f -- "${tmp}/$f" "$f.new"
+	if [ "$s" -eq 0 ]
+	then
+		if [ -s "$f.patch" ]
+		then
+			[ -e "$f" ] && mv -f -- "$f" "$f.old"
+			cp -f -- "$f.new" "$f"
+			echo "Applying $f.patch" >&2
+			patch "$f" < "$f.patch"
+		else
+			cp -f -- "$f.new" "$f"
+		fi
+	fi
+
+	if [ -e "$f" ]
+	then
+		stat=0
+		# diff(1) exits 1 when the files differ, which we accept.
+		diff -u --label "a/$f" --label "b/$f" "$f.new" "$f" \
+			> "$f.patch.tmp" || stat=$?
+		case ${stat} in
+		0)
+			rm -f -- "$f.patch.tmp"
+			;;
+		1)
+			mv -f -- "$f.patch.tmp" "$f.patch"
+			echo "Saved $f.patch"
+			;;
+		*)
+			exit ${stat}
+		esac
+	fi
+done
