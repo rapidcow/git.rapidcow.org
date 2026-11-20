@@ -9,10 +9,10 @@ pub/school/wisc/sdc/fa-25/team/index.html \
 robots.txt:
 	cd -- ${A:Q} && cp -- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}
 
-style.css: ${a}/skel/css/main.css bundle-css
-	cd -- ${A:Q} && ${^X:Q} bundle-css ${a:Q}/${<:Q} > ${B:Q}/${b:Q}/${@:Q}
+style.css: bundle-css
+	cd -- ${A:Q} && ${^X:Q} bundle-css ${a:Q}/${.IMPSRC:Q} > ${B:Q}/${b:Q}/${.TARGET:Q}
 
-app.js: ${a}/skel/app.js
+app.js: ${a}/${lib}/js/app.js
 	cd -- ${A:Q} && cp -- ${a:Q}/${<:Q} ${B:Q}/${b:Q}/${@:Q}
 
 # BEGIN gen-repos (generated; do not edit)

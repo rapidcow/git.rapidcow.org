@@ -1,4 +1,4 @@
-/* HAVE: skel/css/base/type.css: */
+/* HAVE: ${lib}/css/base/type.css: */
 @layer base {
 	body {
 		background: var(--bg);

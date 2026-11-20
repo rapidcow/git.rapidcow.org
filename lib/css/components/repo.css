@@ -1,4 +1,4 @@
-/* HAVE: skel/css/components/repo.css: */
+/* HAVE: ${lib}/css/components/repo.css: */
 @layer components {
 	.repo {
 		& h1 {

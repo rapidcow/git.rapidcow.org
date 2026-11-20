@@ -1,4 +1,4 @@
-/* HAVE: skel/css/base/reset.css: */
+/* HAVE: ${lib}/css/base/reset.css: */
 @layer reset {
 	*, *::before, *::after { box-sizing: border-box; }
 	* { margin: 0; }

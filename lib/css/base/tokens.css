@@ -1,4 +1,4 @@
-/* HAVE: skel/css/base/tokens.css: */
+/* HAVE: ${lib}/css/base/tokens.css: */
 @layer tokens {
 	:root {
 		color-scheme: light dark;

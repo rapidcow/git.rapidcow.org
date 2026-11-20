@@ -1,12 +1,12 @@
 [%
- # HAVE: skel/dir.html
- # NEED: skel/layout.html
- # NEED: skel/macros.html
+ # HAVE: ${skel}/dir.html
+ # NEED: ${skel}/layout.html
+ # NEED: ${skel}/macros.html
  #
  # Directory listing.  Expects `d' (see gen-repos).
 -%]
-[% PROCESS skel/macros.html -%]
-[% WRAPPER skel/layout.html
+[% PROCESS "${D.skel}/macros.html" -%]
+[% WRAPPER "${D.skel}/layout.html"
 	title = d.path _ '/'
 	here = d.name
 	updated = d.updated

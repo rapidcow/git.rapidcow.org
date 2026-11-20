@@ -1,10 +1,14 @@
 --- a/configure
 +++ b/configure
-@@ -155,7 +155,7 @@
+@@ -157,9 +157,9 @@
  	[ '-DF', N__('Manifest, from current directory'), sub { $Dd{F} } ],
  	[ '-De', N__('Directory marker'), sub { $Dd{e} } ],
  	[ '-Dclean', N__('Clean rule template'), sub { $Dd{clean} } ],
+-	[ "-Dgen", "", sub { $Dd{gen} } ],
+-	[ "-Dlib", "", sub { $Dd{lib} } ],
 -	[ "-Dskel", "", sub { $Dd{skel} } ],
++	[ "-Dgen", "Generated data directory", sub { $Dd{gen} } ],
++	[ "-Dlib", "Library directory (CSS modules, scripts)", sub { $Dd{lib} } ],
 +	[ "-Dskel", "Template directory", sub { $Dd{skel} } ],
  );
  our @OPTHELP = (

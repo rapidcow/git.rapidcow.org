@@ -1,0 +1,7 @@
+/* HAVE: ${lib}/css/base/index.css: */
+/* NEED: ${lib}/css/base/reset.css: */
+/* NEED: ${lib}/css/base/tokens.css: */
+/* NEED: ${lib}/css/base/type.css: */
+@import "reset.css";
+@import "tokens.css";
+@import "type.css";

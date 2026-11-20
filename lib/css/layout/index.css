@@ -1,0 +1,3 @@
+/* HAVE: ${lib}/css/layout/index.css: */
+/* NEED: ${lib}/css/layout/page.css: */
+@import "page.css";

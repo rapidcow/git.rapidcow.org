@@ -1,12 +1,12 @@
 [%
  # HAVE: index.html
- # NEED: skel/layout.html
- # NEED: skel/macros.html
- # NEED: gen/home.tt
+ # NEED: ${skel}/layout.html
+ # NEED: ${skel}/macros.html
+ # NEED: ${gen}/home.tt
 -%]
-[% PROCESS gen/home.tt -%]
-[% PROCESS skel/macros.html -%]
-[% WRAPPER skel/layout.html
+[% PROCESS "${D.gen}/home.tt" -%]
+[% PROCESS "${D.skel}/macros.html" -%]
+[% WRAPPER "${D.skel}/layout.html"
 	title = 'git.rapidcow.org'
 	canonical = ''
 	updated = home.updated -%]

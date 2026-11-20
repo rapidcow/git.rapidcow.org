@@ -1,6 +1,6 @@
 [%
  # HAVE: pub/package/artix/world/git/index.html
- # NEED: skel/repo.html
+ # NEED: ${skel}/repo.html
  # GENERATED: gen-repos (edits will be lost)
 -%]
 [% r = {
@@ -146,4 +146,4 @@
 	},
 	'updated' => 1794471345
 } -%]
-[% PROCESS skel/repo.html -%]
+[% PROCESS "${D.skel}/repo.html" -%]

@@ -1,6 +1,6 @@
 [%
  # HAVE: pub/www/site/man/index.html
- # NEED: skel/repo.html
+ # NEED: ${skel}/repo.html
  # GENERATED: gen-repos (edits will be lost)
 -%]
 [% r = {
@@ -43,4 +43,4 @@
 	},
 	'updated' => 1794603050
 } -%]
-[% PROCESS skel/repo.html -%]
+[% PROCESS "${D.skel}/repo.html" -%]

@@ -1,0 +1,7 @@
+/* HAVE: ${lib}/css/components/index.css: */
+/* NEED: ${lib}/css/components/prose.css: */
+/* NEED: ${lib}/css/components/listing.css: */
+/* NEED: ${lib}/css/components/repo.css: */
+@import "prose.css";
+@import "listing.css";
+@import "repo.css";

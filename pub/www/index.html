@@ -1,6 +1,6 @@
 [%
  # HAVE: pub/www/index.html
- # NEED: skel/dir.html
+ # NEED: ${skel}/dir.html
  # GENERATED: gen-repos (edits will be lost)
 -%]
 [% d = {
@@ -19,4 +19,4 @@
 	'path' => 'pub/www',
 	'updated' => 1794995808
 } -%]
-[% PROCESS skel/dir.html -%]
+[% PROCESS "${D.skel}/dir.html" -%]

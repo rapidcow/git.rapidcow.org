@@ -1,4 +1,4 @@
-/* HAVE: skel/css/components/prose.css: */
+/* HAVE: ${lib}/css/components/prose.css: */
 /* Hand-written pages: home, usage. */
 @layer components {
 	main.prose, .prose {

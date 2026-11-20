@@ -1,7 +1,7 @@
-/* HAVE: skel/css/main.css: */
-/* NEED: skel/css/base/index.css: */
-/* NEED: skel/css/layout/index.css: */
-/* NEED: skel/css/components/index.css: */
+/* HAVE: style.css: */
+/* NEED: ${lib}/css/base/index.css: */
+/* NEED: ${lib}/css/layout/index.css: */
+/* NEED: ${lib}/css/components/index.css: */
 /*
  * git.rapidcow.org
  *
@@ -12,6 +12,6 @@
  */
 @layer reset, tokens, base, layout, components;
 
-@import "base/index.css";
-@import "layout/index.css";
-@import "components/index.css";
+@import "lib/css/base/index.css";
+@import "lib/css/layout/index.css";
+@import "lib/css/components/index.css";

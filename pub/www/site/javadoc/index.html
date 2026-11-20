@@ -1,6 +1,6 @@
 [%
  # HAVE: pub/www/site/javadoc/index.html
- # NEED: skel/repo.html
+ # NEED: ${skel}/repo.html
  # GENERATED: gen-repos (edits will be lost)
 -%]
 [% r = {
@@ -127,4 +127,4 @@
 	},
 	'updated' => 1794995808
 } -%]
-[% PROCESS skel/repo.html -%]
+[% PROCESS "${D.skel}/repo.html" -%]

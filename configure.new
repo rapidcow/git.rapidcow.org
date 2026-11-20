@@ -2,7 +2,7 @@
 #
 # configure -- written by `siteconf -i' version 0.03_00.
 #
-# options: -Sa=. -Dskel -P web -Osite_url=https://git.rapidcow.org/ -MRdKw::WwW::GenGenLib::Template::Provider
+# options: -Sa=. -Dskel=skel -Dlib=lib -Dgen=gen -P web -Osite_url=https://git.rapidcow.org/ -MRdKw::WwW::GenGenLib::Template::Provider
 #
 
 use utf8;
@@ -136,7 +136,9 @@ our %Dd = (
 	c => "site",
 	clean => "clean",
 	e => ".ok",
-	skel => "",
+	gen => "gen",
+	lib => "lib",
+	skel => "skel",
 );
 our %Od = (
 	site_url => "https://git.rapidcow.org/",
@@ -155,6 +157,8 @@ our @VARHELP = (
 	[ '-DF', N__('Manifest, from current directory'), sub { $Dd{F} } ],
 	[ '-De', N__('Directory marker'), sub { $Dd{e} } ],
 	[ '-Dclean', N__('Clean rule template'), sub { $Dd{clean} } ],
+	[ "-Dgen", "", sub { $Dd{gen} } ],
+	[ "-Dlib", "", sub { $Dd{lib} } ],
 	[ "-Dskel", "", sub { $Dd{skel} } ],
 );
 our @OPTHELP = (

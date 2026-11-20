@@ -423,11 +423,11 @@ sub stub {
 	return <<"EOT";
 [%
  # HAVE: $file
- # NEED: skel/$template.html
+ # NEED: \${skel}/$template.html
  # $SENTINEL (edits will be lost)
 -%]
 [% $var = @{[ tt($data) ]} -%]
-[% PROCESS skel/$template.html -%]
+[% PROCESS "\${D.skel}/$template.html" -%]
 EOT
 }
 

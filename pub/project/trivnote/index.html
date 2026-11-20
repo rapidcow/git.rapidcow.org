@@ -1,6 +1,6 @@
 [%
  # HAVE: pub/project/trivnote/index.html
- # NEED: skel/repo.html
+ # NEED: ${skel}/repo.html
  # GENERATED: gen-repos (edits will be lost)
 -%]
 [% r = {
@@ -204,4 +204,4 @@
 	},
 	'updated' => 1794170074
 } -%]
-[% PROCESS skel/repo.html -%]
+[% PROCESS "${D.skel}/repo.html" -%]

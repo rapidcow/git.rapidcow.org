@@ -1,6 +1,6 @@
 [%
- # HAVE: skel/layout.html
- # NEED: skel/macros.html
+ # HAVE: ${skel}/layout.html
+ # NEED: ${skel}/macros.html
  #
  # WRAPPER for every page.  Parameters:
  #   title      <title>
@@ -9,7 +9,7 @@
  #   canonical  path of this page from the root, as served ('' for home)
  #   updated    epoch of the last change; omit for hand-written pages
 -%]
-[% PROCESS skel/macros.html -%]
+[% PROCESS "${D.skel}/macros.html" -%]
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,6 +1,6 @@
 [%
  # HAVE: our/package/index.html
- # NEED: skel/dir.html
+ # NEED: ${skel}/dir.html
  # GENERATED: gen-repos (edits will be lost)
 -%]
 [% d = {
@@ -33,4 +33,4 @@
 	'path' => 'our/package',
 	'updated' => 1795148361
 } -%]
-[% PROCESS skel/dir.html -%]
+[% PROCESS "${D.skel}/dir.html" -%]

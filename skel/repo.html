@@ -1,12 +1,12 @@
 [%
- # HAVE: skel/repo.html
- # NEED: skel/layout.html
- # NEED: skel/macros.html
+ # HAVE: ${skel}/repo.html
+ # NEED: ${skel}/layout.html
+ # NEED: ${skel}/macros.html
  #
  # Repository homepage.  Expects `r' (see gen-repos).
 -%]
-[% PROCESS skel/macros.html -%]
-[% WRAPPER skel/layout.html
+[% PROCESS "${D.skel}/macros.html" -%]
+[% WRAPPER "${D.skel}/layout.html"
 	title = r.path
 	here = r.name
 	updated = r.updated

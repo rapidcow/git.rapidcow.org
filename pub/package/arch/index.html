@@ -1,6 +1,6 @@
 [%
  # HAVE: pub/package/arch/index.html
- # NEED: skel/dir.html
+ # NEED: ${skel}/dir.html
  # GENERATED: gen-repos (edits will be lost)
 -%]
 [% d = {
@@ -19,4 +19,4 @@
 	'path' => 'pub/package/arch',
 	'updated' => 1774698930
 } -%]
-[% PROCESS skel/dir.html -%]
+[% PROCESS "${D.skel}/dir.html" -%]

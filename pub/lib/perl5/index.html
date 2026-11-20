@@ -1,6 +1,6 @@
 [%
  # HAVE: pub/lib/perl5/index.html
- # NEED: skel/dir.html
+ # NEED: ${skel}/dir.html
  # GENERATED: gen-repos (edits will be lost)
 -%]
 [% d = {
@@ -33,4 +33,4 @@
 	'path' => 'pub/lib/perl5',
 	'updated' => 1793836369
 } -%]
-[% PROCESS skel/dir.html -%]
+[% PROCESS "${D.skel}/dir.html" -%]

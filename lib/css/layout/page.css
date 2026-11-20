@@ -1,4 +1,4 @@
-/* HAVE: skel/css/layout/page.css: */
+/* HAVE: ${lib}/css/layout/page.css: */
 @layer layout {
 	body {
 		display: grid;

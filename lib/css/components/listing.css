@@ -1,4 +1,4 @@
-/* HAVE: skel/css/components/listing.css: */
+/* HAVE: ${lib}/css/components/listing.css: */
 /* Directory listings and the home page's repo lists. */
 @layer components {
 	.entries {

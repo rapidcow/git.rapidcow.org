@@ -5,7 +5,7 @@ set -e
 files="configure render"
 root="../../.."
 siteconf () {
-command siteconf -if -Sa=. -Dskel -P web \
+command siteconf -if -Sa=. -Dskel=skel -Dlib=lib -Dgen=gen -P web \
 	-Osite_url=https://git.rapidcow.org/ \
 	-MRdKw::WwW::GenGenLib::Template::Provider
 }
