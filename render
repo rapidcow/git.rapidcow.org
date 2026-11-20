@@ -212,14 +212,12 @@ exit 0;  # goodbye!
 sub rewrite
 {
 	my ($uri) = @_;
-	for ($uri) {
-		s{([^/]+)\.html$}
-		 {( $1 eq "index" ? "" : $1 )}eig
-		if $O->{site_url} =~ m{^https?://}i;
-
-		# If that matched the whole string,
-		# we are going to ".".
-		$_ = '.' if !length;
+	if ($O->{site_url} =~ m{^https?://}i) {
+		# Only if we stripped something, and that was all of it,
+		# do we go to ".": an empty URI that locate itself gave us
+		# means "this page" and must be left alone.
+		$uri = '.' if $uri =~ s{([^/]+)\.html$}
+			{( $1 eq "index" ? "" : $1 )}eig && !length $uri;
 	}
 	$uri;
 }
