@@ -346,11 +346,11 @@ for my $d (values %dir) {
 		my ($name) = $c =~ m{([^/]+)\z};
 		if ($d->{entries}{$c} eq 'dir') {
 			my $s = $dir{$c};
-			push @e, { kind => 'dir', name => $name, path => $c,
+			push @e, { kind => 'dir', name => $name, path => $c, file => "$c/index.html",
 				count => $s->{count}, active => $s->{active} };
 		} else {
 			my $r = $repo{$c};
-			push @e, { kind => 'repo', name => $name, path => $c,
+			push @e, { kind => 'repo', name => $name, path => $c, file => "$c/index.html",
 				blurb => $r->{blurb}, active => $r->{active} };
 		}
 	}
@@ -462,7 +462,7 @@ for my $p (sort keys %dir) {
 		values %repo)[0 .. 5];
 	my @pushes;
 	for my $r (values %repo) {
-		push @pushes, map { { %$_, path => $r->{path} } } @{ $r->{events} };
+		push @pushes, map { { %$_, path => $r->{path}, file => "$r->{path}/index.html" } } @{ $r->{events} };
 	}
 	@pushes = sort { $b->{time} <=> $a->{time} || $a->{path} cmp $b->{path} } @pushes;
 	@pushes = @pushes[0 .. ($#pushes < 7 ? $#pushes : 7)];
@@ -471,9 +471,9 @@ for my $p (sort keys %dir) {
 	my $home = {
 		updated => $updated,
 		nrepos => scalar(keys %repo),
-		roots => [ map { { path => $_->{path}, name => $_->{name}, count => $_->{count},
+		roots => [ map { { path => $_->{path}, file => "$_->{path}/index.html", name => $_->{name}, count => $_->{count},
 			active => $_->{active}, intro => $_->{intro} } } @roots ],
-		recent => [ map { { path => $_->{path}, blurb => $_->{blurb}, active => $_->{active} } }
+		recent => [ map { { path => $_->{path}, file => "$_->{path}/index.html", blurb => $_->{blurb}, active => $_->{active} } }
 			grep { defined } @recent ],
 		pushes => \@pushes,
 	};

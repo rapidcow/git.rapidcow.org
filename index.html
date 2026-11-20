@@ -18,7 +18,7 @@
 	<ul class="entries">
 		[%- FOREACH x IN home.roots %]
 		<li class="dir">
-			<a class="name" href="[% locate(x.path _ '/index.html') %]">[% x.name | html %]<span class="slash">/</span></a>
+			<a class="name" href="[% locate(x.file) %]">[% x.name | html %]<span class="slash">/</span></a>
 			<span class="blurb">[% x.intro | html %]</span>
 			[% when(x.active, 'when active') %]
 		</li>
@@ -30,7 +30,7 @@
 			<h2>Recently active</h2>
 			<ol class="plain">
 				[%- FOREACH r IN home.recent %]
-				<li><a class="repo-name" href="[% locate(r.path _ '/index.html') %]">[% r.path | html %]</a>
+				<li><a class="repo-name" href="[% locate(r.file) %]">[% r.path | html %]</a>
 					[% when(r.active, 'when active') %]</li>
 				[%- END %]
 			</ol>
@@ -39,7 +39,7 @@
 			<h2>Recent pushes</h2>
 			<ol class="plain">
 				[%- FOREACH e IN home.pushes %]
-				<li><a class="repo-name" href="[% locate(e.path _ '/index.html') %]">[% e.path.replace('^.*/', '') | html %]</a>
+				<li><a class="repo-name" href="[% locate(e.file) %]">[% e.path.replace('^.*/', '') | html %]</a>
 					[%- FOREACH x IN e.refs.slice(0, 1) %]
 					<code>[% x.name | html %]</code>[% x.note ? ' ' _ x.note : '' | html %]
 					[%- END %]

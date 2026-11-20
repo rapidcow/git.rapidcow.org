@@ -3,6 +3,7 @@
 	'nrepos' => 21,
 	'pushes' => [
 		{
+			'file' => 'our/package/homebrew/index.html',
 			'more' => 0,
 			'path' => 'our/package/homebrew',
 			'refs' => [
@@ -16,6 +17,7 @@
 			'time' => 1795148361
 		},
 		{
+			'file' => 'our/package/homebrew/index.html',
 			'more' => 0,
 			'path' => 'our/package/homebrew',
 			'refs' => [
@@ -29,6 +31,7 @@
 			'time' => 1795135907
 		},
 		{
+			'file' => 'pub/project/siteconf/index.html',
 			'more' => 0,
 			'path' => 'pub/project/siteconf',
 			'refs' => [
@@ -48,6 +51,7 @@
 			'time' => 1795135805
 		},
 		{
+			'file' => 'our/package/homebrew/index.html',
 			'more' => 0,
 			'path' => 'our/package/homebrew',
 			'refs' => [
@@ -61,6 +65,7 @@
 			'time' => 1795134685
 		},
 		{
+			'file' => 'our/package/homebrew/index.html',
 			'more' => 0,
 			'path' => 'our/package/homebrew',
 			'refs' => [
@@ -74,6 +79,7 @@
 			'time' => 1795134083
 		},
 		{
+			'file' => 'our/package/homebrew/index.html',
 			'more' => 0,
 			'path' => 'our/package/homebrew',
 			'refs' => [
@@ -87,6 +93,7 @@
 			'time' => 1795132267
 		},
 		{
+			'file' => 'our/package/homebrew/index.html',
 			'more' => 0,
 			'path' => 'our/package/homebrew',
 			'refs' => [
@@ -100,6 +107,7 @@
 			'time' => 1795131425
 		},
 		{
+			'file' => 'pub/project/siteconf/index.html',
 			'more' => 0,
 			'path' => 'pub/project/siteconf',
 			'refs' => [
@@ -123,31 +131,37 @@
 		{
 			'active' => 1795148361,
 			'blurb' => 'homebrew',
+			'file' => 'our/package/homebrew/index.html',
 			'path' => 'our/package/homebrew'
 		},
 		{
 			'active' => 1795135805,
 			'blurb' => 'just conf',
+			'file' => 'pub/project/siteconf/index.html',
 			'path' => 'pub/project/siteconf'
 		},
 		{
 			'active' => 1794995808,
 			'blurb' => 'javadoc.rapidcow.org',
+			'file' => 'pub/www/site/javadoc/index.html',
 			'path' => 'pub/www/site/javadoc'
 		},
 		{
 			'active' => 1794994572,
 			'blurb' => 'foss.rapidcow.org',
+			'file' => 'pub/www/site/foss/index.html',
 			'path' => 'pub/www/site/foss'
 		},
 		{
 			'active' => 1794914509,
 			'blurb' => 'rapidcow.neocities.org',
+			'file' => 'pub/www/site/neocities/index.html',
 			'path' => 'pub/www/site/neocities'
 		},
 		{
 			'active' => 1794507246,
 			'blurb' => 'freebsd',
+			'file' => 'our/package/freebsd/index.html',
 			'path' => 'our/package/freebsd'
 		}
 	],
@@ -155,6 +169,7 @@
 		{
 			'active' => 1795148361,
 			'count' => 3,
+			'file' => 'our/index.html',
 			'intro' => 'Shared projects: not necessarily ready for production. A directory here is a project (or group) of that name.',
 			'name' => 'our',
 			'path' => 'our'
@@ -162,6 +177,7 @@
 		{
 			'active' => 1795135805,
 			'count' => 18,
+			'file' => 'pub/index.html',
 			'intro' => 'Public projects.',
 			'name' => 'pub',
 			'path' => 'pub'
