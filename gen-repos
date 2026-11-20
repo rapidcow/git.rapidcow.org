@@ -326,10 +326,8 @@ my (%page, %dir);    # path => ...
 for my $path (sort keys %repo) {
 	my $r = $repo{$path};
 	my @p = split m{/}, $path;
-	my @crumbs;
 	for my $i (0 .. $#p - 1) {
 		my $d = join '/', @p[0 .. $i];
-		push @crumbs, { name => $p[$i], path => $d };
 		my $e = $dir{$d} //= { path => $d, name => $p[$i], entries => {}, count => 0,
 			active => 0, updated => 0 };
 		$e->{count}++;
@@ -338,7 +336,6 @@ for my $path (sort keys %repo) {
 		my $child = $i < $#p - 1 ? join('/', @p[0 .. $i + 1]) : $path;
 		$e->{entries}{$child} = $i < $#p - 1 ? 'dir' : 'repo';
 	}
-	$r->{crumbs} = \@crumbs;
 }
 for my $d (values %dir) {
 	if ($repo{ $d->{path} }) {
@@ -360,8 +357,6 @@ for my $d (values %dir) {
 	@e = sort { ($a->{kind} eq 'repo') <=> ($b->{kind} eq 'repo')
 		|| lc $a->{name} cmp lc $b->{name} || $a->{name} cmp $b->{name} } @e;
 	$d->{entries} = \@e;
-	my @p = split m{/}, $d->{path};
-	$d->{crumbs} = [ map { { name => $p[$_], path => join '/', @p[0 .. $_] } } 0 .. $#p - 1 ];
 	$d->{intro} = $INTRO{ $d->{path} } // '';
 }
 

@@ -36,6 +36,7 @@ use strict;
 use warnings;
 
 use Encode ();
+use File::Spec;
 use RdKw::I18N::CodeSets ();
 use RdKw::L10N::TextDomain ':module' => 'RdKw::WwW::SiteConf::L10N';
 
@@ -116,6 +117,27 @@ defined $I{HAVE} or die $cs->tagmsg(E => $cs->diag(__(
 my $location = file2uri($target);
 
 #
+# Breadcrumbs: one per directory above the page (a page that is
+# some/dir/index.html is `dir' itself, so that one is left out).
+# `file' is the URI of the directory's index.html if the source
+# tree has one, so templates can [% IF c.file.defined %] link it.
+#
+my @crumbs;
+{
+	my @seg = split m{/}, $target;
+	my $base = pop @seg;
+	pop @seg if $base eq 'index.html';
+	my @dir;
+	for my $name (@seg) {
+		push @dir, $name;
+		my %c = (name => $name);
+		-e $cs->to_fs(File::Spec->catfile($D->{a}, @dir, 'index.html'))
+			and $c{file} = file2uri(join('/', @dir, 'index.html'));
+		push @crumbs, \%c;
+	}
+}
+
+#
 # Define Template variables (see also Template::Stash
 # if you want access to these from a plugin/filter).
 #
@@ -125,6 +147,7 @@ my %v = (
 	locate => sub { rewrite(locate($O, $location, @_)); },
 	location => $location,
 	target => $target,
+	crumbs => \@crumbs,
 	file2uri => \&file2uri,
 	uri2file => \&uri2file,
 );

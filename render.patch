@@ -1,6 +1,41 @@
 --- a/render
 +++ b/render
-@@ -122,7 +122,7 @@
+@@ -36,6 +36,7 @@
+ use warnings;
+ 
+ use Encode ();
++use File::Spec;
+ use RdKw::I18N::CodeSets ();
+ use RdKw::L10N::TextDomain ':module' => 'RdKw::WwW::SiteConf::L10N';
+ 
+@@ -116,15 +117,37 @@
+ my $location = file2uri($target);
+ 
+ #
++# Breadcrumbs: one per directory above the page (a page that is
++# some/dir/index.html is `dir' itself, so that one is left out).
++# `file' is the URI of the directory's index.html if the source
++# tree has one, so templates can [% IF c.file.defined %] link it.
++#
++my @crumbs;
++{
++	my @seg = split m{/}, $target;
++	my $base = pop @seg;
++	pop @seg if $base eq 'index.html';
++	my @dir;
++	for my $name (@seg) {
++		push @dir, $name;
++		my %c = (name => $name);
++		-e $cs->to_fs(File::Spec->catfile($D->{a}, @dir, 'index.html'))
++			and $c{file} = file2uri(join('/', @dir, 'index.html'));
++		push @crumbs, \%c;
++	}
++}
++
++#
+ # Define Template variables (see also Template::Stash
+ # if you want access to these from a plugin/filter).
+ #
  my %v = (
  	D => $D,
  	O => $O,
@@ -8,8 +43,11 @@
 +	locate => sub { rewrite(locate($O, $location, @_)); },
  	location => $location,
  	target => $target,
++	crumbs => \@crumbs,
  	file2uri => \&file2uri,
-@@ -168,6 +168,7 @@
+ 	uri2file => \&uri2file,
+ );
+@@ -168,6 +191,7 @@
  	DEFINITION => $D,
  	ENCODING => 'UTF-8',
  	INCLUDE_PATH => [ '.', $D->{a} ],
@@ -17,7 +55,7 @@
  })
  	or die "[TT] ", RdKw::WwW::GenGenLib::Template::Provider->error(), "\n";
  my $tt = Template->new({
-@@ -180,3 +181,22 @@
+@@ -180,3 +204,22 @@
  	or die "[TT] ", $tt->error(), "\n";
  
  exit 0;  # goodbye!

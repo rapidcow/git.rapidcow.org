@@ -9,7 +9,6 @@
 [% WRAPPER skel/layout.html
 	title = d.path _ '/'
 	here = d.name
-	crumbs = d.crumbs
 	updated = d.updated
 	canonical = d.path _ '/' -%]
 <article class="listing">
@@ -20,7 +19,7 @@
 	<ul class="entries">
 		[%- FOREACH e IN d.entries %]
 		<li class="[% e.kind %]">
-			<a class="name" href="[% uri(e.path) %]">[% e.name | html %]<span class="slash">/</span></a>
+			<a class="name" href="[% locate(e.path _ '/index.html') %]">[% e.name | html %]<span class="slash">/</span></a>
 			[%- IF e.kind == 'dir' %]
 			<span class="blurb">[% e.count %] repositor[% e.count == 1 ? 'y' : 'ies' %]</span>
 			[%- ELSIF e.blurb %]
