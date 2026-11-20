@@ -1,0 +1,5 @@
+MAKE site
+	NEED index.html
+	NEED robots.txt
+	NEED usage.html
+	NEED pub/school/wisc/sdc/fa-25/team/index.html

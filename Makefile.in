@@ -1,0 +1,10 @@
+
+index.html \
+usage.html \
+pub/school/wisc/sdc/fa-25/team/index.html \
+	: render
+	cd -- ${A:Q} && ${^X:Q} render -B ${B:Q} \
+		-- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}
+
+robots.txt:
+	cd -- ${A:Q} && cp -- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}
