@@ -1,0 +1,10 @@
+--- a/render
++++ b/render
+@@ -168,6 +168,7 @@
+ 	DEFINITION => $D,
+ 	ENCODING => 'UTF-8',
+ 	INCLUDE_PATH => [ '.', $D->{a} ],
++	CHECK_DEPS => 1,
+ })
+ 	or die "[TT] ", RdKw::WwW::GenGenLib::Template::Provider->error(), "\n";
+ my $tt = Template->new({
