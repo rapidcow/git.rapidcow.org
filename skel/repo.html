@@ -23,9 +23,10 @@
 
 	<section class="clone">
 		<h2>Clone</h2>
-<pre><code>git clone [% O.site_url.remove('/$') %]/[% r.dir | html %]/[% r.name | html %].git
-[%- IF r.guest_ssh %]
-git clone guest@[% O.site_url.replace('^https?://', '').remove('/$') %]:[% r.dir | html %]/[% r.name | html %].git
+<pre><code>git clone [% locate('//' _ r.dir _ '/' _ r.name _ '.git') | html %]
+[%- host = locate('//').replace('^[A-Za-z][A-Za-z0-9+.-]*://([^/]*).*$', '$1') %]
+[%- IF r.guest_ssh && host.length %]
+git clone guest@[% host | html %]:[% r.dir | html %]/[% r.name | html %].git
 [%- END %]
 </code></pre>
 	</section>
