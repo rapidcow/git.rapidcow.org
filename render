@@ -221,6 +221,7 @@ sub rewrite
 		# means "this page" and must be left alone.
 		$uri = '.' if $uri =~ s{([^/]+)\.html$}
 			{( $1 eq "index" ? "" : $1 )}eig && !length $uri;
+		$uri =~ s{(?<=\A|\/)(\.\.)?/$}{$1};
 	}
 	$uri;
 }
