@@ -10,7 +10,7 @@ robots.txt:
 	cd -- ${A:Q} && cp -- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}
 
 style.css: bundle-css
-	cd -- ${A:Q} && ${^X:Q} bundle-css ${a:Q}/${.IMPSRC:Q} > ${B:Q}/${b:Q}/${.TARGET:Q}
+	cd -- ${A:Q} && ${^X:Q} bundle-css -B ${B:Q} -- ${a:Q}/${.IMPSRC:Q} > ${B:Q}/${b:Q}/${.TARGET:Q}
 
 app.js:
 	cd -- ${A:Q} && cp -- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}

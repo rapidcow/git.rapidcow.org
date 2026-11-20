@@ -1,23 +1,58 @@
 #!/usr/bin/env perl
 # HAVE: bundle-css
 #
-# bundle-css FILE - write FILE with its @import "x.css"; lines
-# replaced by the (recursively bundled) contents of x.css, which
-# is found relative to the file that imports it.  Only plain
+# bundle-css [-B dir] FILE - write FILE with its @import "x.css";
+# lines replaced by the (recursively bundled) contents of x.css,
+# which is found relative to the file that imports it.  Only plain
 # string imports are understood; that is all we write.
+#
+# Like a template's INCLUDE, an import must be a declared dependency
+# (a NEED in the header of FILE, or of what it imports, and so on):
+# RdKw::WwW::GenGenLib::Template::Provider's access says whether it
+# is, so the build graph knows about every file that goes in.
+use utf8;
+use 5.008;
 use strict;
 use warnings;
+
 use File::Basename qw( dirname );
 use File::Spec;
+use Getopt::Long qw( GetOptions );
+use RdKw::I18N::CodeSets ();
+use RdKw::WwW::GenGenLib 0.0100 qw( load_state );
+use RdKw::WwW::GenGenLib::Template::Provider;
 
-@ARGV == 1 or die "usage: $0 file\n";
+my $cs = RdKw::I18N::CodeSets->locale;
+$cs->initstd(stderr => Encode::FB_PERLQQ());
+@ARGV = $cs->un_argv(@ARGV, { prog => $0 });
+
+my $B = '.';
+Getopt::Long::Configure(qw( bundling no_ignore_case ));
+GetOptions('B=s' => \$B) && @ARGV == 1
+	or die "usage: $0 [-B dir] file\n";
+my ($source) = @ARGV;
+
+my %S = load_state($B);
+my $D = $S{config};
+my $provider = RdKw::WwW::GenGenLib::Template::Provider->new({
+	SOURCE => $source,
+	DEFINITION => $D,
+	ENCODING => 'UTF-8',
+	INCLUDE_PATH => [ '.', $D->{a} ],
+	CHECK_DEPS => 1,
+})
+	or die "$0: ", RdKw::WwW::GenGenLib::Template::Provider->error(), "\n";
 
 my %open;
 sub bundle {
-	my ($file) = @_;
-	$open{$file}++ and die "$0: import cycle at $file\n";
-	open my $fh, '<:encoding(UTF-8)', $file or die "$0: $file: $!\n";
-	my $dir = dirname($file);
+	my ($name) = @_;
+	my ($path, $error) = $provider->access($name);
+	defined $error and die "$0: $name: $error\n";
+	defined $path or die "$0: $name: not found\n";
+	$open{$path}++ and die "$0: import cycle at $name\n";
+	open my $fh, '<:encoding(UTF-8)', $cs->to_fs($path, { prog => $0 })
+		or die "$0: $name: $!\n";
+	my $dir = dirname($name);
 	my $out = '';
 	while (my $line = <$fh>) {
 		if ($line =~ /^\s*\@import\s+(?:"([^"]+)"|'([^']+)')\s*;\s*$/) {
@@ -26,9 +61,9 @@ sub bundle {
 			$out .= $line;
 		}
 	}
-	delete $open{$file};
+	delete $open{$path};
 	$out;
 }
 
 binmode STDOUT, ':encoding(UTF-8)';
-print bundle($ARGV[0]);
+print bundle($source);
