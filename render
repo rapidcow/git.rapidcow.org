@@ -148,11 +148,11 @@ my %v = (
 	locate => sub { rewrite(locate($O, $location, @_)); },
 	location => $location,
 	target => $target,
-	crumbs => \@crumbs,
-	# our own
-	get_version => \&get_version,
 	file2uri => \&file2uri,
 	uri2file => \&uri2file,
+	# ours!
+	crumbs => \@crumbs,
+	get_version => \&get_version,
 );
 
 #

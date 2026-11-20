@@ -10,7 +10,7 @@
  use RdKw::I18N::CodeSets ();
  use RdKw::L10N::TextDomain ':module' => 'RdKw::WwW::SiteConf::L10N';
  
-@@ -116,15 +118,39 @@
+@@ -116,17 +118,41 @@
  my $location = file2uri($target);
  
  #
@@ -45,12 +45,14 @@
 +	locate => sub { rewrite(locate($O, $location, @_)); },
  	location => $location,
  	target => $target,
-+	crumbs => \@crumbs,
-+	# our own
-+	get_version => \&get_version,
  	file2uri => \&file2uri,
  	uri2file => \&uri2file,
++	# ours!
++	crumbs => \@crumbs,
++	get_version => \&get_version,
  );
+ 
+ #
 @@ -168,6 +194,7 @@
  	DEFINITION => $D,
  	ENCODING => 'UTF-8',
