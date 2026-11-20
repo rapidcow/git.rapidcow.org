@@ -12,8 +12,8 @@ robots.txt:
 style.css: bundle-css
 	cd -- ${A:Q} && ${^X:Q} bundle-css ${a:Q}/${.IMPSRC:Q} > ${B:Q}/${b:Q}/${.TARGET:Q}
 
-app.js: ${a}/${lib}/js/app.js
-	cd -- ${A:Q} && cp -- ${a:Q}/${<:Q} ${B:Q}/${b:Q}/${@:Q}
+app.js:
+	cd -- ${A:Q} && cp -- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}
 
 # BEGIN gen-repos (generated; do not edit)
 our/index.html \
