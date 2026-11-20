@@ -58,9 +58,8 @@ my $HOST  = 'git.rapidcow.org';
 my @ROOTS = qw( pub our/package );
 # Intro text of a top-level listing.
 my %INTRO = (
-	pub => 'Public projects.',
-	our => 'Shared projects: not necessarily ready for production. '
-		. 'A directory here is a project (or group) of that name.',
+	pub => 'Public projects',
+	our => 'Shared projects',
 );
 my $SENTINEL = 'GENERATED: gen-repos';
 my $CACHE    = 'gen/cache.json';

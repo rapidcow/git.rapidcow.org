@@ -175,14 +175,14 @@
 		{
 			'active' => 1795148361,
 			'count' => 3,
-			'intro' => 'Shared projects: not necessarily ready for production. A directory here is a project (or group) of that name.',
+			'intro' => 'Shared projects',
 			'name' => 'our',
 			'path' => 'our/index.html'
 		},
 		{
 			'active' => 1795135805,
 			'count' => 18,
-			'intro' => 'Public projects.',
+			'intro' => 'Public projects',
 			'name' => 'pub',
 			'path' => 'pub/index.html'
 		}
