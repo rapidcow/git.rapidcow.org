@@ -11,4 +11,4 @@
 [% MACRO when(t, cls) BLOCK -%]
 <time class="[% cls || 'when' %]" datetime="[% iso(t) %]" title="[% stamp(t) %]">[% day(t) %]</time>
 [%- END -%]
-[% MACRO uri(path) GET locate('/' _ path _ '/') -%]
+[% MACRO uri(path) GET locate(path _ '/') -%]
