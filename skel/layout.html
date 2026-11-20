@@ -15,7 +15,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="canonical" href="[% O.site_url.remove('/$') %]/[% canonical %]">
+	<link rel="canonical" href="[% locate('//' _ canonical) %]">
 	<link rel="stylesheet" href="[% locate('style.css') %]">
 	<script src="[% locate('app.js') %]" defer></script>
 	<title>[% title | html %]</title>
@@ -39,7 +39,7 @@
 	[%- IF updated %]
 	<p>Updated <time class="when" datetime="[% iso(updated) %]" title="[% stamp(updated) %]">[% stamp(updated) %]</time></p>
 	[%- END %]
-	<p><a href="[% locate('usage') %]">How to clone</a> &middot; <a href="[% locate('') %]">Home</a></p>
+	<p><a href="[% locate('usage.html') %]">How to clone</a> &middot; <a href="[% locate('') %]">Home</a></p>
 </footer>
 </body>
 </html>
