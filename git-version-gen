@@ -1,7 +1,11 @@
 #!/bin/sh
 # Emit Template Toolkit assignments; run from the source tree.
 set -eu
+sha=$(git rev-parse HEAD)
 version=$(git rev-parse --short HEAD)
+branch=$(git symbolic-ref --quiet --short HEAD) || branch=HEAD
+# Quote arbitrary branch names for a literal TT string.
+branch=$(printf '%s' "$branch" | perl -pe 's/([\\\x27])/\\$1/g')
 dirty=0
 if [ -n "$(git status --porcelain --untracked-files=normal)" ]; then
 	dirty=1
@@ -12,5 +16,5 @@ updated=$(git log -1 --format=%at -- . ':(exclude)gen/**')
 case $updated in
 	''|*[!0-9]*) updated=0 ;;
 esac
-printf '[%% git_version = "%s"; git_dirty = %s; git_updated = %s; %%]\n' \
-	"$version" "$dirty" "$updated"
+printf "[%% git_sha = '%s'; git_version = '%s'; git_branch = '%s'; git_dirty = %s; git_updated = %s; %%]\n" \
+	"$sha" "$version" "$branch" "$dirty" "$updated"

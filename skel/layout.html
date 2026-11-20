@@ -47,9 +47,12 @@
 	[%- IF updated %]
 	<p>Updated <time class="when" datetime="[% iso(updated) %]" title="[% stamp(updated) %]">[% stamp(updated) %]</time></p>
 	[%- END %]
-	<p>Git build <code>[% git_version %]</code> &middot;
+	<p>Git build <code><abbr title="[% git_sha %]">[% git_version %]</abbr></code> on
+	[%- IF git_dirty %] [% git_branch | html %]
+	[%- ELSE %] <a href="[% D.gitweb_base_url _ '-/tree/' _ git_sha | html %]">[% git_branch | html %]</a>
+	[%- END %] &middot;
 	[%- IF git_dirty %] Read source
-	[%- ELSE %] <a href="[% D.gitweb_base_url _ location | html %]">Read source</a>
+	[%- ELSE %] <a href="[% D.gitweb_base_url _ '-/blob/' _ git_sha _ '/' _ location | html %]">Read source</a>
 	[%- END %]
 	[%- IF git_updated %] &middot; [% when(git_updated) %][% END %]</p>
 	<p><a href="[% locate('usage.html') %]">How to clone</a> &middot; <a href="[% locate('index.html') %]">Home</a></p>
