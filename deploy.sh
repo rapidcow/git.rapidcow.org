@@ -26,7 +26,7 @@ trap 'rm -rf -- "$work"' EXIT
 mkdir -- "$work/build" "$work/site" "$work/empty"
 
 # Each deployment gets fresh configuration, metadata, and rendered pages.
-./configure -DB="$work/build" -Obase_url=/
+./configure -DA="$PWD" -DB="$work/build" -Obase_url=/
 siteconf -gB "$work/build"
 make -C "$work/build"
 
