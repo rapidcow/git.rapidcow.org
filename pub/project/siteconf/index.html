@@ -175,7 +175,13 @@
 		}
 	],
 	'guest_ssh' => 0,
-	'mirrors' => [],
+	'mirrors' => [
+		'https://github.com/rapidcow/siteconf.git',
+		'https://gitlab.com/rapidcow/siteconf.git',
+		'https://bitbucket.org/rapidcow/siteconf.git',
+		'https://gitee.com/rapidcow/siteconf.git',
+		'https://gitcode.com/rapidcow/siteconf.git'
+	],
 	'name' => 'siteconf',
 	'nbranches' => 1,
 	'ntags' => 36,
@@ -235,6 +241,6 @@
 		'subject' => 'oh crap wait, claude already added this one',
 		'time' => 1795222495
 	},
-	'updated' => 1795222589
+	'updated' => 1795258995
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]

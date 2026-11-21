@@ -530,7 +530,7 @@
          }
       },
       "pub/lib/python3/liblist" : {
-         "meta" : "dc72ba75633eb5c2bc42ea4d2c2640777732d054",
+         "meta" : "15b783ee2089d692de9522852ff0d6860beeaede",
          "repo" : {
             "active" : 1795227057,
             "blurb" : "liblist (rdks.list)",
@@ -559,13 +559,7 @@
                }
             ],
             "guest_ssh" : 1,
-            "mirrors" : [
-               "https://github.com/rapidcow/siteconf.git",
-               "https://gitlab.com/rapidcow/siteconf.git",
-               "https://bitbucket.org/rapidcow/siteconf.git",
-               "https://gitee.com/rapidcow/siteconf.git",
-               "https://gitcode.com/rapidcow/siteconf.git"
-            ],
+            "mirrors" : [],
             "name" : "liblist",
             "nbranches" : 1,
             "ntags" : 0,
@@ -576,7 +570,7 @@
                "subject" : "Merge extracted history from pyutil.git",
                "time" : 1794352979
             },
-            "updated" : 1795258149
+            "updated" : 1795258984
          }
       },
       "pub/lib/python3/libmail" : {
@@ -1698,7 +1692,7 @@
          }
       },
       "pub/project/siteconf" : {
-         "meta" : "4a63a66166eb370a871c23f7c55abd84b47cf0c8",
+         "meta" : "0396bdcf7c80cb0e72b22600e3cd8bb2837c59f5",
          "repo" : {
             "active" : 1795222589,
             "blurb" : "just conf",
@@ -1871,7 +1865,13 @@
                }
             ],
             "guest_ssh" : 0,
-            "mirrors" : [],
+            "mirrors" : [
+               "https://github.com/rapidcow/siteconf.git",
+               "https://gitlab.com/rapidcow/siteconf.git",
+               "https://bitbucket.org/rapidcow/siteconf.git",
+               "https://gitee.com/rapidcow/siteconf.git",
+               "https://gitcode.com/rapidcow/siteconf.git"
+            ],
             "name" : "siteconf",
             "nbranches" : 1,
             "ntags" : 36,
@@ -1931,7 +1931,7 @@
                "subject" : "oh crap wait, claude already added this one",
                "time" : 1795222495
             },
-            "updated" : 1795222589
+            "updated" : 1795258995
          }
       },
       "pub/project/trivnote" : {
