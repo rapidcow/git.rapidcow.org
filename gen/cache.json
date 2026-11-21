@@ -523,6 +523,92 @@
             "updated" : 1780972777
          }
       },
+      "pub/lib/python3/liblist" : {
+         "meta" : "3fbf30077711fc6dd729b857fac7ddfbac8695d1",
+         "repo" : {
+            "active" : 1795227057,
+            "blurb" : "liblist (rdks.list)",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "main",
+                  "time" : 1794352979
+               }
+            ],
+            "desc" : "liblist (rdks.list)",
+            "desc_html" : "",
+            "dir" : "pub/lib/python3",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+24)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795227057
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "liblist",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/lib/python3/liblist",
+            "tags" : [],
+            "tip" : {
+               "sha" : "91148a2",
+               "subject" : "Merge extracted history from pyutil.git",
+               "time" : 1794352979
+            },
+            "updated" : 1795227057
+         }
+      },
+      "pub/lib/python3/libmail" : {
+         "meta" : "a4bbf9f2a877d74d39d866ed1734e7fea7af7096",
+         "repo" : {
+            "active" : 1795227041,
+            "blurb" : "libmail (rdks.mail)",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "main",
+                  "time" : 1787482690
+               }
+            ],
+            "desc" : "libmail (rdks.mail)",
+            "desc_html" : "",
+            "dir" : "pub/lib/python3",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+86)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795227041
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "libmail",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/lib/python3/libmail",
+            "tags" : [],
+            "tip" : {
+               "sha" : "52b6abd",
+               "subject" : "reader iterator: expect unpaired sequences",
+               "time" : 1787482690
+            },
+            "updated" : 1795227041
+         }
+      },
       "pub/package/arch/main/ed" : {
          "meta" : "37b2bc1d657645cb7a69629eb801095cba98587b",
          "repo" : {
@@ -1590,21 +1676,69 @@
          }
       },
       "pub/project/siteconf" : {
-         "meta" : "9502c5035d60f0678d894a72c2c5f837fdc956a2",
+         "meta" : "4a63a66166eb370a871c23f7c55abd84b47cf0c8",
          "repo" : {
-            "active" : 1795135805,
+            "active" : 1795222589,
             "blurb" : "just conf",
             "branch" : "master",
             "branches" : [
                {
                   "name" : "master",
-                  "time" : 1795135687
+                  "time" : 1795222495
                }
             ],
             "desc" : "just conf",
             "desc_html" : "",
             "dir" : "pub/project",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "genlib/v0.03_00",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1795222589
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+5)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "genlib/v0.03_00",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "siteconf-l10n/v0.00_00",
+                        "note" : "",
+                        "type" : "tag"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "siteconf/v0.03_00",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1795221362
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -1712,42 +1846,6 @@
                      }
                   ],
                   "time" : 1795092763
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "master",
-                        "note" : "(+1)",
-                        "type" : "branch"
-                     },
-                     {
-                        "kind" : "updated",
-                        "name" : "siteconf/v0.03_00",
-                        "note" : "",
-                        "type" : "tag"
-                     }
-                  ],
-                  "time" : 1795090178
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "master",
-                        "note" : "(+1)",
-                        "type" : "branch"
-                     },
-                     {
-                        "kind" : "updated",
-                        "name" : "siteconf/v0.03_00",
-                        "note" : "",
-                        "type" : "tag"
-                     }
-                  ],
-                  "time" : 1795089534
                }
             ],
             "guest_ssh" : 0,
@@ -1757,12 +1855,16 @@
             "path" : "pub/project/siteconf",
             "tags" : [
                {
+                  "name" : "genlib/v0.03_00",
+                  "time" : 1795221248
+               },
+               {
                   "name" : "siteconf/v0.03_00",
-                  "time" : 1795095659
+                  "time" : 1795221220
                },
                {
                   "name" : "siteconf-l10n/v0.00_00",
-                  "time" : 1795094614
+                  "time" : 1795221055
                },
                {
                   "name" : "codesets/v0.00_00",
@@ -1775,10 +1877,6 @@
                {
                   "name" : "template-provider/v0.00_00",
                   "time" : 1794981275
-               },
-               {
-                  "name" : "genlib/v0.03_00",
-                  "time" : 1794980734
                },
                {
                   "name" : "textdomain/v0.00_00",
@@ -1806,11 +1904,11 @@
                }
             ],
             "tip" : {
-               "sha" : "5e15c23",
-               "subject" : "t/provider.t: please do not interpolate externally",
-               "time" : 1795135687
+               "sha" : "e203504",
+               "subject" : "oh crap wait, claude already added this one",
+               "time" : 1795222495
             },
-            "updated" : 1795135805
+            "updated" : 1795222589
          }
       },
       "pub/project/trivnote" : {
@@ -2189,21 +2287,45 @@
          }
       },
       "pub/www/site/foss" : {
-         "meta" : "45038d215aa81d61ba17e0ac8ea90fed5a101318",
+         "meta" : "3b9b77dcdfd052b63a7aa2be668144d8e177355d",
          "repo" : {
-            "active" : 1794994572,
+            "active" : 1795228102,
             "blurb" : "foss.rapidcow.org",
             "branch" : "gh-pages",
             "branches" : [
                {
                   "name" : "gh-pages",
-                  "time" : 1794994553
+                  "time" : 1795228069
                }
             ],
             "desc" : "foss.rapidcow.org",
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795228102
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+4)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795227997
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -2275,30 +2397,6 @@
                      }
                   ],
                   "time" : 1794911484
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "gh-pages",
-                        "note" : "(+2)",
-                        "type" : "branch"
-                     }
-                  ],
-                  "time" : 1794910998
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "gh-pages",
-                        "note" : "(+3)",
-                        "type" : "branch"
-                     }
-                  ],
-                  "time" : 1794909516
                }
             ],
             "guest_ssh" : 1,
@@ -2308,29 +2406,144 @@
             "path" : "pub/www/site/foss",
             "tags" : [],
             "tip" : {
-               "sha" : "13e4dab",
-               "subject" : "this chomp is actually not necessary",
-               "time" : 1794994553
+               "sha" : "6a01324",
+               "subject" : "we actually need at least 3.103",
+               "time" : 1795228069
             },
-            "updated" : 1794994572
+            "updated" : 1795228102
+         }
+      },
+      "pub/www/site/git" : {
+         "meta" : "dc9570c53b49a80cbdfcda3fb962934e0048705e",
+         "repo" : {
+            "active" : 1795227158,
+            "blurb" : "git.rapidcow.org without cgit",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "main",
+                  "time" : 1795227075
+               }
+            ],
+            "desc" : "git.rapidcow.org without cgit",
+            "desc_html" : "",
+            "dir" : "pub/www/site",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795227158
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795225921
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795225855
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+3)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795225810
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795224693
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+57)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795224643
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "git",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/www/site/git",
+            "tags" : [],
+            "tip" : {
+               "sha" : "0b68cba",
+               "subject" : "actually create lib/python3/",
+               "time" : 1795227075
+            },
+            "updated" : 1795227158
          }
       },
       "pub/www/site/javadoc" : {
-         "meta" : "a24632b9299274b8d89e96ca6133a98a4bb6e28e",
+         "meta" : "2acba6018f13ec2bb59ebd784f2a8869c2f740ba",
          "repo" : {
-            "active" : 1794995808,
+            "active" : 1795224228,
             "blurb" : "javadoc.rapidcow.org",
             "branch" : "gh-pages",
             "branches" : [
                {
                   "name" : "gh-pages",
-                  "time" : 1794995767
+                  "time" : 1795224165
                }
             ],
             "desc" : "javadoc.rapidcow.org",
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795224228
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -2414,18 +2627,6 @@
                      }
                   ],
                   "time" : 1794885090
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "gh-pages",
-                        "note" : "(+1)",
-                        "type" : "branch"
-                     }
-                  ],
-                  "time" : 1794604976
                }
             ],
             "guest_ssh" : 0,
@@ -2435,11 +2636,11 @@
             "path" : "pub/www/site/javadoc",
             "tags" : [],
             "tip" : {
-               "sha" : "1cabc15",
-               "subject" : "check the docs directory",
-               "time" : 1794995767
+               "sha" : "e4b578e",
+               "subject" : "why is this failing",
+               "time" : 1795224165
             },
-            "updated" : 1794995808
+            "updated" : 1795224228
          }
       },
       "pub/www/site/man" : {

@@ -18,6 +18,9 @@ MAKE site
 	NEED pub/lib/perl5/IPC-Unix/index.html
 	NEED pub/lib/perl5/List-Search/index.html
 	NEED pub/lib/perl5/index.html
+	NEED pub/lib/python3/index.html
+	NEED pub/lib/python3/liblist/index.html
+	NEED pub/lib/python3/libmail/index.html
 	NEED pub/package/arch/index.html
 	NEED pub/package/arch/main/ed/index.html
 	NEED pub/package/arch/main/git/index.html
@@ -42,6 +45,7 @@ MAKE site
 	NEED pub/school/wisc/sdc/index.html
 	NEED pub/www/index.html
 	NEED pub/www/site/foss/index.html
+	NEED pub/www/site/git/index.html
 	NEED pub/www/site/index.html
 	NEED pub/www/site/javadoc/index.html
 	NEED pub/www/site/man/index.html

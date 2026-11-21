@@ -1,0 +1,30 @@
+[%
+ # HAVE: pub/lib/python3/index.html
+ # NEED: ${skel}/dir.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% d = {
+	'active' => 1795227057,
+	'dir' => 'pub/lib',
+	'entries' => [
+		{
+			'active' => 1795227057,
+			'blurb' => 'liblist (rdks.list)',
+			'kind' => 'repo',
+			'name' => 'liblist',
+			'path' => 'pub/lib/python3/liblist/index.html'
+		},
+		{
+			'active' => 1795227041,
+			'blurb' => 'libmail (rdks.mail)',
+			'kind' => 'repo',
+			'name' => 'libmail',
+			'path' => 'pub/lib/python3/libmail/index.html'
+		}
+	],
+	'intro' => '',
+	'name' => 'python3',
+	'path' => 'pub/lib/python3/index.html',
+	'updated' => 1795227057
+} -%]
+[% PROCESS "${D.skel}/dir.html" -%]

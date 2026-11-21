@@ -3,7 +3,7 @@
 # A local destination is useful for rehearsing the exact deployment.
 set -euo pipefail
 cd -- "$(dirname -- "$0")"
-destination=${1:-root@ubuntu:/srv/www/git}
+destination=${1:-root@ubuntu:/srv/www/pub/git.rapidcow.org}
 if (( $# > 1 )); then
 	echo "usage: $0 [destination]" >&2
 	exit 2
@@ -26,16 +26,16 @@ trap 'rm -rf -- "$work"' EXIT
 mkdir -- "$work/build" "$work/site" "$work/empty"
 
 # Each deployment gets fresh configuration, metadata, and rendered pages.
-./configure -DB="$work/build" -Obase_url=/
+./configure -DA="$PWD" -DB="$work/build" -Obase_url=/
 siteconf -gB "$work/build"
 make -C "$work/build"
 
 # Materialize only the manifest. A failed producer fails this pipeline too.
 siteconf -lF "$work/build/MY/MANIFEST.site" -0 |
-	rsync -a --files-from=- --from0 --itemize-changes -- "$work/build/site/" "$work/site/"
+	rsync -a --files-from=- --from0 --itemize-changes --chown www-data:www-data -- "$work/build/site/" "$work/site/"
 
 # Reuse one sibling backup directory, clearing the previous deployment's backup.
 rsync -a --delete -- "$work/empty/" "$destination.bak/"
 # A full directory mirror (rather than --files-from) deletes even stale subtrees.
-rsync -a --delete --backup --backup-dir="$backup" --itemize-changes -- \
+rsync -a --delete --backup --backup-dir="$backup" --itemize-changes --chown www-data:www-data -- \
 	"$work/site/" "$destination/"
