@@ -1692,7 +1692,7 @@
          }
       },
       "pub/project/siteconf" : {
-         "meta" : "0396bdcf7c80cb0e72b22600e3cd8bb2837c59f5",
+         "meta" : "2390bd4e2a85d7df4ac78287e1d4827903bba4f5",
          "repo" : {
             "active" : 1795222589,
             "blurb" : "just conf",
@@ -1866,11 +1866,11 @@
             ],
             "guest_ssh" : 0,
             "mirrors" : [
-               "https://github.com/rapidcow/siteconf.git",
-               "https://gitlab.com/rapidcow/siteconf.git",
-               "https://bitbucket.org/rapidcow/siteconf.git",
-               "https://gitee.com/rapidcow/siteconf.git",
-               "https://gitcode.com/rapidcow/siteconf.git"
+               "<a href=\"https://github.com/rapidcow/siteconf\">https://github.com/rapidcow/siteconf</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/siteconf\">https://gitlab.com/rapidcow/siteconf</a>.git",
+               "<a href=\"https://bitbucket.org/rapidcow/siteconf\">https://bitbucket.org/rapidcow/siteconf</a>.git",
+               "<a href=\"https://gitee.com/rapidcow/siteconf\">https://gitee.com/rapidcow/siteconf</a>.git",
+               "<a href=\"https://gitcode.com/rapidcow/siteconf\">https://gitcode.com/rapidcow/siteconf</a>.git"
             ],
             "name" : "siteconf",
             "nbranches" : 1,
@@ -1931,7 +1931,7 @@
                "subject" : "oh crap wait, claude already added this one",
                "time" : 1795222495
             },
-            "updated" : 1795258995
+            "updated" : 1795259170
          }
       },
       "pub/project/trivnote" : {

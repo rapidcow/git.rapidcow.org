@@ -24,7 +24,9 @@
 	<section class="clone">
 		[%- IF r.mirrors.size %]
 		<h2>Mirrors</h2>
-<pre><code>[%- FOREACH mirror IN r.mirrors %]git clone [% mirror | html %]
+<pre><code>[%- FOREACH mirror IN r.mirrors;
+	link = mirror.match('^<a href="(https?://[^"<>\s]+)">([^<>]+)</a>([^<>]*)$') -%]
+git clone [% IF link %]<a href="[% link.0 | html %]">[% link.1 | html %]</a>[% link.2 | html %][% ELSE %][% mirror | html %][% END %]
 [% END -%]</code></pre>
 		[%- END %]
 		<h2>Clone</h2>
