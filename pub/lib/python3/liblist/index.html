@@ -1,0 +1,46 @@
+[%
+ # HAVE: pub/lib/python3/liblist/index.html
+ # NEED: ${skel}/repo.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% r = {
+	'active' => 1795227057,
+	'blurb' => 'liblist (rdks.list)',
+	'branch' => 'main',
+	'branches' => [
+		{
+			'name' => 'main',
+			'time' => 1794352979
+		}
+	],
+	'desc' => 'liblist (rdks.list)',
+	'desc_html' => '',
+	'dir' => 'pub/lib/python3',
+	'events' => [
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'created',
+					'name' => 'main',
+					'note' => '(+24)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795227057
+		}
+	],
+	'guest_ssh' => 1,
+	'name' => 'liblist',
+	'nbranches' => 1,
+	'ntags' => 0,
+	'path' => 'pub/lib/python3/liblist/index.html',
+	'tags' => [],
+	'tip' => {
+		'sha' => '91148a2',
+		'subject' => 'Merge extracted history from pyutil.git',
+		'time' => 1794352979
+	},
+	'updated' => 1795227057
+} -%]
+[% PROCESS "${D.skel}/repo.html" -%]

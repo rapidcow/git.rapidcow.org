@@ -1,0 +1,46 @@
+[%
+ # HAVE: pub/lib/python3/libmail/index.html
+ # NEED: ${skel}/repo.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% r = {
+	'active' => 1795227041,
+	'blurb' => 'libmail (rdks.mail)',
+	'branch' => 'main',
+	'branches' => [
+		{
+			'name' => 'main',
+			'time' => 1787482690
+		}
+	],
+	'desc' => 'libmail (rdks.mail)',
+	'desc_html' => '',
+	'dir' => 'pub/lib/python3',
+	'events' => [
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'created',
+					'name' => 'main',
+					'note' => '(+86)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795227041
+		}
+	],
+	'guest_ssh' => 1,
+	'name' => 'libmail',
+	'nbranches' => 1,
+	'ntags' => 0,
+	'path' => 'pub/lib/python3/libmail/index.html',
+	'tags' => [],
+	'tip' => {
+		'sha' => '52b6abd',
+		'subject' => 'reader iterator: expect unpaired sequences',
+		'time' => 1787482690
+	},
+	'updated' => 1795227041
+} -%]
+[% PROCESS "${D.skel}/repo.html" -%]

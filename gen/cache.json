@@ -523,6 +523,92 @@
             "updated" : 1780972777
          }
       },
+      "pub/lib/python3/liblist" : {
+         "meta" : "3fbf30077711fc6dd729b857fac7ddfbac8695d1",
+         "repo" : {
+            "active" : 1795227057,
+            "blurb" : "liblist (rdks.list)",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "main",
+                  "time" : 1794352979
+               }
+            ],
+            "desc" : "liblist (rdks.list)",
+            "desc_html" : "",
+            "dir" : "pub/lib/python3",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+24)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795227057
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "liblist",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/lib/python3/liblist",
+            "tags" : [],
+            "tip" : {
+               "sha" : "91148a2",
+               "subject" : "Merge extracted history from pyutil.git",
+               "time" : 1794352979
+            },
+            "updated" : 1795227057
+         }
+      },
+      "pub/lib/python3/libmail" : {
+         "meta" : "a4bbf9f2a877d74d39d866ed1734e7fea7af7096",
+         "repo" : {
+            "active" : 1795227041,
+            "blurb" : "libmail (rdks.mail)",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "main",
+                  "time" : 1787482690
+               }
+            ],
+            "desc" : "libmail (rdks.mail)",
+            "desc_html" : "",
+            "dir" : "pub/lib/python3",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+86)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795227041
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "libmail",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/lib/python3/libmail",
+            "tags" : [],
+            "tip" : {
+               "sha" : "52b6abd",
+               "subject" : "reader iterator: expect unpaired sequences",
+               "time" : 1787482690
+            },
+            "updated" : 1795227041
+         }
+      },
       "pub/package/arch/main/ed" : {
          "meta" : "37b2bc1d657645cb7a69629eb801095cba98587b",
          "repo" : {
@@ -2328,21 +2414,45 @@
          }
       },
       "pub/www/site/git" : {
-         "meta" : "0aafb21e56a4400c7c6e7c9f6172b54c2ab637b4",
+         "meta" : "f31bc0bdfd7f589ca3a650781c1e63a863dd5f6d",
          "repo" : {
-            "active" : 1795225810,
+            "active" : 1795225921,
             "blurb" : "git.rapidcow.org without cgit",
             "branch" : "main",
             "branches" : [
                {
                   "name" : "main",
-                  "time" : 1795225450
+                  "time" : 1795225903
                }
             ],
             "desc" : "git.rapidcow.org without cgit",
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795225921
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795225855
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -2387,11 +2497,11 @@
             "path" : "pub/www/site/git",
             "tags" : [],
             "tip" : {
-               "sha" : "4065016",
-               "subject" : "oh wait, this guy isn't even the right root",
-               "time" : 1795225450
+               "sha" : "180683f",
+               "subject" : "use absolute ${A}",
+               "time" : 1795225903
             },
-            "updated" : 1795225810
+            "updated" : 1795225921
          }
       },
       "pub/www/site/javadoc" : {
