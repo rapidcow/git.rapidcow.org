@@ -32,10 +32,10 @@ make -C "$work/build"
 
 # Materialize only the manifest. A failed producer fails this pipeline too.
 siteconf -lF "$work/build/MY/MANIFEST.site" -0 |
-	rsync -a --files-from=- --from0 --itemize-changes -- "$work/build/site/" "$work/site/"
+	rsync -a --files-from=- --from0 --itemize-changes --owner www-data --group www-data -- "$work/build/site/" "$work/site/"
 
 # Reuse one sibling backup directory, clearing the previous deployment's backup.
 rsync -a --delete -- "$work/empty/" "$destination.bak/"
 # A full directory mirror (rather than --files-from) deletes even stale subtrees.
-rsync -a --delete --backup --backup-dir="$backup" --itemize-changes -- \
+rsync -a --delete --backup --backup-dir="$backup" --itemize-changes --owner www-data --group www-data -- \
 	"$work/site/" "$destination/"
