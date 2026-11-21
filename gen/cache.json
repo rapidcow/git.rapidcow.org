@@ -558,7 +558,7 @@
          }
       },
       "pub/lib/python3/liblist" : {
-         "meta" : "15b783ee2089d692de9522852ff0d6860beeaede",
+         "meta" : "2209b57d0e7ffe4aa26e05446162fd5bb0b6ed62",
          "repo" : {
             "active" : 1795227057,
             "blurb" : "liblist (rdks.list)",
@@ -587,7 +587,13 @@
                }
             ],
             "guest_ssh" : 1,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://bitbucket.org/rapidcow/liblist/src/main/\">https://bitbucket.org/rapidcow/liblist</a>.git",
+               "<a href=\"https://github.com/rapidcow/liblist\">https://github.com/rapidcow/liblist</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/liblist\">https://gitlab.com/rapidcow/liblist</a>.git",
+               "<a href=\"https://gitcode.com/rapidcow/liblist\">https://gitcode.com/rapidcow/liblist</a>.git",
+               "<a href=\"https://gitee.com/rapidcow/liblist\">https://gitee.com/rapidcow/liblist</a>.git"
+            ],
             "name" : "liblist",
             "nbranches" : 1,
             "ntags" : 0,
@@ -598,11 +604,11 @@
                "subject" : "Merge extracted history from pyutil.git",
                "time" : 1794352979
             },
-            "updated" : 1795258984
+            "updated" : 1795264996
          }
       },
       "pub/lib/python3/libmail" : {
-         "meta" : "47e9dcaa5cb45a8c430cdce07db1c64f196c0ff8",
+         "meta" : "2a11a5a0d0870e5066aa005cdc9f70fbe5cef0bd",
          "repo" : {
             "active" : 1795263040,
             "blurb" : "libmail (rdks.mail)",
@@ -643,7 +649,13 @@
                }
             ],
             "guest_ssh" : 1,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://bitbucket.org/rapidcow/libmail/src/main/\">https://bitbucket.org/rapidcow/libmail</a>.git",
+               "<a href=\"https://github.com/rapidcow/libmail\">https://github.com/rapidcow/libmail</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/libmail\">https://gitlab.com/rapidcow/libmail</a>.git",
+               "<a href=\"https://gitcode.com/rapidcow/libmail\">https://gitcode.com/rapidcow/libmail</a>.git",
+               "<a href=\"https://gitee.com/rapidcow/libmail\">https://gitee.com/rapidcow/libmail</a>.git"
+            ],
             "name" : "libmail",
             "nbranches" : 1,
             "ntags" : 0,
@@ -654,7 +666,7 @@
                "subject" : "canon mail",
                "time" : 1795262973
             },
-            "updated" : 1795263040
+            "updated" : 1795264976
          }
       },
       "pub/project/archive/bridge" : {

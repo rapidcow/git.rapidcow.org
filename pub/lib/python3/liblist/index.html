@@ -31,7 +31,13 @@
 		}
 	],
 	'guest_ssh' => 1,
-	'mirrors' => [],
+	'mirrors' => [
+		'<a href="https://bitbucket.org/rapidcow/liblist/src/main/">https://bitbucket.org/rapidcow/liblist</a>.git',
+		'<a href="https://github.com/rapidcow/liblist">https://github.com/rapidcow/liblist</a>.git',
+		'<a href="https://gitlab.com/rapidcow/liblist">https://gitlab.com/rapidcow/liblist</a>.git',
+		'<a href="https://gitcode.com/rapidcow/liblist">https://gitcode.com/rapidcow/liblist</a>.git',
+		'<a href="https://gitee.com/rapidcow/liblist">https://gitee.com/rapidcow/liblist</a>.git'
+	],
 	'name' => 'liblist',
 	'nbranches' => 1,
 	'ntags' => 0,
@@ -42,6 +48,6 @@
 		'subject' => 'Merge extracted history from pyutil.git',
 		'time' => 1794352979
 	},
-	'updated' => 1795258984
+	'updated' => 1795264996
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]

@@ -43,7 +43,13 @@
 		}
 	],
 	'guest_ssh' => 1,
-	'mirrors' => [],
+	'mirrors' => [
+		'<a href="https://bitbucket.org/rapidcow/libmail/src/main/">https://bitbucket.org/rapidcow/libmail</a>.git',
+		'<a href="https://github.com/rapidcow/libmail">https://github.com/rapidcow/libmail</a>.git',
+		'<a href="https://gitlab.com/rapidcow/libmail">https://gitlab.com/rapidcow/libmail</a>.git',
+		'<a href="https://gitcode.com/rapidcow/libmail">https://gitcode.com/rapidcow/libmail</a>.git',
+		'<a href="https://gitee.com/rapidcow/libmail">https://gitee.com/rapidcow/libmail</a>.git'
+	],
 	'name' => 'libmail',
 	'nbranches' => 1,
 	'ntags' => 0,
@@ -54,6 +60,6 @@
 		'subject' => 'canon mail',
 		'time' => 1795262973
 	},
-	'updated' => 1795263040
+	'updated' => 1795264976
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]
