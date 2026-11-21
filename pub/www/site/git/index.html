@@ -1,0 +1,106 @@
+[%
+ # HAVE: pub/www/site/git/index.html
+ # NEED: ${skel}/repo.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% r = {
+	'active' => 1795227158,
+	'blurb' => 'git.rapidcow.org without cgit',
+	'branch' => 'main',
+	'branches' => [
+		{
+			'name' => 'main',
+			'time' => 1795227075
+		}
+	],
+	'desc' => 'git.rapidcow.org without cgit',
+	'desc_html' => '',
+	'dir' => 'pub/www/site',
+	'events' => [
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795227158
+		},
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795225921
+		},
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795225855
+		},
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+3)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795225810
+		},
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795224693
+		},
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'created',
+					'name' => 'main',
+					'note' => '(+57)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795224643
+		}
+	],
+	'guest_ssh' => 1,
+	'name' => 'git',
+	'nbranches' => 1,
+	'ntags' => 0,
+	'path' => 'pub/www/site/git/index.html',
+	'tags' => [],
+	'tip' => {
+		'sha' => '0b68cba',
+		'subject' => 'actually create lib/python3/',
+		'time' => 1795227075
+	},
+	'updated' => 1795227158
+} -%]
+[% PROCESS "${D.skel}/repo.html" -%]
