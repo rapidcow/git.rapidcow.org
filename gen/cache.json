@@ -1855,21 +1855,33 @@
          }
       },
       "pub/www/site/git" : {
-         "meta" : "c71afb840090ad46cac58629413e48c2466c9b31",
+         "meta" : "28677d32699fb7609fa421e3041986256d11ddca",
          "repo" : {
-            "active" : 1795265731,
+            "active" : 1795267036,
             "blurb" : "git.rapidcow.org without cgit",
             "branch" : "main",
             "branches" : [
                {
                   "name" : "main",
-                  "time" : 1795265711
+                  "time" : 1795266758
                }
             ],
             "desc" : "git.rapidcow.org without cgit",
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795267036
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -1953,18 +1965,6 @@
                      }
                   ],
                   "time" : 1795225855
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "main",
-                        "note" : "(+3)",
-                        "type" : "branch"
-                     }
-                  ],
-                  "time" : 1795225810
                }
             ],
             "guest_ssh" : 1,
@@ -1978,11 +1978,11 @@
             "path" : "pub/www/site/git",
             "tags" : [],
             "tip" : {
-               "sha" : "9e55127",
-               "subject" : "update self",
-               "time" : 1795265711
+               "sha" : "1cff778",
+               "subject" : "more mirror list",
+               "time" : 1795266758
             },
-            "updated" : 1795266169
+            "updated" : 1795267036
          }
       },
       "pub/www/site/home" : {
