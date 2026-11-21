@@ -61,7 +61,7 @@
  })
  	or die "[TT] ", RdKw::WwW::GenGenLib::Template::Provider->error(), "\n";
  my $tt = Template->new({
-@@ -180,3 +207,48 @@
+@@ -180,3 +207,49 @@
  	or die "[TT] ", $tt->error(), "\n";
  
  exit 0;  # goodbye!
@@ -79,6 +79,7 @@
 +		# means "this page" and must be left alone.
 +		$uri = '.' if $uri =~ s{([^/]+)\.html$}
 +			{( $1 eq "index" ? "" : $1 )}eig && !length $uri;
++		$uri =~ s{(?<=\A|\/)(\.\.)?/$}{$1};
 +	}
 +	$uri;
 +}
