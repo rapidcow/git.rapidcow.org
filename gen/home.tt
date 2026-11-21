@@ -10,6 +10,20 @@
 				{
 					'kind' => 'updated',
 					'name' => 'main',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795265731
+		},
+		{
+			'more' => 0,
+			'name' => 'git',
+			'path' => 'pub/www/site/git/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
 					'note' => '(+12)',
 					'type' => 'branch'
 				}
@@ -99,25 +113,18 @@
 				}
 			],
 			'time' => 1795256615
-		},
-		{
-			'more' => 0,
-			'name' => 'work',
-			'path' => 'pub/www/site/work/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => '0',
-					'note' => '(-228+228)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795256588
 		}
 	],
 	'recent' => [
 		{
-			'active' => 1795265608,
+			'active' => 1795266369,
+			'blurb' => 'preview.rapidcow.org',
+			'dir' => 'pub/www/site',
+			'name' => 'preview',
+			'path' => 'pub/www/site/preview/index.html'
+		},
+		{
+			'active' => 1795265731,
 			'blurb' => 'git.rapidcow.org without cgit',
 			'dir' => 'pub/www/site',
 			'name' => 'git',
@@ -150,13 +157,6 @@
 			'dir' => 'pub/www/site',
 			'name' => 'old',
 			'path' => 'pub/www/site/old/index.html'
-		},
-		{
-			'active' => 1795259865,
-			'blurb' => 'preview.rapidcow.org',
-			'dir' => 'pub/www/site',
-			'name' => 'preview',
-			'path' => 'pub/www/site/preview/index.html'
 		}
 	],
 	'roots' => [
@@ -168,12 +168,12 @@
 			'path' => 'our/index.html'
 		},
 		{
-			'active' => 1795265608,
+			'active' => 1795266369,
 			'count' => 21,
 			'intro' => 'Public projects',
 			'name' => 'pub',
 			'path' => 'pub/index.html'
 		}
 	],
-	'updated' => 1795265608
+	'updated' => 1795266369
 } -%]

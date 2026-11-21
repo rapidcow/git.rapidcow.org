@@ -1724,7 +1724,7 @@
          }
       },
       "pub/www/site/foss" : {
-         "meta" : "cb762d6532b2ce13807ee5ba39f5d554238370f7",
+         "meta" : "5ebbe7ce7fac94d0b142160e73ae539af9136883",
          "repo" : {
             "active" : 1795228102,
             "blurb" : "foss.rapidcow.org",
@@ -1838,7 +1838,8 @@
             ],
             "guest_ssh" : 1,
             "mirrors" : [
-               "<a href=\"https://github.com/rapidcow/foss.rapidcow.org\">https://github.com/rapidcow/foss.rapidcow.org</a>.git"
+               "<a href=\"https://github.com/rapidcow/foss.rapidcow.org\">https://github.com/rapidcow/foss.rapidcow.org</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/foss.rapidcow.org\">https://gitlab.com/rapidcow/foss.rapidcow.org</a>.git"
             ],
             "name" : "foss",
             "nbranches" : 1,
@@ -1850,25 +1851,37 @@
                "subject" : "we actually need at least 3.103",
                "time" : 1795228069
             },
-            "updated" : 1795261164
+            "updated" : 1795266120
          }
       },
       "pub/www/site/git" : {
-         "meta" : "8c05c8e06d276e3e64a1db4ee5793e7df793fe01",
+         "meta" : "c71afb840090ad46cac58629413e48c2466c9b31",
          "repo" : {
-            "active" : 1795265608,
+            "active" : 1795265731,
             "blurb" : "git.rapidcow.org without cgit",
             "branch" : "main",
             "branches" : [
                {
                   "name" : "main",
-                  "time" : 1795265011
+                  "time" : 1795265711
                }
             ],
             "desc" : "git.rapidcow.org without cgit",
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795265731
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -1952,33 +1965,24 @@
                      }
                   ],
                   "time" : 1795225810
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "main",
-                        "note" : "(+1)",
-                        "type" : "branch"
-                     }
-                  ],
-                  "time" : 1795224693
                }
             ],
             "guest_ssh" : 1,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://github.com/rapidcow/git.rapidcow.org\">https://github.com/rapidcow/git.rapidcow.org</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/git.rapidcow.org\">https://gitlab.com/rapidcow/git.rapidcow.org</a>.git"
+            ],
             "name" : "git",
             "nbranches" : 1,
             "ntags" : 0,
             "path" : "pub/www/site/git",
             "tags" : [],
             "tip" : {
-               "sha" : "6493eee",
-               "subject" : "Python index",
-               "time" : 1795265011
+               "sha" : "9e55127",
+               "subject" : "update self",
+               "time" : 1795265711
             },
-            "updated" : 1795265608
+            "updated" : 1795266169
          }
       },
       "pub/www/site/home" : {
@@ -2454,11 +2458,11 @@
          }
       },
       "pub/www/site/preview" : {
-         "meta" : "f3a9dca9ccf7fb190f1b1402dd609d6e06b51f5d",
+         "meta" : "5ef286f8fc772959e7830df444f2299a2329aabc",
          "repo" : {
-            "active" : 1795259865,
+            "active" : 1795266369,
             "blurb" : "preview.rapidcow.org",
-            "branch" : "master",
+            "branch" : "main",
             "branches" : [],
             "desc" : "preview.rapidcow.org",
             "desc_html" : "",
@@ -2471,11 +2475,11 @@
             "ntags" : 0,
             "path" : "pub/www/site/preview",
             "tags" : [],
-            "updated" : 1795259865
+            "updated" : 1795266369
          }
       },
       "pub/www/site/status" : {
-         "meta" : "4d54c66f8fe397f1ee58e21a17c19533af610562",
+         "meta" : "f628e67d34763e2cdfb654ae95e94e7992b99244",
          "repo" : {
             "active" : 1795256505,
             "blurb" : "status.rapidcow.org",
@@ -2524,7 +2528,10 @@
                }
             ],
             "guest_ssh" : 1,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://github.com/rapidcow/status.rapidcow.org\">https://github.com/rapidcow/status.rapidcow.org</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/status.rapidcow.org\">https://gitlab.com/rapidcow/status.rapidcow.org</a>.git"
+            ],
             "name" : "status",
             "nbranches" : 3,
             "ntags" : 0,
@@ -2535,7 +2542,7 @@
                "subject" : "okay, there was this other sentence",
                "time" : 1795255876
             },
-            "updated" : 1795256505
+            "updated" : 1795266067
          }
       },
       "pub/www/site/work" : {

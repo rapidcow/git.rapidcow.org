@@ -51,7 +51,10 @@
 		}
 	],
 	'guest_ssh' => 1,
-	'mirrors' => [],
+	'mirrors' => [
+		'<a href="https://github.com/rapidcow/status.rapidcow.org">https://github.com/rapidcow/status.rapidcow.org</a>.git',
+		'<a href="https://gitlab.com/rapidcow/status.rapidcow.org">https://gitlab.com/rapidcow/status.rapidcow.org</a>.git'
+	],
 	'name' => 'status',
 	'nbranches' => 3,
 	'ntags' => 0,
@@ -62,6 +65,6 @@
 		'subject' => 'okay, there was this other sentence',
 		'time' => 1795255876
 	},
-	'updated' => 1795256505
+	'updated' => 1795266067
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]

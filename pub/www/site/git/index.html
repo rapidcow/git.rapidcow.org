@@ -4,19 +4,31 @@
  # GENERATED: gen-repos (edits will be lost)
 -%]
 [% r = {
-	'active' => 1795265608,
+	'active' => 1795265731,
 	'blurb' => 'git.rapidcow.org without cgit',
 	'branch' => 'main',
 	'branches' => [
 		{
 			'name' => 'main',
-			'time' => 1795265011
+			'time' => 1795265711
 		}
 	],
 	'desc' => 'git.rapidcow.org without cgit',
 	'desc_html' => '',
 	'dir' => 'pub/www/site',
 	'events' => [
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795265731
+		},
 		{
 			'more' => 0,
 			'refs' => [
@@ -100,32 +112,23 @@
 				}
 			],
 			'time' => 1795225810
-		},
-		{
-			'more' => 0,
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'main',
-					'note' => '(+1)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795224693
 		}
 	],
 	'guest_ssh' => 1,
-	'mirrors' => [],
+	'mirrors' => [
+		'<a href="https://github.com/rapidcow/git.rapidcow.org">https://github.com/rapidcow/git.rapidcow.org</a>.git',
+		'<a href="https://gitlab.com/rapidcow/git.rapidcow.org">https://gitlab.com/rapidcow/git.rapidcow.org</a>.git'
+	],
 	'name' => 'git',
 	'nbranches' => 1,
 	'ntags' => 0,
 	'path' => 'pub/www/site/git/index.html',
 	'tags' => [],
 	'tip' => {
-		'sha' => '6493eee',
-		'subject' => 'Python index',
-		'time' => 1795265011
+		'sha' => '9e55127',
+		'subject' => 'update self',
+		'time' => 1795265711
 	},
-	'updated' => 1795265608
+	'updated' => 1795266169
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]
