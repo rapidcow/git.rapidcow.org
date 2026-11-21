@@ -4,6 +4,48 @@
 	'pushes' => [
 		{
 			'more' => 0,
+			'name' => 'foss',
+			'path' => 'pub/www/site/foss/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'gh-pages',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795228102
+		},
+		{
+			'more' => 0,
+			'name' => 'foss',
+			'path' => 'pub/www/site/foss/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'gh-pages',
+					'note' => '(+4)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795227997
+		},
+		{
+			'more' => 0,
+			'name' => 'git',
+			'path' => 'pub/www/site/git/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795227158
+		},
+		{
+			'more' => 0,
 			'name' => 'liblist',
 			'path' => 'pub/lib/python3/liblist/index.html',
 			'refs' => [
@@ -71,51 +113,23 @@
 				}
 			],
 			'time' => 1795225810
-		},
-		{
-			'more' => 0,
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'main',
-					'note' => '(+1)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795224693
-		},
-		{
-			'more' => 0,
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html',
-			'refs' => [
-				{
-					'kind' => 'created',
-					'name' => 'main',
-					'note' => '(+57)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795224643
-		},
-		{
-			'more' => 0,
-			'name' => 'javadoc',
-			'path' => 'pub/www/site/javadoc/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'gh-pages',
-					'note' => '(+1)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795224228
 		}
 	],
 	'recent' => [
+		{
+			'active' => 1795228102,
+			'blurb' => 'foss.rapidcow.org',
+			'dir' => 'pub/www/site',
+			'name' => 'foss',
+			'path' => 'pub/www/site/foss/index.html'
+		},
+		{
+			'active' => 1795227158,
+			'blurb' => 'git.rapidcow.org without cgit',
+			'dir' => 'pub/www/site',
+			'name' => 'git',
+			'path' => 'pub/www/site/git/index.html'
+		},
 		{
 			'active' => 1795227057,
 			'blurb' => 'liblist (rdks.list)',
@@ -131,13 +145,6 @@
 			'path' => 'pub/lib/python3/libmail/index.html'
 		},
 		{
-			'active' => 1795225921,
-			'blurb' => 'git.rapidcow.org without cgit',
-			'dir' => 'pub/www/site',
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html'
-		},
-		{
 			'active' => 1795224228,
 			'blurb' => 'javadoc.rapidcow.org',
 			'dir' => 'pub/www/site',
@@ -150,13 +157,6 @@
 			'dir' => 'pub/project',
 			'name' => 'siteconf',
 			'path' => 'pub/project/siteconf/index.html'
-		},
-		{
-			'active' => 1795148361,
-			'blurb' => 'homebrew',
-			'dir' => 'our/package',
-			'name' => 'homebrew',
-			'path' => 'our/package/homebrew/index.html'
 		}
 	],
 	'roots' => [
@@ -168,12 +168,12 @@
 			'path' => 'our/index.html'
 		},
 		{
-			'active' => 1795227057,
+			'active' => 1795228102,
 			'count' => 21,
 			'intro' => 'Public projects',
 			'name' => 'pub',
 			'path' => 'pub/index.html'
 		}
 	],
-	'updated' => 1795227057
+	'updated' => 1795228102
 } -%]

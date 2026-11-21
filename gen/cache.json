@@ -2287,21 +2287,45 @@
          }
       },
       "pub/www/site/foss" : {
-         "meta" : "45038d215aa81d61ba17e0ac8ea90fed5a101318",
+         "meta" : "3b9b77dcdfd052b63a7aa2be668144d8e177355d",
          "repo" : {
-            "active" : 1794994572,
+            "active" : 1795228102,
             "blurb" : "foss.rapidcow.org",
             "branch" : "gh-pages",
             "branches" : [
                {
                   "name" : "gh-pages",
-                  "time" : 1794994553
+                  "time" : 1795228069
                }
             ],
             "desc" : "foss.rapidcow.org",
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795228102
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+4)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795227997
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -2373,30 +2397,6 @@
                      }
                   ],
                   "time" : 1794911484
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "gh-pages",
-                        "note" : "(+2)",
-                        "type" : "branch"
-                     }
-                  ],
-                  "time" : 1794910998
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "gh-pages",
-                        "note" : "(+3)",
-                        "type" : "branch"
-                     }
-                  ],
-                  "time" : 1794909516
                }
             ],
             "guest_ssh" : 1,
@@ -2406,29 +2406,41 @@
             "path" : "pub/www/site/foss",
             "tags" : [],
             "tip" : {
-               "sha" : "13e4dab",
-               "subject" : "this chomp is actually not necessary",
-               "time" : 1794994553
+               "sha" : "6a01324",
+               "subject" : "we actually need at least 3.103",
+               "time" : 1795228069
             },
-            "updated" : 1794994572
+            "updated" : 1795228102
          }
       },
       "pub/www/site/git" : {
-         "meta" : "f31bc0bdfd7f589ca3a650781c1e63a863dd5f6d",
+         "meta" : "dc9570c53b49a80cbdfcda3fb962934e0048705e",
          "repo" : {
-            "active" : 1795225921,
+            "active" : 1795227158,
             "blurb" : "git.rapidcow.org without cgit",
             "branch" : "main",
             "branches" : [
                {
                   "name" : "main",
-                  "time" : 1795225903
+                  "time" : 1795227075
                }
             ],
             "desc" : "git.rapidcow.org without cgit",
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795227158
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -2497,11 +2509,11 @@
             "path" : "pub/www/site/git",
             "tags" : [],
             "tip" : {
-               "sha" : "180683f",
-               "subject" : "use absolute ${A}",
-               "time" : 1795225903
+               "sha" : "0b68cba",
+               "subject" : "actually create lib/python3/",
+               "time" : 1795227075
             },
-            "updated" : 1795225921
+            "updated" : 1795227158
          }
       },
       "pub/www/site/javadoc" : {
