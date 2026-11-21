@@ -3,7 +3,7 @@
 # A local destination is useful for rehearsing the exact deployment.
 set -euo pipefail
 cd -- "$(dirname -- "$0")"
-destination=${1:-root@ubuntu:/srv/www/git}
+destination=${1:-root@ubuntu:/srv/www/pub/git.rapidcow.org}
 if (( $# > 1 )); then
 	echo "usage: $0 [destination]" >&2
 	exit 2
