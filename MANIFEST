@@ -42,6 +42,7 @@ MAKE site
 	NEED pub/school/wisc/sdc/index.html
 	NEED pub/www/index.html
 	NEED pub/www/site/foss/index.html
+	NEED pub/www/site/git/index.html
 	NEED pub/www/site/index.html
 	NEED pub/www/site/javadoc/index.html
 	NEED pub/www/site/man/index.html

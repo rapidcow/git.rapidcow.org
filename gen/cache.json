@@ -2327,22 +2327,77 @@
             "updated" : 1794994572
          }
       },
-      "pub/www/site/javadoc" : {
-         "meta" : "a24632b9299274b8d89e96ca6133a98a4bb6e28e",
+      "pub/www/site/git" : {
+         "meta" : "cf2a85313fe1845cc3facbd4fa1782e1dbf6ca8c",
          "repo" : {
-            "active" : 1794995808,
+            "active" : 1795224643,
+            "blurb" : "git.rapidcow.org without cgit",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "main",
+                  "time" : 1795222773
+               }
+            ],
+            "desc" : "git.rapidcow.org without cgit",
+            "desc_html" : "",
+            "dir" : "pub/www/site",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+57)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795224643
+               }
+            ],
+            "guest_ssh" : 1,
+            "name" : "git",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/www/site/git",
+            "tags" : [],
+            "tip" : {
+               "sha" : "954d264",
+               "subject" : "siteconf push",
+               "time" : 1795222773
+            },
+            "updated" : 1795224643
+         }
+      },
+      "pub/www/site/javadoc" : {
+         "meta" : "2acba6018f13ec2bb59ebd784f2a8869c2f740ba",
+         "repo" : {
+            "active" : 1795224228,
             "blurb" : "javadoc.rapidcow.org",
             "branch" : "gh-pages",
             "branches" : [
                {
                   "name" : "gh-pages",
-                  "time" : 1794995767
+                  "time" : 1795224165
                }
             ],
             "desc" : "javadoc.rapidcow.org",
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795224228
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -2426,18 +2481,6 @@
                      }
                   ],
                   "time" : 1794885090
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "gh-pages",
-                        "note" : "(+1)",
-                        "type" : "branch"
-                     }
-                  ],
-                  "time" : 1794604976
                }
             ],
             "guest_ssh" : 0,
@@ -2447,11 +2490,11 @@
             "path" : "pub/www/site/javadoc",
             "tags" : [],
             "tip" : {
-               "sha" : "1cabc15",
-               "subject" : "check the docs directory",
-               "time" : 1794995767
+               "sha" : "e4b578e",
+               "subject" : "why is this failing",
+               "time" : 1795224165
             },
-            "updated" : 1794995808
+            "updated" : 1795224228
          }
       },
       "pub/www/site/man" : {
