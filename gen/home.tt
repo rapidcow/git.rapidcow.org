@@ -1,7 +1,103 @@
 [%# GENERATED: gen-repos: the home page's data -%]
 [% home = {
-	'nrepos' => 24,
+	'nrepos' => 26,
 	'pushes' => [
+		{
+			'more' => 0,
+			'name' => 'www.endfindme.com',
+			'path' => 'pub/www/site/www.endfindme.com/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => '0',
+					'note' => '(+5)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795256615
+		},
+		{
+			'more' => 0,
+			'name' => 'www.endfindme.com',
+			'path' => 'pub/www/site/www.endfindme.com/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => '0',
+					'note' => '(-228+228)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795256588
+		},
+		{
+			'more' => 0,
+			'name' => 'status',
+			'path' => 'pub/www/site/status/index.html',
+			'refs' => [
+				{
+					'kind' => 'created',
+					'name' => 'main',
+					'note' => '(+8)',
+					'type' => 'branch'
+				},
+				{
+					'kind' => 'created',
+					'name' => 'pages',
+					'note' => '(+120)',
+					'type' => 'branch'
+				},
+				{
+					'kind' => 'created',
+					'name' => 'pages-src',
+					'note' => '(+203)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795256505
+		},
+		{
+			'more' => 0,
+			'name' => 'neocities',
+			'path' => 'pub/www/site/neocities/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'master',
+					'note' => '(+8)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795230792
+		},
+		{
+			'more' => 0,
+			'name' => 'git',
+			'path' => 'pub/www/site/git/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795228505
+		},
+		{
+			'more' => 0,
+			'name' => 'git',
+			'path' => 'pub/www/site/git/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795228156
+		},
 		{
 			'more' => 0,
 			'name' => 'foss',
@@ -29,93 +125,37 @@
 				}
 			],
 			'time' => 1795227997
-		},
-		{
-			'more' => 0,
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'main',
-					'note' => '(+1)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795227158
-		},
-		{
-			'more' => 0,
-			'name' => 'liblist',
-			'path' => 'pub/lib/python3/liblist/index.html',
-			'refs' => [
-				{
-					'kind' => 'created',
-					'name' => 'main',
-					'note' => '(+24)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795227057
-		},
-		{
-			'more' => 0,
-			'name' => 'libmail',
-			'path' => 'pub/lib/python3/libmail/index.html',
-			'refs' => [
-				{
-					'kind' => 'created',
-					'name' => 'main',
-					'note' => '(+86)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795227041
-		},
-		{
-			'more' => 0,
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'main',
-					'note' => '(+1)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795225921
-		},
-		{
-			'more' => 0,
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'main',
-					'note' => '(+1)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795225855
-		},
-		{
-			'more' => 0,
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'main',
-					'note' => '(+3)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795225810
 		}
 	],
 	'recent' => [
+		{
+			'active' => 1795256630,
+			'blurb' => 'www.endfindme.com',
+			'dir' => 'pub/www/site',
+			'name' => 'www.endfindme.com',
+			'path' => 'pub/www/site/www.endfindme.com/index.html'
+		},
+		{
+			'active' => 1795256505,
+			'blurb' => 'status.rapidcow.org',
+			'dir' => 'pub/www/site',
+			'name' => 'status',
+			'path' => 'pub/www/site/status/index.html'
+		},
+		{
+			'active' => 1795230792,
+			'blurb' => 'rapidcow.neocities.org',
+			'dir' => 'pub/www/site',
+			'name' => 'neocities',
+			'path' => 'pub/www/site/neocities/index.html'
+		},
+		{
+			'active' => 1795228505,
+			'blurb' => 'git.rapidcow.org without cgit',
+			'dir' => 'pub/www/site',
+			'name' => 'git',
+			'path' => 'pub/www/site/git/index.html'
+		},
 		{
 			'active' => 1795228102,
 			'blurb' => 'foss.rapidcow.org',
@@ -124,39 +164,11 @@
 			'path' => 'pub/www/site/foss/index.html'
 		},
 		{
-			'active' => 1795227158,
-			'blurb' => 'git.rapidcow.org without cgit',
-			'dir' => 'pub/www/site',
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html'
-		},
-		{
 			'active' => 1795227057,
 			'blurb' => 'liblist (rdks.list)',
 			'dir' => 'pub/lib/python3',
 			'name' => 'liblist',
 			'path' => 'pub/lib/python3/liblist/index.html'
-		},
-		{
-			'active' => 1795227041,
-			'blurb' => 'libmail (rdks.mail)',
-			'dir' => 'pub/lib/python3',
-			'name' => 'libmail',
-			'path' => 'pub/lib/python3/libmail/index.html'
-		},
-		{
-			'active' => 1795224228,
-			'blurb' => 'javadoc.rapidcow.org',
-			'dir' => 'pub/www/site',
-			'name' => 'javadoc',
-			'path' => 'pub/www/site/javadoc/index.html'
-		},
-		{
-			'active' => 1795222589,
-			'blurb' => 'just conf',
-			'dir' => 'pub/project',
-			'name' => 'siteconf',
-			'path' => 'pub/project/siteconf/index.html'
 		}
 	],
 	'roots' => [
@@ -168,12 +180,12 @@
 			'path' => 'our/index.html'
 		},
 		{
-			'active' => 1795228102,
-			'count' => 21,
+			'active' => 1795256630,
+			'count' => 23,
 			'intro' => 'Public projects',
 			'name' => 'pub',
 			'path' => 'pub/index.html'
 		}
 	],
-	'updated' => 1795228102
+	'updated' => 1795258149
 } -%]

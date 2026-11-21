@@ -62,6 +62,8 @@ pub/www/site/index.html \
 pub/www/site/javadoc/index.html \
 pub/www/site/man/index.html \
 pub/www/site/neocities/index.html \
+pub/www/site/status/index.html \
+pub/www/site/www.endfindme.com/index.html \
 	: render
 	cd -- ${A:Q} && ${^X:Q} render -B ${B:Q} \
 		-- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}

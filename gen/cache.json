@@ -12,6 +12,7 @@
             "dir" : "our/package",
             "events" : [],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "artix",
             "nbranches" : 0,
             "ntags" : 0,
@@ -32,6 +33,7 @@
             "dir" : "our/package",
             "events" : [],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "freebsd",
             "nbranches" : 0,
             "ntags" : 0,
@@ -142,6 +144,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "homebrew",
             "nbranches" : 1,
             "ntags" : 0,
@@ -287,6 +290,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "Algo-BSearch",
             "nbranches" : 1,
             "ntags" : 2,
@@ -363,6 +367,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "IPC-Unix",
             "nbranches" : 1,
             "ntags" : 1,
@@ -481,6 +486,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "List-Search",
             "nbranches" : 1,
             "ntags" : 7,
@@ -524,7 +530,7 @@
          }
       },
       "pub/lib/python3/liblist" : {
-         "meta" : "3fbf30077711fc6dd729b857fac7ddfbac8695d1",
+         "meta" : "dc72ba75633eb5c2bc42ea4d2c2640777732d054",
          "repo" : {
             "active" : 1795227057,
             "blurb" : "liblist (rdks.list)",
@@ -553,6 +559,13 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [
+               "https://github.com/rapidcow/siteconf.git",
+               "https://gitlab.com/rapidcow/siteconf.git",
+               "https://bitbucket.org/rapidcow/siteconf.git",
+               "https://gitee.com/rapidcow/siteconf.git",
+               "https://gitcode.com/rapidcow/siteconf.git"
+            ],
             "name" : "liblist",
             "nbranches" : 1,
             "ntags" : 0,
@@ -563,7 +576,7 @@
                "subject" : "Merge extracted history from pyutil.git",
                "time" : 1794352979
             },
-            "updated" : 1795227057
+            "updated" : 1795258149
          }
       },
       "pub/lib/python3/libmail" : {
@@ -596,6 +609,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "libmail",
             "nbranches" : 1,
             "ntags" : 0,
@@ -669,6 +683,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "ed",
             "nbranches" : 1,
             "ntags" : 45,
@@ -813,6 +828,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "git",
             "nbranches" : 2,
             "ntags" : 277,
@@ -939,6 +955,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "systemd",
             "nbranches" : 2,
             "ntags" : 494,
@@ -1065,6 +1082,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "vi",
             "nbranches" : 2,
             "ntags" : 19,
@@ -1215,6 +1233,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "git",
             "nbranches" : 2,
             "ntags" : 11,
@@ -1339,6 +1358,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "fresh",
             "nbranches" : 1,
             "ntags" : 0,
@@ -1470,6 +1490,7 @@
                }
             ],
             "guest_ssh" : 0,
+            "mirrors" : [],
             "name" : "bridge",
             "nbranches" : 2,
             "ntags" : 0,
@@ -1645,6 +1666,7 @@
                }
             ],
             "guest_ssh" : 0,
+            "mirrors" : [],
             "name" : "perspective",
             "nbranches" : 1,
             "ntags" : 4,
@@ -1849,6 +1871,7 @@
                }
             ],
             "guest_ssh" : 0,
+            "mirrors" : [],
             "name" : "siteconf",
             "nbranches" : 1,
             "ntags" : 36,
@@ -2081,6 +2104,7 @@
                }
             ],
             "guest_ssh" : 0,
+            "mirrors" : [],
             "name" : "trivnote",
             "nbranches" : 3,
             "ntags" : 5,
@@ -2273,6 +2297,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "team",
             "nbranches" : 12,
             "ntags" : 0,
@@ -2400,6 +2425,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "foss",
             "nbranches" : 1,
             "ntags" : 0,
@@ -2414,21 +2440,45 @@
          }
       },
       "pub/www/site/git" : {
-         "meta" : "dc9570c53b49a80cbdfcda3fb962934e0048705e",
+         "meta" : "c9c220e0908acab496a184990648e433b1ade183",
          "repo" : {
-            "active" : 1795227158,
+            "active" : 1795228505,
             "blurb" : "git.rapidcow.org without cgit",
             "branch" : "main",
             "branches" : [
                {
                   "name" : "main",
-                  "time" : 1795227075
+                  "time" : 1795228484
                }
             ],
             "desc" : "git.rapidcow.org without cgit",
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795228505
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795228156
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -2503,17 +2553,18 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "git",
             "nbranches" : 1,
             "ntags" : 0,
             "path" : "pub/www/site/git",
             "tags" : [],
             "tip" : {
-               "sha" : "0b68cba",
-               "subject" : "actually create lib/python3/",
-               "time" : 1795227075
+               "sha" : "33e2e11",
+               "subject" : "save render patch!!!!",
+               "time" : 1795228484
             },
-            "updated" : 1795227158
+            "updated" : 1795228505
          }
       },
       "pub/www/site/javadoc" : {
@@ -2630,6 +2681,7 @@
                }
             ],
             "guest_ssh" : 0,
+            "mirrors" : [],
             "name" : "javadoc",
             "nbranches" : 1,
             "ntags" : 0,
@@ -2673,6 +2725,7 @@
                }
             ],
             "guest_ssh" : 1,
+            "mirrors" : [],
             "name" : "man",
             "nbranches" : 1,
             "ntags" : 0,
@@ -2687,15 +2740,15 @@
          }
       },
       "pub/www/site/neocities" : {
-         "meta" : "13bb72633eeb686f05d7bede38d06e7c5cf43f7e",
+         "meta" : "491a1d497c32c46f1bb9c78d15886be7a2ce8da6",
          "repo" : {
-            "active" : 1794914509,
+            "active" : 1795230792,
             "blurb" : "rapidcow.neocities.org",
             "branch" : "master",
             "branches" : [
                {
                   "name" : "master",
-                  "time" : 1794914492
+                  "time" : 1795230767
                },
                {
                   "name" : "main/2025-01-03",
@@ -2722,6 +2775,18 @@
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+8)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795230792
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -2835,21 +2900,10 @@
                      }
                   ],
                   "time" : 1793837092
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "master",
-                        "note" : "(+3)",
-                        "type" : "branch"
-                     }
-                  ],
-                  "time" : 1793775012
                }
             ],
             "guest_ssh" : 0,
+            "mirrors" : [],
             "name" : "neocities",
             "nbranches" : 6,
             "ntags" : 7,
@@ -2885,11 +2939,143 @@
                }
             ],
             "tip" : {
-               "sha" : "4f9bc75",
-               "subject" : "revert sloppy code",
-               "time" : 1794914492
+               "sha" : "2d50d27",
+               "subject" : "Merge branch 'master' of rpi-4b:~ethan/my/website/neocities",
+               "time" : 1795230767
             },
-            "updated" : 1794914509
+            "updated" : 1795230792
+         }
+      },
+      "pub/www/site/status" : {
+         "meta" : "4d54c66f8fe397f1ee58e21a17c19533af610562",
+         "repo" : {
+            "active" : 1795256505,
+            "blurb" : "status.rapidcow.org",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "main",
+                  "time" : 1795255876
+               },
+               {
+                  "name" : "pages",
+                  "time" : 1795255584
+               },
+               {
+                  "name" : "pages-src",
+                  "time" : 1795255533
+               }
+            ],
+            "desc" : "status.rapidcow.org",
+            "desc_html" : "",
+            "dir" : "pub/www/site",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+8)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "pages",
+                        "note" : "(+120)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "created",
+                        "name" : "pages-src",
+                        "note" : "(+203)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795256505
+               }
+            ],
+            "guest_ssh" : 1,
+            "mirrors" : [],
+            "name" : "status",
+            "nbranches" : 3,
+            "ntags" : 0,
+            "path" : "pub/www/site/status",
+            "tags" : [],
+            "tip" : {
+               "sha" : "5cc1250",
+               "subject" : "okay, there was this other sentence",
+               "time" : 1795255876
+            },
+            "updated" : 1795256505
+         }
+      },
+      "pub/www/site/www.endfindme.com" : {
+         "meta" : "82315f859ce99fe96ea2ffb9db01d303a2b743ea",
+         "repo" : {
+            "active" : 1795256630,
+            "blurb" : "www.endfindme.com",
+            "branch" : "0",
+            "branches" : [
+               {
+                  "name" : "0",
+                  "time" : 1795094752
+               }
+            ],
+            "desc" : "www.endfindme.com",
+            "desc_html" : "",
+            "dir" : "pub/www/site",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "0",
+                        "note" : "(+5)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795256615
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "0",
+                        "note" : "(-228+228)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795256588
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "0",
+                        "note" : "(+238)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794998195
+               }
+            ],
+            "guest_ssh" : 1,
+            "mirrors" : [],
+            "name" : "www.endfindme.com",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/www/site/www.endfindme.com",
+            "tags" : [],
+            "tip" : {
+               "sha" : "36b762f",
+               "subject" : "remove that one singular space",
+               "time" : 1795094752
+            },
+            "updated" : 1795256630
          }
       }
    },

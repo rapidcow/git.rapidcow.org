@@ -1,0 +1,67 @@
+[%
+ # HAVE: pub/www/site/status/index.html
+ # NEED: ${skel}/repo.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% r = {
+	'active' => 1795256505,
+	'blurb' => 'status.rapidcow.org',
+	'branch' => 'main',
+	'branches' => [
+		{
+			'name' => 'main',
+			'time' => 1795255876
+		},
+		{
+			'name' => 'pages',
+			'time' => 1795255584
+		},
+		{
+			'name' => 'pages-src',
+			'time' => 1795255533
+		}
+	],
+	'desc' => 'status.rapidcow.org',
+	'desc_html' => '',
+	'dir' => 'pub/www/site',
+	'events' => [
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'created',
+					'name' => 'main',
+					'note' => '(+8)',
+					'type' => 'branch'
+				},
+				{
+					'kind' => 'created',
+					'name' => 'pages',
+					'note' => '(+120)',
+					'type' => 'branch'
+				},
+				{
+					'kind' => 'created',
+					'name' => 'pages-src',
+					'note' => '(+203)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795256505
+		}
+	],
+	'guest_ssh' => 1,
+	'mirrors' => [],
+	'name' => 'status',
+	'nbranches' => 3,
+	'ntags' => 0,
+	'path' => 'pub/www/site/status/index.html',
+	'tags' => [],
+	'tip' => {
+		'sha' => '5cc1250',
+		'subject' => 'okay, there was this other sentence',
+		'time' => 1795255876
+	},
+	'updated' => 1795256505
+} -%]
+[% PROCESS "${D.skel}/repo.html" -%]

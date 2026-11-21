@@ -1,0 +1,71 @@
+[%
+ # HAVE: pub/www/site/www.endfindme.com/index.html
+ # NEED: ${skel}/repo.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% r = {
+	'active' => 1795256630,
+	'blurb' => 'www.endfindme.com',
+	'branch' => '0',
+	'branches' => [
+		{
+			'name' => '0',
+			'time' => 1795094752
+		}
+	],
+	'desc' => 'www.endfindme.com',
+	'desc_html' => '',
+	'dir' => 'pub/www/site',
+	'events' => [
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => '0',
+					'note' => '(+5)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795256615
+		},
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => '0',
+					'note' => '(-228+228)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795256588
+		},
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'created',
+					'name' => '0',
+					'note' => '(+238)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1794998195
+		}
+	],
+	'guest_ssh' => 1,
+	'mirrors' => [],
+	'name' => 'www.endfindme.com',
+	'nbranches' => 1,
+	'ntags' => 0,
+	'path' => 'pub/www/site/www.endfindme.com/index.html',
+	'tags' => [],
+	'tip' => {
+		'sha' => '36b762f',
+		'subject' => 'remove that one singular space',
+		'time' => 1795094752
+	},
+	'updated' => 1795256630
+} -%]
+[% PROCESS "${D.skel}/repo.html" -%]

@@ -50,4 +50,6 @@ MAKE site
 	NEED pub/www/site/javadoc/index.html
 	NEED pub/www/site/man/index.html
 	NEED pub/www/site/neocities/index.html
+	NEED pub/www/site/status/index.html
+	NEED pub/www/site/www.endfindme.com/index.html
 # END gen-repos
