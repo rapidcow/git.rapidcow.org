@@ -9,6 +9,11 @@
 			& .dir { color: var(--ink-dim); font-weight: 400; }
 		}
 
+		& pre.lede {
+			white-space: pre-wrap;
+			overflow-wrap: anywhere;
+		}
+
 		& .facts dl {
 			display: grid;
 			grid-template-columns: max-content 1fr;

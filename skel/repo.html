@@ -18,11 +18,16 @@
 [% r.desc_html %]
 	</div>
 	[%- ELSIF r.desc %]
-	<p class="lede">[% r.desc | html %]</p>
+	<pre class="lede">[% r.desc | html %]</pre>
 	[%- END %]
 
 	<section class="clone">
 		<h2>Clone</h2>
+		[%- IF r.mirrors.size %]
+		<h3>Mirrors</h3>
+<pre><code>[%- FOREACH mirror IN r.mirrors %]git clone [% mirror | html %]
+[% END -%]</code></pre>
+		[%- END %]
 <pre><code>git clone [% locate('//' _ r.dir _ '/' _ r.name _ '.git') | html %]
 [%- host = locate('//').replace('^[A-Za-z][A-Za-z0-9+.-]*://([^/]*).*$', '$1') %]
 [%- IF r.guest_ssh && host.length %]

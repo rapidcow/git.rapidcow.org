@@ -117,6 +117,7 @@ fetch)
 		if [ -n "$m" ]; then
 			git "$g" cat-file blob "$m:description.html" 2>/dev/null | field descr_html
 			git "$g" cat-file blob "$m:description" 2>/dev/null | field descr
+			git "$g" cat-file blob "$m:mirrorlist" 2>/dev/null | field mirrorlist
 			# Effective permission of the anonymous ssh user: its own
 			# entry if it has one (even an empty one), else the default.
 			if p=$(git "$g" config --blob "$m:config" --get 'shell.guest@rapidcow.org.permission' 2>/dev/null)
@@ -127,6 +128,8 @@ fetch)
 			git "$g" log -n "$LOG_DEPTH" --format='%ct%x1f%s%x1f%b%x1e' refs/info/rdk-self 2>/dev/null | field log
 		else
 			cat "$r/description" 2>/dev/null | field descr
+			cat "$r/description.html" 2>/dev/null | field descr_html
+			cat "$r/mirrorlist" 2>/dev/null | field mirrorlist
 		fi
 		git "$g" symbolic-ref -q HEAD 2>/dev/null | field head
 		git "$g" for-each-ref --format='%(refname)%09%(creatordate:unix)' refs/heads refs/tags 2>/dev/null | field refs
@@ -184,7 +187,8 @@ if ($opt_c) {
 		(my $path = $dir) =~ s/\.git\z//;
 		$meta{$path} = $m // '';
 	}
-	my @stale = grep { !length $meta{$_} || ($cache{$_}{meta} // '') ne $meta{$_} }
+	my @stale = grep { !length $meta{$_} || ($cache{$_}{meta} // '') ne $meta{$_}
+		|| !exists $cache{$_}{repo}{mirrors} }
 		sort keys %meta;
 	say STDERR scalar(keys %meta), " visible repositories, ",
 		scalar(@stale), " to fetch";
@@ -248,6 +252,8 @@ sub build_repo {
 	$r{desc} = $descr;
 	$r{desc_html} = $html;
 	$r{blurb} = blurb($descr, $html);
+	$r{mirrors} = [ grep { length && !/^#/ }
+		map { s/^\s+|\s+$//gr } split /\n/, text($raw->{mirrorlist}) ];
 
 	# refs: branches and tags
 	my (@branches, @tags);
