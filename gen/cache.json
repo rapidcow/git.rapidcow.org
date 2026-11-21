@@ -2660,11 +2660,11 @@
          }
       },
       "pub/www/site/home" : {
-         "meta" : "90eb7458d26e1926a3ed3e544a3f6f7c6674fc6a",
+         "meta" : "52f6b70c766720027c252d5af14595a676631789",
          "repo" : {
             "active" : 1795257474,
             "blurb" : "www.rapidcow.org",
-            "branch" : "0",
+            "branch" : "main",
             "branches" : [
                {
                   "name" : "main",
@@ -2695,7 +2695,12 @@
             "ntags" : 0,
             "path" : "pub/www/site/home",
             "tags" : [],
-            "updated" : 1795259774
+            "tip" : {
+               "sha" : "f6f10de",
+               "subject" : "patch....? change?",
+               "time" : 1795256791
+            },
+            "updated" : 1795260472
          }
       },
       "pub/www/site/javadoc" : {
