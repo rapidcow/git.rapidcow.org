@@ -1,0 +1,24 @@
+[%
+ # HAVE: pub/www/site/preview/index.html
+ # NEED: ${skel}/repo.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% r = {
+	'active' => 1795259865,
+	'blurb' => 'preview.rapidcow.org',
+	'branch' => 'master',
+	'branches' => [],
+	'desc' => 'preview.rapidcow.org',
+	'desc_html' => '',
+	'dir' => 'pub/www/site',
+	'events' => [],
+	'guest_ssh' => 1,
+	'mirrors' => [],
+	'name' => 'preview',
+	'nbranches' => 0,
+	'ntags' => 0,
+	'path' => 'pub/www/site/preview/index.html',
+	'tags' => [],
+	'updated' => 1795259865
+} -%]
+[% PROCESS "${D.skel}/repo.html" -%]

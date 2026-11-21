@@ -1,0 +1,95 @@
+[%
+ # HAVE: pub/www/site/blog/index.html
+ # NEED: ${skel}/repo.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% r = {
+	'active' => 1795260303,
+	'blurb' => 'www.yizx.net',
+	'branch' => '0',
+	'branches' => [
+		{
+			'name' => '0',
+			'time' => 1795234956
+		}
+	],
+	'desc' => 'www.yizx.net',
+	'desc_html' => '',
+	'dir' => 'pub/www/site',
+	'events' => [
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => '0',
+					'note' => '(-106+106)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795260303
+		},
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => '0',
+					'note' => '(+10)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795235041
+		},
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => '0',
+					'note' => '(+6)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1794246306
+		},
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => '0',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1794002861
+		},
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'created',
+					'name' => '0',
+					'note' => '(+89)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1793775513
+		}
+	],
+	'guest_ssh' => 1,
+	'mirrors' => [],
+	'name' => 'blog',
+	'nbranches' => 1,
+	'ntags' => 0,
+	'path' => 'pub/www/site/blog/index.html',
+	'tags' => [],
+	'tip' => {
+		'sha' => '3a608ec',
+		'subject' => 'Merge branch \'0\' of rpi-4b:~ethan/my/site/www-net into 0',
+		'time' => 1795234956
+	},
+	'updated' => 1795260303
+} -%]
+[% PROCESS "${D.skel}/repo.html" -%]

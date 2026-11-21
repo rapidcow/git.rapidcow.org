@@ -1,0 +1,47 @@
+[%
+ # HAVE: pub/www/site/old/index.html
+ # NEED: ${skel}/repo.html
+ # GENERATED: gen-repos (edits will be lost)
+-%]
+[% r = {
+	'active' => 1795260148,
+	'blurb' => '2024 rapidcow.org',
+	'branch' => 'main',
+	'branches' => [
+		{
+			'name' => 'main',
+			'time' => 1795095244
+		}
+	],
+	'desc' => '2024 rapidcow.org',
+	'desc_html' => '',
+	'dir' => 'pub/www/site',
+	'events' => [
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'created',
+					'name' => 'main',
+					'note' => '(+86)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795260148
+		}
+	],
+	'guest_ssh' => 1,
+	'mirrors' => [],
+	'name' => 'old',
+	'nbranches' => 1,
+	'ntags' => 0,
+	'path' => 'pub/www/site/old/index.html',
+	'tags' => [],
+	'tip' => {
+		'sha' => '9a7d166',
+		'subject' => 'update^?-upgrade',
+		'time' => 1795095244
+	},
+	'updated' => 1795260148
+} -%]
+[% PROCESS "${D.skel}/repo.html" -%]

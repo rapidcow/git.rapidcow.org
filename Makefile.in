@@ -56,14 +56,18 @@ pub/school/wisc/index.html \
 pub/school/wisc/sdc/fa-25/index.html \
 pub/school/wisc/sdc/index.html \
 pub/www/index.html \
+pub/www/site/blog/index.html \
 pub/www/site/foss/index.html \
 pub/www/site/git/index.html \
+pub/www/site/home/index.html \
 pub/www/site/index.html \
 pub/www/site/javadoc/index.html \
 pub/www/site/man/index.html \
 pub/www/site/neocities/index.html \
+pub/www/site/old/index.html \
+pub/www/site/preview/index.html \
 pub/www/site/status/index.html \
-pub/www/site/www.endfindme.com/index.html \
+pub/www/site/work/index.html \
 	: render
 	cd -- ${A:Q} && ${^X:Q} render -B ${B:Q} \
 		-- ${a:Q}/${.IMPSRC:Q} ${B:Q}/${b:Q}/${.TARGET:Q}

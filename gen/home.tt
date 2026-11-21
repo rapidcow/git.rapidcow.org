@@ -1,11 +1,53 @@
 [%# GENERATED: gen-repos: the home page's data -%]
 [% home = {
-	'nrepos' => 26,
+	'nrepos' => 30,
 	'pushes' => [
 		{
 			'more' => 0,
-			'name' => 'www.endfindme.com',
-			'path' => 'pub/www/site/www.endfindme.com/index.html',
+			'name' => 'blog',
+			'path' => 'pub/www/site/blog/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => '0',
+					'note' => '(-106+106)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795260303
+		},
+		{
+			'more' => 0,
+			'name' => 'old',
+			'path' => 'pub/www/site/old/index.html',
+			'refs' => [
+				{
+					'kind' => 'created',
+					'name' => 'main',
+					'note' => '(+86)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795260148
+		},
+		{
+			'more' => 0,
+			'name' => 'home',
+			'path' => 'pub/www/site/home/index.html',
+			'refs' => [
+				{
+					'kind' => 'created',
+					'name' => 'main',
+					'note' => '(+97)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795257474
+		},
+		{
+			'more' => 0,
+			'name' => 'work',
+			'path' => 'pub/www/site/work/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
@@ -18,8 +60,8 @@
 		},
 		{
 			'more' => 0,
-			'name' => 'www.endfindme.com',
-			'path' => 'pub/www/site/www.endfindme.com/index.html',
+			'name' => 'work',
+			'path' => 'pub/www/site/work/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
@@ -58,6 +100,20 @@
 		},
 		{
 			'more' => 0,
+			'name' => 'blog',
+			'path' => 'pub/www/site/blog/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => '0',
+					'note' => '(+10)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795235041
+		},
+		{
+			'more' => 0,
 			'name' => 'neocities',
 			'path' => 'pub/www/site/neocities/index.html',
 			'refs' => [
@@ -69,71 +125,43 @@
 				}
 			],
 			'time' => 1795230792
-		},
-		{
-			'more' => 0,
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'main',
-					'note' => '(+1)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795228505
-		},
-		{
-			'more' => 0,
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'main',
-					'note' => '(+1)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795228156
-		},
-		{
-			'more' => 0,
-			'name' => 'foss',
-			'path' => 'pub/www/site/foss/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'gh-pages',
-					'note' => '(+1)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795228102
-		},
-		{
-			'more' => 0,
-			'name' => 'foss',
-			'path' => 'pub/www/site/foss/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'gh-pages',
-					'note' => '(+4)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795227997
 		}
 	],
 	'recent' => [
 		{
+			'active' => 1795260303,
+			'blurb' => 'www.yizx.net',
+			'dir' => 'pub/www/site',
+			'name' => 'blog',
+			'path' => 'pub/www/site/blog/index.html'
+		},
+		{
+			'active' => 1795260148,
+			'blurb' => '2024 rapidcow.org',
+			'dir' => 'pub/www/site',
+			'name' => 'old',
+			'path' => 'pub/www/site/old/index.html'
+		},
+		{
+			'active' => 1795259865,
+			'blurb' => 'preview.rapidcow.org',
+			'dir' => 'pub/www/site',
+			'name' => 'preview',
+			'path' => 'pub/www/site/preview/index.html'
+		},
+		{
+			'active' => 1795257474,
+			'blurb' => 'www.rapidcow.org',
+			'dir' => 'pub/www/site',
+			'name' => 'home',
+			'path' => 'pub/www/site/home/index.html'
+		},
+		{
 			'active' => 1795256630,
 			'blurb' => 'www.endfindme.com',
 			'dir' => 'pub/www/site',
-			'name' => 'www.endfindme.com',
-			'path' => 'pub/www/site/www.endfindme.com/index.html'
+			'name' => 'work',
+			'path' => 'pub/www/site/work/index.html'
 		},
 		{
 			'active' => 1795256505,
@@ -141,34 +169,6 @@
 			'dir' => 'pub/www/site',
 			'name' => 'status',
 			'path' => 'pub/www/site/status/index.html'
-		},
-		{
-			'active' => 1795230792,
-			'blurb' => 'rapidcow.neocities.org',
-			'dir' => 'pub/www/site',
-			'name' => 'neocities',
-			'path' => 'pub/www/site/neocities/index.html'
-		},
-		{
-			'active' => 1795228505,
-			'blurb' => 'git.rapidcow.org without cgit',
-			'dir' => 'pub/www/site',
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html'
-		},
-		{
-			'active' => 1795228102,
-			'blurb' => 'foss.rapidcow.org',
-			'dir' => 'pub/www/site',
-			'name' => 'foss',
-			'path' => 'pub/www/site/foss/index.html'
-		},
-		{
-			'active' => 1795227057,
-			'blurb' => 'liblist (rdks.list)',
-			'dir' => 'pub/lib/python3',
-			'name' => 'liblist',
-			'path' => 'pub/lib/python3/liblist/index.html'
 		}
 	],
 	'roots' => [
@@ -180,12 +180,12 @@
 			'path' => 'our/index.html'
 		},
 		{
-			'active' => 1795256630,
-			'count' => 23,
+			'active' => 1795260303,
+			'count' => 27,
 			'intro' => 'Public projects',
 			'name' => 'pub',
 			'path' => 'pub/index.html'
 		}
 	],
-	'updated' => 1795259170
+	'updated' => 1795260303
 } -%]

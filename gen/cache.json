@@ -2311,6 +2311,98 @@
             "updated" : 1781573784
          }
       },
+      "pub/www/site/blog" : {
+         "meta" : "ae04d148e1dedd56cde6b8486f8e028c7077d663",
+         "repo" : {
+            "active" : 1795260303,
+            "blurb" : "www.yizx.net",
+            "branch" : "0",
+            "branches" : [
+               {
+                  "name" : "0",
+                  "time" : 1795234956
+               }
+            ],
+            "desc" : "www.yizx.net",
+            "desc_html" : "",
+            "dir" : "pub/www/site",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "0",
+                        "note" : "(-106+106)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795260303
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "0",
+                        "note" : "(+10)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795235041
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "0",
+                        "note" : "(+6)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794246306
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "0",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1794002861
+               },
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "0",
+                        "note" : "(+89)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1793775513
+               }
+            ],
+            "guest_ssh" : 1,
+            "mirrors" : [],
+            "name" : "blog",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/www/site/blog",
+            "tags" : [],
+            "tip" : {
+               "sha" : "3a608ec",
+               "subject" : "Merge branch '0' of rpi-4b:~ethan/my/site/www-net into 0",
+               "time" : 1795234956
+            },
+            "updated" : 1795260303
+         }
+      },
       "pub/www/site/foss" : {
          "meta" : "3b9b77dcdfd052b63a7aa2be668144d8e177355d",
          "repo" : {
@@ -2565,6 +2657,45 @@
                "time" : 1795228484
             },
             "updated" : 1795228505
+         }
+      },
+      "pub/www/site/home" : {
+         "meta" : "90eb7458d26e1926a3ed3e544a3f6f7c6674fc6a",
+         "repo" : {
+            "active" : 1795257474,
+            "blurb" : "www.rapidcow.org",
+            "branch" : "0",
+            "branches" : [
+               {
+                  "name" : "main",
+                  "time" : 1795256791
+               }
+            ],
+            "desc" : "www.rapidcow.org",
+            "desc_html" : "",
+            "dir" : "pub/www/site",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+97)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795257474
+               }
+            ],
+            "guest_ssh" : 1,
+            "mirrors" : [],
+            "name" : "home",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/www/site/home",
+            "tags" : [],
+            "updated" : 1795259774
          }
       },
       "pub/www/site/javadoc" : {
@@ -2946,6 +3077,71 @@
             "updated" : 1795230792
          }
       },
+      "pub/www/site/old" : {
+         "meta" : "6e13de725d7d07a4dffee4d44bec1260e922a1f2",
+         "repo" : {
+            "active" : 1795260148,
+            "blurb" : "2024 rapidcow.org",
+            "branch" : "main",
+            "branches" : [
+               {
+                  "name" : "main",
+                  "time" : 1795095244
+               }
+            ],
+            "desc" : "2024 rapidcow.org",
+            "desc_html" : "",
+            "dir" : "pub/www/site",
+            "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "created",
+                        "name" : "main",
+                        "note" : "(+86)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795260148
+               }
+            ],
+            "guest_ssh" : 1,
+            "mirrors" : [],
+            "name" : "old",
+            "nbranches" : 1,
+            "ntags" : 0,
+            "path" : "pub/www/site/old",
+            "tags" : [],
+            "tip" : {
+               "sha" : "9a7d166",
+               "subject" : "update^?-upgrade",
+               "time" : 1795095244
+            },
+            "updated" : 1795260148
+         }
+      },
+      "pub/www/site/preview" : {
+         "meta" : "f3a9dca9ccf7fb190f1b1402dd609d6e06b51f5d",
+         "repo" : {
+            "active" : 1795259865,
+            "blurb" : "preview.rapidcow.org",
+            "branch" : "master",
+            "branches" : [],
+            "desc" : "preview.rapidcow.org",
+            "desc_html" : "",
+            "dir" : "pub/www/site",
+            "events" : [],
+            "guest_ssh" : 1,
+            "mirrors" : [],
+            "name" : "preview",
+            "nbranches" : 0,
+            "ntags" : 0,
+            "path" : "pub/www/site/preview",
+            "tags" : [],
+            "updated" : 1795259865
+         }
+      },
       "pub/www/site/status" : {
          "meta" : "4d54c66f8fe397f1ee58e21a17c19533af610562",
          "repo" : {
@@ -3010,7 +3206,7 @@
             "updated" : 1795256505
          }
       },
-      "pub/www/site/www.endfindme.com" : {
+      "pub/www/site/work" : {
          "meta" : "82315f859ce99fe96ea2ffb9db01d303a2b743ea",
          "repo" : {
             "active" : 1795256630,
@@ -3065,10 +3261,10 @@
             ],
             "guest_ssh" : 1,
             "mirrors" : [],
-            "name" : "www.endfindme.com",
+            "name" : "work",
             "nbranches" : 1,
             "ntags" : 0,
-            "path" : "pub/www/site/www.endfindme.com",
+            "path" : "pub/www/site/work",
             "tags" : [],
             "tip" : {
                "sha" : "36b762f",

@@ -44,12 +44,16 @@ MAKE site
 	NEED pub/school/wisc/sdc/fa-25/index.html
 	NEED pub/school/wisc/sdc/index.html
 	NEED pub/www/index.html
+	NEED pub/www/site/blog/index.html
 	NEED pub/www/site/foss/index.html
 	NEED pub/www/site/git/index.html
+	NEED pub/www/site/home/index.html
 	NEED pub/www/site/index.html
 	NEED pub/www/site/javadoc/index.html
 	NEED pub/www/site/man/index.html
 	NEED pub/www/site/neocities/index.html
+	NEED pub/www/site/old/index.html
+	NEED pub/www/site/preview/index.html
 	NEED pub/www/site/status/index.html
-	NEED pub/www/site/www.endfindme.com/index.html
+	NEED pub/www/site/work/index.html
 # END gen-repos
