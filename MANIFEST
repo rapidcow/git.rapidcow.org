@@ -21,18 +21,6 @@ MAKE site
 	NEED pub/lib/python3/index.html
 	NEED pub/lib/python3/liblist/index.html
 	NEED pub/lib/python3/libmail/index.html
-	NEED pub/package/arch/index.html
-	NEED pub/package/arch/main/ed/index.html
-	NEED pub/package/arch/main/git/index.html
-	NEED pub/package/arch/main/index.html
-	NEED pub/package/arch/main/systemd/index.html
-	NEED pub/package/arch/main/vi/index.html
-	NEED pub/package/artix/index.html
-	NEED pub/package/artix/world/git/index.html
-	NEED pub/package/artix/world/index.html
-	NEED pub/package/homebrew/fresh/index.html
-	NEED pub/package/homebrew/index.html
-	NEED pub/package/index.html
 	NEED pub/project/archive/bridge/index.html
 	NEED pub/project/archive/index.html
 	NEED pub/project/index.html

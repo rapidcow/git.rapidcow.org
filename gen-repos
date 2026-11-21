@@ -55,7 +55,7 @@ use MIME::Base64 qw( decode_base64 );
 my $HOST  = 'git.rapidcow.org';
 # Only these are even looked at.  Anything else on the server
 # (usr/, net/, other our/*) stays off the site until added here.
-my @ROOTS = qw( pub our/package );
+my @ROOTS = qw( pub/lib pub/project pub/school pub/www our/package );
 # Intro text of a top-level listing.
 my %INTRO = (
 	pub => 'Public projects',

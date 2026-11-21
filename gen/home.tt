@@ -1,6 +1,6 @@
 [%# GENERATED: gen-repos: the home page's data -%]
 [% home = {
-	'nrepos' => 30,
+	'nrepos' => 24,
 	'pushes' => [
 		{
 			'more' => 0,
@@ -181,7 +181,7 @@
 		},
 		{
 			'active' => 1795260303,
-			'count' => 27,
+			'count' => 21,
 			'intro' => 'Public projects',
 			'name' => 'pub',
 			'path' => 'pub/index.html'
