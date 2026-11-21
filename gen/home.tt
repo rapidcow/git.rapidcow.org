@@ -4,6 +4,34 @@
 	'pushes' => [
 		{
 			'more' => 0,
+			'name' => 'libmail',
+			'path' => 'pub/lib/python3/libmail/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795263040
+		},
+		{
+			'more' => 0,
+			'name' => 'IPC-Unix',
+			'path' => 'pub/lib/perl5/IPC-Unix/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'master',
+					'note' => '(+3)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795262420
+		},
+		{
+			'more' => 0,
 			'name' => 'blog',
 			'path' => 'pub/www/site/blog/index.html',
 			'refs' => [
@@ -97,37 +125,23 @@
 				}
 			],
 			'time' => 1795256505
-		},
-		{
-			'more' => 0,
-			'name' => 'blog',
-			'path' => 'pub/www/site/blog/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => '0',
-					'note' => '(+10)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795235041
-		},
-		{
-			'more' => 0,
-			'name' => 'neocities',
-			'path' => 'pub/www/site/neocities/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'master',
-					'note' => '(+8)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795230792
 		}
 	],
 	'recent' => [
+		{
+			'active' => 1795263040,
+			'blurb' => 'libmail (rdks.mail)',
+			'dir' => 'pub/lib/python3',
+			'name' => 'libmail',
+			'path' => 'pub/lib/python3/libmail/index.html'
+		},
+		{
+			'active' => 1795262420,
+			'blurb' => 'meow',
+			'dir' => 'pub/lib/perl5',
+			'name' => 'IPC-Unix',
+			'path' => 'pub/lib/perl5/IPC-Unix/index.html'
+		},
 		{
 			'active' => 1795260303,
 			'blurb' => 'www.yizx.net',
@@ -155,20 +169,6 @@
 			'dir' => 'pub/www/site',
 			'name' => 'home',
 			'path' => 'pub/www/site/home/index.html'
-		},
-		{
-			'active' => 1795256630,
-			'blurb' => 'www.endfindme.com',
-			'dir' => 'pub/www/site',
-			'name' => 'work',
-			'path' => 'pub/www/site/work/index.html'
-		},
-		{
-			'active' => 1795256505,
-			'blurb' => 'status.rapidcow.org',
-			'dir' => 'pub/www/site',
-			'name' => 'status',
-			'path' => 'pub/www/site/status/index.html'
 		}
 	],
 	'roots' => [
@@ -180,12 +180,12 @@
 			'path' => 'our/index.html'
 		},
 		{
-			'active' => 1795260303,
+			'active' => 1795263040,
 			'count' => 21,
 			'intro' => 'Public projects',
 			'name' => 'pub',
 			'path' => 'pub/index.html'
 		}
 	],
-	'updated' => 1795260472
+	'updated' => 1795264566
 } -%]

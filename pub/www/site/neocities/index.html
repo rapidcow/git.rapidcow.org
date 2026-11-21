@@ -165,7 +165,10 @@
 		}
 	],
 	'guest_ssh' => 0,
-	'mirrors' => [],
+	'mirrors' => [
+		'<a href="https://github.com/rapidcow/neocities">https://github.com/rapidcow/neocities</a>.git',
+		'<a href="https://gitlab.com/rapidcow/neocities">https://gitlab.com/rapidcow/neocities</a>.git'
+	],
 	'name' => 'neocities',
 	'nbranches' => 6,
 	'ntags' => 7,
@@ -205,6 +208,6 @@
 		'subject' => 'Merge branch \'master\' of rpi-4b:~ethan/my/website/neocities',
 		'time' => 1795230767
 	},
-	'updated' => 1795230792
+	'updated' => 1795261073
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]

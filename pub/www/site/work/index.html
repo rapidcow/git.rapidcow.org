@@ -55,7 +55,10 @@
 		}
 	],
 	'guest_ssh' => 1,
-	'mirrors' => [],
+	'mirrors' => [
+		'<a href="https://github.com/eyzmeng/www.endfindme.com">https://github.com/eyzmeng/www.endfindme.com</a>.git',
+		'<a href="https://gitlab.com/rapidcow/www.endfindme.com">https://gitlab.com/rapidcow/www.endfindme.com</a>.git'
+	],
 	'name' => 'work',
 	'nbranches' => 1,
 	'ntags' => 0,
@@ -66,6 +69,6 @@
 		'subject' => 'remove that one singular space',
 		'time' => 1795094752
 	},
-	'updated' => 1795256630
+	'updated' => 1795261254
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]

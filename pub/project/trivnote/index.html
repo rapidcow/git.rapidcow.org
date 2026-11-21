@@ -171,7 +171,13 @@
 		}
 	],
 	'guest_ssh' => 0,
-	'mirrors' => [],
+	'mirrors' => [
+		'<a href="https://bitbucket.org/rapidcow/trivnote/src/master/">https://bitbucket.org/rapidcow/trivnote</a>.git',
+		'<a href="https://github.com/rapidcow/trivnote">https://github.com/rapidcow/trivnote</a>.git',
+		'<a href="https://gitlab.com/rapidcow/trivnote">https://gitlab.com/rapidcow/trivnote</a>.git',
+		'<a href="https://gitcode.com/rapidcow/trivnote">https://gitcode.com/rapidcow/trivnote</a>.git',
+		'<a href="https://gitee.com/rapidcow/trivnote">https://gitee.com/rapidcow/trivnote</a>.git'
+	],
 	'name' => 'trivnote',
 	'nbranches' => 3,
 	'ntags' => 5,
@@ -203,6 +209,6 @@
 		'subject' => 'xterm alone is fine',
 		'time' => 1794169774
 	},
-	'updated' => 1794170074
+	'updated' => 1795264566
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]

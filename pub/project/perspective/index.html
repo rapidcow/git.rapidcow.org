@@ -163,7 +163,13 @@
 		}
 	],
 	'guest_ssh' => 0,
-	'mirrors' => [],
+	'mirrors' => [
+		'<a href="https://bitbucket.org/rapidcow/perspective/src/master/">https://bitbucket.org/rapidcow/perspective</a>.git',
+		'<a href="https://github.com/rapidcow/perspective">https://github.com/rapidcow/perspective</a>.git',
+		'<a href="https://gitlab.com/rapidcow/perspective">https://gitlab.com/rapidcow/perspective</a>.git',
+		'<a href="https://gitcode.com/rapidcow/perspective">https://gitcode.com/rapidcow/perspective</a>.git',
+		'<a href="https://gitee.com/rapidcow/perspective">https://gitee.com/rapidcow/perspective</a>.git'
+	],
 	'name' => 'perspective',
 	'nbranches' => 1,
 	'ntags' => 4,
@@ -191,6 +197,6 @@
 		'subject' => 'plan!',
 		'time' => 1793142276
 	},
-	'updated' => 1794114749
+	'updated' => 1795264299
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]

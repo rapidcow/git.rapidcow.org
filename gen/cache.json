@@ -159,7 +159,7 @@
          }
       },
       "pub/lib/perl5/Algo-BSearch" : {
-         "meta" : "20ccabf7cd96162004668215c8d5c3135a321e36",
+         "meta" : "39bc7d093dbdfe5355b1f80488722a30557d5d6c",
          "repo" : {
             "active" : 1793591906,
             "blurb" : "Algo::BSearch",
@@ -290,7 +290,13 @@
                }
             ],
             "guest_ssh" : 1,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://github.com/rapidcow/p5-Algo-BSearch\">https://github.com/rapidcow/p5-Algo-BSearch</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/p5-algo-bsearch\">https://gitlab.com/rapidcow/p5-algo-bsearch</a>.git",
+               "<a href=\"https://gitcode.com/rapidcow/p5-Algo-BSearch\">https://gitcode.com/rapidcow/p5-Algo-BSearch</a>.git",
+               "<a href=\"https://bitbucket.org/rapidcow/p5-algo-bsearch/src/master/\">https://bitbucket.org/rapidcow/p5-algo-bsearch</a>.git",
+               "<a href=\"https://gitee.com/rapidcow/p5-Algo-BSearch\">https://gitee.com/rapidcow/p5-Algo-BSearch</a>.git"
+            ],
             "name" : "Algo-BSearch",
             "nbranches" : 1,
             "ntags" : 2,
@@ -310,25 +316,37 @@
                "subject" : "this can be done",
                "time" : 1793566034
             },
-            "updated" : 1793773669
+            "updated" : 1795261574
          }
       },
       "pub/lib/perl5/IPC-Unix" : {
-         "meta" : "63d8fe953ad50962ae40a6aa1d79ec43e9dceb38",
+         "meta" : "4feb97f4b17f8d18b0c0fd81460aa5c6e583ddd0",
          "repo" : {
-            "active" : 1793836369,
+            "active" : 1795262420,
             "blurb" : "meow",
             "branch" : "master",
             "branches" : [
                {
                   "name" : "master",
-                  "time" : 1793836324
+                  "time" : 1794826107
                }
             ],
             "desc" : "meow",
             "desc_html" : "",
             "dir" : "pub/lib/perl5",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+3)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795262420
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -367,7 +385,13 @@
                }
             ],
             "guest_ssh" : 1,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://github.com/rapidcow/p5-IPC-Unix\">https://github.com/rapidcow/p5-IPC-Unix</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/p5-IPC-Unix\">https://gitlab.com/rapidcow/p5-IPC-Unix</a>.git",
+               "<a href=\"https://gitcode.com/rapidcow/p5-IPC-Unix\">https://gitcode.com/rapidcow/p5-IPC-Unix</a>.git",
+               "<a href=\"https://gitee.com/rapidcow/p5-ipc-unix\">https://gitee.com/rapidcow/p5-ipc-unix</a>.git",
+               "<a href=\"https://bitbucket.org/rapidcow/p5-ipc-unix/src/master/\">https://bitbucket.org/rapidcow/p5-ipc-unix</a>.git"
+            ],
             "name" : "IPC-Unix",
             "nbranches" : 1,
             "ntags" : 1,
@@ -379,15 +403,15 @@
                }
             ],
             "tip" : {
-               "sha" : "e7e274a",
-               "subject" : "ignore ourselves",
-               "time" : 1793836324
+               "sha" : "5619510",
+               "subject" : "re-gen abuild checksum",
+               "time" : 1794826107
             },
-            "updated" : 1793836369
+            "updated" : 1795262529
          }
       },
       "pub/lib/perl5/List-Search" : {
-         "meta" : "b7d1f32b60fbe775e31ffe01fb31622c4bb1d1a2",
+         "meta" : "a116ed4b2078f6f873ccebad943489516905c7e7",
          "repo" : {
             "active" : 1780972777,
             "blurb" : "List-Search dist by EVDB",
@@ -486,7 +510,11 @@
                }
             ],
             "guest_ssh" : 1,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://codeberg.org/rapidcow/p5-List-Search\">https://codeberg.org/rapidcow/p5-List-Search</a>.git",
+               "<a href=\"https://github.com/rapidcow/p5-List-Search\">https://github.com/rapidcow/p5-List-Search</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/p5-list-search\">https://gitlab.com/rapidcow/p5-list-search</a>.git"
+            ],
             "name" : "List-Search",
             "nbranches" : 1,
             "ntags" : 7,
@@ -526,7 +554,7 @@
                "subject" : "Bump version to 0.44 JUST for this fiasco",
                "time" : 1780971225
             },
-            "updated" : 1780972777
+            "updated" : 1795261647
          }
       },
       "pub/lib/python3/liblist" : {
@@ -574,21 +602,33 @@
          }
       },
       "pub/lib/python3/libmail" : {
-         "meta" : "a4bbf9f2a877d74d39d866ed1734e7fea7af7096",
+         "meta" : "47e9dcaa5cb45a8c430cdce07db1c64f196c0ff8",
          "repo" : {
-            "active" : 1795227041,
+            "active" : 1795263040,
             "blurb" : "libmail (rdks.mail)",
             "branch" : "main",
             "branches" : [
                {
                   "name" : "main",
-                  "time" : 1787482690
+                  "time" : 1795262973
                }
             ],
             "desc" : "libmail (rdks.mail)",
             "desc_html" : "",
             "dir" : "pub/lib/python3",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795263040
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -610,15 +650,15 @@
             "path" : "pub/lib/python3/libmail",
             "tags" : [],
             "tip" : {
-               "sha" : "52b6abd",
-               "subject" : "reader iterator: expect unpaired sequences",
-               "time" : 1787482690
+               "sha" : "6b2dfdb",
+               "subject" : "canon mail",
+               "time" : 1795262973
             },
-            "updated" : 1795227041
+            "updated" : 1795263040
          }
       },
       "pub/project/archive/bridge" : {
-         "meta" : "ae975a712146f2fc754dbea8796c77da246c808b",
+         "meta" : "c91bc26294cffc3ab3dd0d87882c20293eb6aaef",
          "repo" : {
             "active" : 1792783281,
             "blurb" : "apple notes reverse engineering (among other things)",
@@ -735,7 +775,12 @@
                }
             ],
             "guest_ssh" : 0,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://github.com/rapidcow/archive-bridge\">https://github.com/rapidcow/archive-bridge</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/archive-bridge\">https://gitlab.com/rapidcow/archive-bridge</a>.git",
+               "<a href=\"https://gitcode.com/rapidcow/archive-bridge\">https://gitcode.com/rapidcow/archive-bridge</a>.git",
+               "<a href=\"https://gitee.com/rapidcow/archive-bridge\">https://gitee.com/rapidcow/archive-bridge</a>.git"
+            ],
             "name" : "bridge",
             "nbranches" : 2,
             "ntags" : 0,
@@ -746,11 +791,11 @@
                "subject" : "No idea here either",
                "time" : 1792780813
             },
-            "updated" : 1792783281
+            "updated" : 1795264511
          }
       },
       "pub/project/perspective" : {
-         "meta" : "a8f518b89a64baea6049de075f32c83a4b69013b",
+         "meta" : "353fcf970b78100727964d0261262784af895475",
          "repo" : {
             "active" : 1793142506,
             "blurb" : "The Perspective Project",
@@ -911,7 +956,13 @@
                }
             ],
             "guest_ssh" : 0,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://bitbucket.org/rapidcow/perspective/src/master/\">https://bitbucket.org/rapidcow/perspective</a>.git",
+               "<a href=\"https://github.com/rapidcow/perspective\">https://github.com/rapidcow/perspective</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/perspective\">https://gitlab.com/rapidcow/perspective</a>.git",
+               "<a href=\"https://gitcode.com/rapidcow/perspective\">https://gitcode.com/rapidcow/perspective</a>.git",
+               "<a href=\"https://gitee.com/rapidcow/perspective\">https://gitee.com/rapidcow/perspective</a>.git"
+            ],
             "name" : "perspective",
             "nbranches" : 1,
             "ntags" : 4,
@@ -939,7 +990,7 @@
                "subject" : "plan!",
                "time" : 1793142276
             },
-            "updated" : 1794114749
+            "updated" : 1795264299
          }
       },
       "pub/project/siteconf" : {
@@ -1186,7 +1237,7 @@
          }
       },
       "pub/project/trivnote" : {
-         "meta" : "b129faf81fb09fa78ed7e27d7a886047ca0335b0",
+         "meta" : "7fe35b600d4af3c6828a9307067dedab5ba91553",
          "repo" : {
             "active" : 1794170074,
             "blurb" : "my notes app :] (android only for now)",
@@ -1355,7 +1406,13 @@
                }
             ],
             "guest_ssh" : 0,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://bitbucket.org/rapidcow/trivnote/src/master/\">https://bitbucket.org/rapidcow/trivnote</a>.git",
+               "<a href=\"https://github.com/rapidcow/trivnote\">https://github.com/rapidcow/trivnote</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/trivnote\">https://gitlab.com/rapidcow/trivnote</a>.git",
+               "<a href=\"https://gitcode.com/rapidcow/trivnote\">https://gitcode.com/rapidcow/trivnote</a>.git",
+               "<a href=\"https://gitee.com/rapidcow/trivnote\">https://gitee.com/rapidcow/trivnote</a>.git"
+            ],
             "name" : "trivnote",
             "nbranches" : 3,
             "ntags" : 5,
@@ -1387,7 +1444,7 @@
                "subject" : "xterm alone is fine",
                "time" : 1794169774
             },
-            "updated" : 1794170074
+            "updated" : 1795264566
          }
       },
       "pub/school/wisc/sdc/fa-25/team" : {
@@ -1655,7 +1712,7 @@
          }
       },
       "pub/www/site/foss" : {
-         "meta" : "3b9b77dcdfd052b63a7aa2be668144d8e177355d",
+         "meta" : "cb762d6532b2ce13807ee5ba39f5d554238370f7",
          "repo" : {
             "active" : 1795228102,
             "blurb" : "foss.rapidcow.org",
@@ -1768,7 +1825,9 @@
                }
             ],
             "guest_ssh" : 1,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://github.com/rapidcow/foss.rapidcow.org\">https://github.com/rapidcow/foss.rapidcow.org</a>.git"
+            ],
             "name" : "foss",
             "nbranches" : 1,
             "ntags" : 0,
@@ -1779,7 +1838,7 @@
                "subject" : "we actually need at least 3.103",
                "time" : 1795228069
             },
-            "updated" : 1795228102
+            "updated" : 1795261164
          }
       },
       "pub/www/site/git" : {
@@ -1955,7 +2014,7 @@
          }
       },
       "pub/www/site/javadoc" : {
-         "meta" : "2acba6018f13ec2bb59ebd784f2a8869c2f740ba",
+         "meta" : "c30c36e30faada5b22dab8cdd27e3f14f073a319",
          "repo" : {
             "active" : 1795224228,
             "blurb" : "javadoc.rapidcow.org",
@@ -2068,7 +2127,9 @@
                }
             ],
             "guest_ssh" : 0,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://github.com/rapidcow/javadoc.rapidcow.org\">https://github.com/rapidcow/javadoc.rapidcow.org</a>.git"
+            ],
             "name" : "javadoc",
             "nbranches" : 1,
             "ntags" : 0,
@@ -2079,7 +2140,7 @@
                "subject" : "why is this failing",
                "time" : 1795224165
             },
-            "updated" : 1795224228
+            "updated" : 1795261104
          }
       },
       "pub/www/site/man" : {
@@ -2127,7 +2188,7 @@
          }
       },
       "pub/www/site/neocities" : {
-         "meta" : "491a1d497c32c46f1bb9c78d15886be7a2ce8da6",
+         "meta" : "6bb2c60ee16da1da29a65839ac7cb1ca08ca0a31",
          "repo" : {
             "active" : 1795230792,
             "blurb" : "rapidcow.neocities.org",
@@ -2290,7 +2351,10 @@
                }
             ],
             "guest_ssh" : 0,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://github.com/rapidcow/neocities\">https://github.com/rapidcow/neocities</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/neocities\">https://gitlab.com/rapidcow/neocities</a>.git"
+            ],
             "name" : "neocities",
             "nbranches" : 6,
             "ntags" : 7,
@@ -2330,7 +2394,7 @@
                "subject" : "Merge branch 'master' of rpi-4b:~ethan/my/website/neocities",
                "time" : 1795230767
             },
-            "updated" : 1795230792
+            "updated" : 1795261073
          }
       },
       "pub/www/site/old" : {
@@ -2463,7 +2527,7 @@
          }
       },
       "pub/www/site/work" : {
-         "meta" : "82315f859ce99fe96ea2ffb9db01d303a2b743ea",
+         "meta" : "df0acbfadbf312084afcf9fe82408287d13b6a70",
          "repo" : {
             "active" : 1795256630,
             "blurb" : "www.endfindme.com",
@@ -2516,7 +2580,10 @@
                }
             ],
             "guest_ssh" : 1,
-            "mirrors" : [],
+            "mirrors" : [
+               "<a href=\"https://github.com/eyzmeng/www.endfindme.com\">https://github.com/eyzmeng/www.endfindme.com</a>.git",
+               "<a href=\"https://gitlab.com/rapidcow/www.endfindme.com\">https://gitlab.com/rapidcow/www.endfindme.com</a>.git"
+            ],
             "name" : "work",
             "nbranches" : 1,
             "ntags" : 0,
@@ -2527,7 +2594,7 @@
                "subject" : "remove that one singular space",
                "time" : 1795094752
             },
-            "updated" : 1795256630
+            "updated" : 1795261254
          }
       }
    },

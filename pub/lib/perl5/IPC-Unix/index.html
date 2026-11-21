@@ -4,19 +4,31 @@
  # GENERATED: gen-repos (edits will be lost)
 -%]
 [% r = {
-	'active' => 1793836369,
+	'active' => 1795262420,
 	'blurb' => 'meow',
 	'branch' => 'master',
 	'branches' => [
 		{
 			'name' => 'master',
-			'time' => 1793836324
+			'time' => 1794826107
 		}
 	],
 	'desc' => 'meow',
 	'desc_html' => '',
 	'dir' => 'pub/lib/perl5',
 	'events' => [
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'master',
+					'note' => '(+3)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795262420
+		},
 		{
 			'more' => 0,
 			'refs' => [
@@ -55,7 +67,13 @@
 		}
 	],
 	'guest_ssh' => 1,
-	'mirrors' => [],
+	'mirrors' => [
+		'<a href="https://github.com/rapidcow/p5-IPC-Unix">https://github.com/rapidcow/p5-IPC-Unix</a>.git',
+		'<a href="https://gitlab.com/rapidcow/p5-IPC-Unix">https://gitlab.com/rapidcow/p5-IPC-Unix</a>.git',
+		'<a href="https://gitcode.com/rapidcow/p5-IPC-Unix">https://gitcode.com/rapidcow/p5-IPC-Unix</a>.git',
+		'<a href="https://gitee.com/rapidcow/p5-ipc-unix">https://gitee.com/rapidcow/p5-ipc-unix</a>.git',
+		'<a href="https://bitbucket.org/rapidcow/p5-ipc-unix/src/master/">https://bitbucket.org/rapidcow/p5-ipc-unix</a>.git'
+	],
 	'name' => 'IPC-Unix',
 	'nbranches' => 1,
 	'ntags' => 1,
@@ -67,10 +85,10 @@
 		}
 	],
 	'tip' => {
-		'sha' => 'e7e274a',
-		'subject' => 'ignore ourselves',
-		'time' => 1793836324
+		'sha' => '5619510',
+		'subject' => 're-gen abuild checksum',
+		'time' => 1794826107
 	},
-	'updated' => 1793836369
+	'updated' => 1795262529
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]

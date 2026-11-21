@@ -119,7 +119,12 @@
 		}
 	],
 	'guest_ssh' => 0,
-	'mirrors' => [],
+	'mirrors' => [
+		'<a href="https://github.com/rapidcow/archive-bridge">https://github.com/rapidcow/archive-bridge</a>.git',
+		'<a href="https://gitlab.com/rapidcow/archive-bridge">https://gitlab.com/rapidcow/archive-bridge</a>.git',
+		'<a href="https://gitcode.com/rapidcow/archive-bridge">https://gitcode.com/rapidcow/archive-bridge</a>.git',
+		'<a href="https://gitee.com/rapidcow/archive-bridge">https://gitee.com/rapidcow/archive-bridge</a>.git'
+	],
 	'name' => 'bridge',
 	'nbranches' => 2,
 	'ntags' => 0,
@@ -130,6 +135,6 @@
 		'subject' => 'No idea here either',
 		'time' => 1792780813
 	},
-	'updated' => 1792783281
+	'updated' => 1795264511
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]

@@ -101,7 +101,11 @@
 		}
 	],
 	'guest_ssh' => 1,
-	'mirrors' => [],
+	'mirrors' => [
+		'<a href="https://codeberg.org/rapidcow/p5-List-Search">https://codeberg.org/rapidcow/p5-List-Search</a>.git',
+		'<a href="https://github.com/rapidcow/p5-List-Search">https://github.com/rapidcow/p5-List-Search</a>.git',
+		'<a href="https://gitlab.com/rapidcow/p5-list-search">https://gitlab.com/rapidcow/p5-list-search</a>.git'
+	],
 	'name' => 'List-Search',
 	'nbranches' => 1,
 	'ntags' => 7,
@@ -141,6 +145,6 @@
 		'subject' => 'Bump version to 0.44 JUST for this fiasco',
 		'time' => 1780971225
 	},
-	'updated' => 1780972777
+	'updated' => 1795261647
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]
