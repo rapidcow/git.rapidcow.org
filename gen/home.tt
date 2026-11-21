@@ -8,6 +8,34 @@
 			'path' => 'pub/www/site/git/index.html',
 			'refs' => [
 				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+3)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795225810
+		},
+		{
+			'more' => 0,
+			'name' => 'git',
+			'path' => 'pub/www/site/git/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795224693
+		},
+		{
+			'more' => 0,
+			'name' => 'git',
+			'path' => 'pub/www/site/git/index.html',
+			'refs' => [
+				{
 					'kind' => 'created',
 					'name' => 'main',
 					'note' => '(+57)',
@@ -109,45 +137,11 @@
 				}
 			],
 			'time' => 1795135907
-		},
-		{
-			'more' => 0,
-			'name' => 'siteconf',
-			'path' => 'pub/project/siteconf/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'master',
-					'note' => '(+1)',
-					'type' => 'branch'
-				},
-				{
-					'kind' => 'updated',
-					'name' => 'template-provider/v0.00_00',
-					'note' => '',
-					'type' => 'tag'
-				}
-			],
-			'time' => 1795135805
-		},
-		{
-			'more' => 0,
-			'name' => 'homebrew',
-			'path' => 'our/package/homebrew/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'fresh',
-					'note' => '(+1)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795134685
 		}
 	],
 	'recent' => [
 		{
-			'active' => 1795224643,
+			'active' => 1795225810,
 			'blurb' => 'git.rapidcow.org without cgit',
 			'dir' => 'pub/www/site',
 			'name' => 'git',
@@ -198,12 +192,12 @@
 			'path' => 'our/index.html'
 		},
 		{
-			'active' => 1795224643,
+			'active' => 1795225810,
 			'count' => 19,
 			'intro' => 'Public projects',
 			'name' => 'pub',
 			'path' => 'pub/index.html'
 		}
 	],
-	'updated' => 1795224643
+	'updated' => 1795225810
 } -%]
