@@ -4,6 +4,20 @@
 	'pushes' => [
 		{
 			'more' => 0,
+			'name' => 'git',
+			'path' => 'pub/www/site/git/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+12)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795265608
+		},
+		{
+			'more' => 0,
 			'name' => 'libmail',
 			'path' => 'pub/lib/python3/libmail/index.html',
 			'refs' => [
@@ -99,35 +113,16 @@
 				}
 			],
 			'time' => 1795256588
-		},
-		{
-			'more' => 0,
-			'name' => 'status',
-			'path' => 'pub/www/site/status/index.html',
-			'refs' => [
-				{
-					'kind' => 'created',
-					'name' => 'main',
-					'note' => '(+8)',
-					'type' => 'branch'
-				},
-				{
-					'kind' => 'created',
-					'name' => 'pages',
-					'note' => '(+120)',
-					'type' => 'branch'
-				},
-				{
-					'kind' => 'created',
-					'name' => 'pages-src',
-					'note' => '(+203)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795256505
 		}
 	],
 	'recent' => [
+		{
+			'active' => 1795265608,
+			'blurb' => 'git.rapidcow.org without cgit',
+			'dir' => 'pub/www/site',
+			'name' => 'git',
+			'path' => 'pub/www/site/git/index.html'
+		},
 		{
 			'active' => 1795263040,
 			'blurb' => 'libmail (rdks.mail)',
@@ -162,13 +157,6 @@
 			'dir' => 'pub/www/site',
 			'name' => 'preview',
 			'path' => 'pub/www/site/preview/index.html'
-		},
-		{
-			'active' => 1795257474,
-			'blurb' => 'www.rapidcow.org',
-			'dir' => 'pub/www/site',
-			'name' => 'home',
-			'path' => 'pub/www/site/home/index.html'
 		}
 	],
 	'roots' => [
@@ -180,12 +168,12 @@
 			'path' => 'our/index.html'
 		},
 		{
-			'active' => 1795263040,
+			'active' => 1795265608,
 			'count' => 21,
 			'intro' => 'Public projects',
 			'name' => 'pub',
 			'path' => 'pub/index.html'
 		}
 	],
-	'updated' => 1795264996
+	'updated' => 1795265608
 } -%]
