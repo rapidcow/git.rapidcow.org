@@ -1006,21 +1006,39 @@
          }
       },
       "pub/project/siteconf" : {
-         "meta" : "d23dcaecd86bb6a8ac52aa7ef0a12f082276c6df",
+         "meta" : "433554c827d032ea8a0d4c3db89539135d01d5da",
          "repo" : {
-            "active" : 1795538961,
+            "active" : 1795540365,
             "blurb" : "just conf",
             "branch" : "master",
             "branches" : [
                {
                   "name" : "master",
-                  "time" : 1795538904
+                  "time" : 1795540347
                }
             ],
             "desc" : "just conf",
             "desc_html" : "",
             "dir" : "pub/project",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "master",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     },
+                     {
+                        "kind" : "updated",
+                        "name" : "gengenlib/v0.01_00",
+                        "note" : "",
+                        "type" : "tag"
+                     }
+                  ],
+                  "time" : 1795540365
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -1158,36 +1176,6 @@
                      }
                   ],
                   "time" : 1795222589
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "master",
-                        "note" : "(+5)",
-                        "type" : "branch"
-                     },
-                     {
-                        "kind" : "updated",
-                        "name" : "genlib/v0.03_00",
-                        "note" : "",
-                        "type" : "tag"
-                     },
-                     {
-                        "kind" : "updated",
-                        "name" : "siteconf-l10n/v0.00_00",
-                        "note" : "",
-                        "type" : "tag"
-                     },
-                     {
-                        "kind" : "updated",
-                        "name" : "siteconf/v0.03_00",
-                        "note" : "",
-                        "type" : "tag"
-                     }
-                  ],
-                  "time" : 1795221362
                }
             ],
             "guest_ssh" : 0,
@@ -1203,6 +1191,10 @@
             "ntags" : 39,
             "path" : "pub/project/siteconf",
             "tags" : [
+               {
+                  "name" : "gengenlib/v0.01_00",
+                  "time" : 1795540352
+               },
                {
                   "name" : "siteconf/v0.03_00",
                   "time" : 1795538933
@@ -1232,10 +1224,6 @@
                   "time" : 1795537435
                },
                {
-                  "name" : "gengenlib/v0.01_00",
-                  "time" : 1795537407
-               },
-               {
                   "name" : "genlib/v0.03_00",
                   "time" : 1795537390
                },
@@ -1253,11 +1241,11 @@
                }
             ],
             "tip" : {
-               "sha" : "b85d1c5",
-               "subject" : "don't say \"now\"",
-               "time" : 1795538904
+               "sha" : "fe1ce58",
+               "subject" : "why is this in SCREAMING case",
+               "time" : 1795540347
             },
-            "updated" : 1795538961
+            "updated" : 1795540365
          }
       },
       "pub/project/trivnote" : {
@@ -1736,21 +1724,33 @@
          }
       },
       "pub/www/site/foss" : {
-         "meta" : "5ebbe7ce7fac94d0b142160e73ae539af9136883",
+         "meta" : "c06fb7e58ca95b01db4942e7fedd535d3774971c",
          "repo" : {
-            "active" : 1795228102,
+            "active" : 1795540211,
             "blurb" : "foss.rapidcow.org",
             "branch" : "gh-pages",
             "branches" : [
                {
                   "name" : "gh-pages",
-                  "time" : 1795228069
+                  "time" : 1795540129
                }
             ],
             "desc" : "foss.rapidcow.org",
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795540211
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -1834,18 +1834,6 @@
                      }
                   ],
                   "time" : 1794914415
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "gh-pages",
-                        "note" : "(+2)",
-                        "type" : "branch"
-                     }
-                  ],
-                  "time" : 1794911484
                }
             ],
             "guest_ssh" : 1,
@@ -1859,29 +1847,41 @@
             "path" : "pub/www/site/foss",
             "tags" : [],
             "tip" : {
-               "sha" : "6a01324",
-               "subject" : "we actually need at least 3.103",
-               "time" : 1795228069
+               "sha" : "9250fe9",
+               "subject" : "upgrade",
+               "time" : 1795540129
             },
-            "updated" : 1795266120
+            "updated" : 1795540211
          }
       },
       "pub/www/site/git" : {
-         "meta" : "bb40c83ce3f0297b43e1d60a3b8d977fd56fafa6",
+         "meta" : "77f5d64e3a344171210e19846bb83fd1cc76c9f7",
          "repo" : {
-            "active" : 1795539507,
+            "active" : 1795539547,
             "blurb" : "git.rapidcow.org without cgit",
             "branch" : "main",
             "branches" : [
                {
                   "name" : "main",
-                  "time" : 1795539311
+                  "time" : 1795539529
                }
             ],
             "desc" : "git.rapidcow.org without cgit",
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "main",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795539547
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -1965,18 +1965,6 @@
                      }
                   ],
                   "time" : 1795228156
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "updated",
-                        "name" : "main",
-                        "note" : "(+1)",
-                        "type" : "branch"
-                     }
-                  ],
-                  "time" : 1795227158
                }
             ],
             "guest_ssh" : 1,
@@ -1990,11 +1978,11 @@
             "path" : "pub/www/site/git",
             "tags" : [],
             "tip" : {
-               "sha" : "8c348c8",
-               "subject" : "we no longer have MY/MANIFEST.<goal>",
-               "time" : 1795539311
+               "sha" : "c8b7075",
+               "subject" : "self-update",
+               "time" : 1795539529
             },
-            "updated" : 1795539507
+            "updated" : 1795539547
          }
       },
       "pub/www/site/home" : {
@@ -2172,21 +2160,33 @@
          }
       },
       "pub/www/site/man" : {
-         "meta" : "987dd594538e724b54961265c3d3217de356400a",
+         "meta" : "cfe7161bceb68880113229adf2611c22d07318d3",
          "repo" : {
-            "active" : 1795539170,
+            "active" : 1795540603,
             "blurb" : "man pages",
             "branch" : "gh-pages",
             "branches" : [
                {
                   "name" : "gh-pages",
-                  "time" : 1795539151
+                  "time" : 1795540539
                }
             ],
             "desc" : "man pages",
             "desc_html" : "",
             "dir" : "pub/www/site",
             "events" : [
+               {
+                  "more" : 0,
+                  "refs" : [
+                     {
+                        "kind" : "updated",
+                        "name" : "gh-pages",
+                        "note" : "(+1)",
+                        "type" : "branch"
+                     }
+                  ],
+                  "time" : 1795540603
+               },
                {
                   "more" : 0,
                   "refs" : [
@@ -2270,18 +2270,6 @@
                      }
                   ],
                   "time" : 1795535209
-               },
-               {
-                  "more" : 0,
-                  "refs" : [
-                     {
-                        "kind" : "created",
-                        "name" : "gh-pages",
-                        "note" : "(+1)",
-                        "type" : "branch"
-                     }
-                  ],
-                  "time" : 1794506742
                }
             ],
             "guest_ssh" : 1,
@@ -2292,11 +2280,11 @@
             "path" : "pub/www/site/man",
             "tags" : [],
             "tip" : {
-               "sha" : "c0d95ad",
-               "subject" : "siteconf retag",
-               "time" : 1795539151
+               "sha" : "7f37220",
+               "subject" : "stupid update",
+               "time" : 1795540539
             },
-            "updated" : 1795539170
+            "updated" : 1795540603
          }
       },
       "pub/www/site/neocities" : {

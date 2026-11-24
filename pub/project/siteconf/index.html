@@ -4,19 +4,37 @@
  # GENERATED: gen-repos (edits will be lost)
 -%]
 [% r = {
-	'active' => 1795538961,
+	'active' => 1795540365,
 	'blurb' => 'just conf',
 	'branch' => 'master',
 	'branches' => [
 		{
 			'name' => 'master',
-			'time' => 1795538904
+			'time' => 1795540347
 		}
 	],
 	'desc' => 'just conf',
 	'desc_html' => '',
 	'dir' => 'pub/project',
 	'events' => [
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'master',
+					'note' => '(+1)',
+					'type' => 'branch'
+				},
+				{
+					'kind' => 'updated',
+					'name' => 'gengenlib/v0.01_00',
+					'note' => '',
+					'type' => 'tag'
+				}
+			],
+			'time' => 1795540365
+		},
 		{
 			'more' => 0,
 			'refs' => [
@@ -154,36 +172,6 @@
 				}
 			],
 			'time' => 1795222589
-		},
-		{
-			'more' => 0,
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'master',
-					'note' => '(+5)',
-					'type' => 'branch'
-				},
-				{
-					'kind' => 'updated',
-					'name' => 'genlib/v0.03_00',
-					'note' => '',
-					'type' => 'tag'
-				},
-				{
-					'kind' => 'updated',
-					'name' => 'siteconf-l10n/v0.00_00',
-					'note' => '',
-					'type' => 'tag'
-				},
-				{
-					'kind' => 'updated',
-					'name' => 'siteconf/v0.03_00',
-					'note' => '',
-					'type' => 'tag'
-				}
-			],
-			'time' => 1795221362
 		}
 	],
 	'guest_ssh' => 0,
@@ -199,6 +187,10 @@
 	'ntags' => 39,
 	'path' => 'pub/project/siteconf/index.html',
 	'tags' => [
+		{
+			'name' => 'gengenlib/v0.01_00',
+			'time' => 1795540352
+		},
 		{
 			'name' => 'siteconf/v0.03_00',
 			'time' => 1795538933
@@ -228,10 +220,6 @@
 			'time' => 1795537435
 		},
 		{
-			'name' => 'gengenlib/v0.01_00',
-			'time' => 1795537407
-		},
-		{
 			'name' => 'genlib/v0.03_00',
 			'time' => 1795537390
 		},
@@ -249,10 +237,10 @@
 		}
 	],
 	'tip' => {
-		'sha' => 'b85d1c5',
-		'subject' => 'don\'t say "now"',
-		'time' => 1795538904
+		'sha' => 'fe1ce58',
+		'subject' => 'why is this in SCREAMING case',
+		'time' => 1795540347
 	},
-	'updated' => 1795538961
+	'updated' => 1795540365
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]

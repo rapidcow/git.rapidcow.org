@@ -4,6 +4,68 @@
 	'pushes' => [
 		{
 			'more' => 0,
+			'name' => 'man',
+			'path' => 'pub/www/site/man/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'gh-pages',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795540603
+		},
+		{
+			'more' => 0,
+			'name' => 'siteconf',
+			'path' => 'pub/project/siteconf/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'master',
+					'note' => '(+1)',
+					'type' => 'branch'
+				},
+				{
+					'kind' => 'updated',
+					'name' => 'gengenlib/v0.01_00',
+					'note' => '',
+					'type' => 'tag'
+				}
+			],
+			'time' => 1795540365
+		},
+		{
+			'more' => 0,
+			'name' => 'foss',
+			'path' => 'pub/www/site/foss/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'gh-pages',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795540211
+		},
+		{
+			'more' => 0,
+			'name' => 'git',
+			'path' => 'pub/www/site/git/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'main',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795539547
+		},
+		{
+			'more' => 0,
 			'name' => 'git',
 			'path' => 'pub/www/site/git/index.html',
 			'refs' => [
@@ -63,115 +125,36 @@
 				}
 			],
 			'time' => 1795538504
-		},
-		{
-			'more' => 6,
-			'name' => 'siteconf',
-			'path' => 'pub/project/siteconf/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'master',
-					'note' => '(+1)',
-					'type' => 'branch'
-				},
-				{
-					'kind' => 'updated',
-					'name' => 'codesets/v0.00_00',
-					'note' => '',
-					'type' => 'tag'
-				},
-				{
-					'kind' => 'updated',
-					'name' => 'gengenlib/v0.01_00',
-					'note' => '',
-					'type' => 'tag'
-				},
-				{
-					'kind' => 'updated',
-					'name' => 'genlib/v0.03_00',
-					'note' => '',
-					'type' => 'tag'
-				},
-				{
-					'kind' => 'updated',
-					'name' => 'siteconf/v0.03_00',
-					'note' => '',
-					'type' => 'tag'
-				},
-				{
-					'kind' => 'updated',
-					'name' => 'template-provider/v0.00_00',
-					'note' => '',
-					'type' => 'tag'
-				}
-			],
-			'time' => 1795538223
-		},
-		{
-			'more' => 0,
-			'name' => 'man',
-			'path' => 'pub/www/site/man/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'gh-pages',
-					'note' => '(+3)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795536906
-		},
-		{
-			'more' => 0,
-			'name' => 'man',
-			'path' => 'pub/www/site/man/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'gh-pages',
-					'note' => '(+7)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795536401
-		},
-		{
-			'more' => 0,
-			'name' => 'siteconf',
-			'path' => 'pub/project/siteconf/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'master',
-					'note' => '(+46)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795536323
 		}
 	],
 	'recent' => [
 		{
-			'active' => 1795539507,
-			'blurb' => 'git.rapidcow.org without cgit',
-			'dir' => 'pub/www/site',
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html'
-		},
-		{
-			'active' => 1795539170,
+			'active' => 1795540603,
 			'blurb' => 'man pages',
 			'dir' => 'pub/www/site',
 			'name' => 'man',
 			'path' => 'pub/www/site/man/index.html'
 		},
 		{
-			'active' => 1795538961,
+			'active' => 1795540365,
 			'blurb' => 'just conf',
 			'dir' => 'pub/project',
 			'name' => 'siteconf',
 			'path' => 'pub/project/siteconf/index.html'
+		},
+		{
+			'active' => 1795540211,
+			'blurb' => 'foss.rapidcow.org',
+			'dir' => 'pub/www/site',
+			'name' => 'foss',
+			'path' => 'pub/www/site/foss/index.html'
+		},
+		{
+			'active' => 1795539547,
+			'blurb' => 'git.rapidcow.org without cgit',
+			'dir' => 'pub/www/site',
+			'name' => 'git',
+			'path' => 'pub/www/site/git/index.html'
 		},
 		{
 			'active' => 1795266369,
@@ -186,13 +169,6 @@
 			'dir' => 'pub/lib/python3',
 			'name' => 'libmail',
 			'path' => 'pub/lib/python3/libmail/index.html'
-		},
-		{
-			'active' => 1795262420,
-			'blurb' => 'meow',
-			'dir' => 'pub/lib/perl5',
-			'name' => 'IPC-Unix',
-			'path' => 'pub/lib/perl5/IPC-Unix/index.html'
 		}
 	],
 	'roots' => [
@@ -204,12 +180,12 @@
 			'path' => 'our/index.html'
 		},
 		{
-			'active' => 1795539507,
+			'active' => 1795540603,
 			'count' => 21,
 			'intro' => 'Public projects',
 			'name' => 'pub',
 			'path' => 'pub/index.html'
 		}
 	],
-	'updated' => 1795539507
+	'updated' => 1795540603
 } -%]
