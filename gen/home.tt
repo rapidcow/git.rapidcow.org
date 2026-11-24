@@ -10,6 +10,40 @@
 				{
 					'kind' => 'updated',
 					'name' => 'gh-pages',
+					'note' => '(+1)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795539170
+		},
+		{
+			'more' => 0,
+			'name' => 'siteconf',
+			'path' => 'pub/project/siteconf/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'master',
+					'note' => '(+1)',
+					'type' => 'branch'
+				},
+				{
+					'kind' => 'updated',
+					'name' => 'siteconf/v0.03_00',
+					'note' => '',
+					'type' => 'tag'
+				}
+			],
+			'time' => 1795538961
+		},
+		{
+			'more' => 0,
+			'name' => 'man',
+			'path' => 'pub/www/site/man/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'gh-pages',
 					'note' => '(+2)',
 					'type' => 'branch'
 				}
@@ -115,46 +149,18 @@
 				}
 			],
 			'time' => 1795535921
-		},
-		{
-			'more' => 0,
-			'name' => 'man',
-			'path' => 'pub/www/site/man/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'gh-pages',
-					'note' => '(-21+21)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795535542
-		},
-		{
-			'more' => 0,
-			'name' => 'man',
-			'path' => 'pub/www/site/man/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'gh-pages',
-					'note' => '(+20)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795535209
 		}
 	],
 	'recent' => [
 		{
-			'active' => 1795538504,
+			'active' => 1795539170,
 			'blurb' => 'man pages',
 			'dir' => 'pub/www/site',
 			'name' => 'man',
 			'path' => 'pub/www/site/man/index.html'
 		},
 		{
-			'active' => 1795538223,
+			'active' => 1795538961,
 			'blurb' => 'just conf',
 			'dir' => 'pub/project',
 			'name' => 'siteconf',
@@ -198,12 +204,12 @@
 			'path' => 'our/index.html'
 		},
 		{
-			'active' => 1795538504,
+			'active' => 1795539170,
 			'count' => 21,
 			'intro' => 'Public projects',
 			'name' => 'pub',
 			'path' => 'pub/index.html'
 		}
 	],
-	'updated' => 1795538504
+	'updated' => 1795539170
 } -%]

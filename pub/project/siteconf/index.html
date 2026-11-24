@@ -4,19 +4,37 @@
  # GENERATED: gen-repos (edits will be lost)
 -%]
 [% r = {
-	'active' => 1795538223,
+	'active' => 1795538961,
 	'blurb' => 'just conf',
 	'branch' => 'master',
 	'branches' => [
 		{
 			'name' => 'master',
-			'time' => 1795537304
+			'time' => 1795538904
 		}
 	],
 	'desc' => 'just conf',
 	'desc_html' => '',
 	'dir' => 'pub/project',
 	'events' => [
+		{
+			'more' => 0,
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'master',
+					'note' => '(+1)',
+					'type' => 'branch'
+				},
+				{
+					'kind' => 'updated',
+					'name' => 'siteconf/v0.03_00',
+					'note' => '',
+					'type' => 'tag'
+				}
+			],
+			'time' => 1795538961
+		},
 		{
 			'more' => 6,
 			'refs' => [
@@ -166,24 +184,6 @@
 				}
 			],
 			'time' => 1795221362
-		},
-		{
-			'more' => 0,
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'master',
-					'note' => '(+1)',
-					'type' => 'branch'
-				},
-				{
-					'kind' => 'updated',
-					'name' => 'template-provider/v0.00_00',
-					'note' => '',
-					'type' => 'tag'
-				}
-			],
-			'time' => 1795135805
 		}
 	],
 	'guest_ssh' => 0,
@@ -199,6 +199,10 @@
 	'ntags' => 39,
 	'path' => 'pub/project/siteconf/index.html',
 	'tags' => [
+		{
+			'name' => 'siteconf/v0.03_00',
+			'time' => 1795538933
+		},
 		{
 			'name' => 'siteconf-redo/v0.03_00',
 			'time' => 1795538157
@@ -232,10 +236,6 @@
 			'time' => 1795537390
 		},
 		{
-			'name' => 'siteconf/v0.03_00',
-			'time' => 1795537381
-		},
-		{
 			'name' => 'siteconf-l10n/v0.03_00',
 			'time' => 1795537362
 		},
@@ -249,10 +249,10 @@
 		}
 	],
 	'tip' => {
-		'sha' => '62b10cc',
-		'subject' => 'release',
-		'time' => 1795537304
+		'sha' => 'b85d1c5',
+		'subject' => 'don\'t say "now"',
+		'time' => 1795538904
 	},
-	'updated' => 1795538223
+	'updated' => 1795538961
 } -%]
 [% PROCESS "${D.skel}/repo.html" -%]
