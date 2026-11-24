@@ -31,7 +31,7 @@ siteconf -gB "$work/build"
 make -C "$work/build"
 
 # Materialize only the manifest. A failed producer fails this pipeline too.
-siteconf -lF "$work/build/MY/MANIFEST.site" -0 |
+siteconf -lF "$work/build/MY/MANIFEST" -0 |
 	rsync -a --files-from=- --from0 --itemize-changes -- "$work/build/site/" "$work/site/"
 
 # Reuse one sibling backup directory, clearing the previous deployment's backup.
