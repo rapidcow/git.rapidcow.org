@@ -4,120 +4,164 @@
 	'pushes' => [
 		{
 			'more' => 0,
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html',
+			'name' => 'man',
+			'path' => 'pub/www/site/man/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
-					'name' => 'main',
-					'note' => '(+1)',
+					'name' => 'gh-pages',
+					'note' => '(+2)',
 					'type' => 'branch'
 				}
 			],
-			'time' => 1795267036
+			'time' => 1795538504
 		},
 		{
-			'more' => 0,
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'main',
-					'note' => '(+1)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795265731
-		},
-		{
-			'more' => 0,
-			'name' => 'git',
-			'path' => 'pub/www/site/git/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'main',
-					'note' => '(+12)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795265608
-		},
-		{
-			'more' => 0,
-			'name' => 'libmail',
-			'path' => 'pub/lib/python3/libmail/index.html',
-			'refs' => [
-				{
-					'kind' => 'updated',
-					'name' => 'main',
-					'note' => '(+1)',
-					'type' => 'branch'
-				}
-			],
-			'time' => 1795263040
-		},
-		{
-			'more' => 0,
-			'name' => 'IPC-Unix',
-			'path' => 'pub/lib/perl5/IPC-Unix/index.html',
+			'more' => 6,
+			'name' => 'siteconf',
+			'path' => 'pub/project/siteconf/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
 					'name' => 'master',
+					'note' => '(+1)',
+					'type' => 'branch'
+				},
+				{
+					'kind' => 'updated',
+					'name' => 'codesets/v0.00_00',
+					'note' => '',
+					'type' => 'tag'
+				},
+				{
+					'kind' => 'updated',
+					'name' => 'gengenlib/v0.01_00',
+					'note' => '',
+					'type' => 'tag'
+				},
+				{
+					'kind' => 'updated',
+					'name' => 'genlib/v0.03_00',
+					'note' => '',
+					'type' => 'tag'
+				},
+				{
+					'kind' => 'updated',
+					'name' => 'siteconf/v0.03_00',
+					'note' => '',
+					'type' => 'tag'
+				},
+				{
+					'kind' => 'updated',
+					'name' => 'template-provider/v0.00_00',
+					'note' => '',
+					'type' => 'tag'
+				}
+			],
+			'time' => 1795538223
+		},
+		{
+			'more' => 0,
+			'name' => 'man',
+			'path' => 'pub/www/site/man/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'gh-pages',
 					'note' => '(+3)',
 					'type' => 'branch'
 				}
 			],
-			'time' => 1795262420
+			'time' => 1795536906
 		},
 		{
 			'more' => 0,
-			'name' => 'blog',
-			'path' => 'pub/www/site/blog/index.html',
+			'name' => 'man',
+			'path' => 'pub/www/site/man/index.html',
 			'refs' => [
 				{
 					'kind' => 'updated',
-					'name' => '0',
-					'note' => '(-106+106)',
+					'name' => 'gh-pages',
+					'note' => '(+7)',
 					'type' => 'branch'
 				}
 			],
-			'time' => 1795260303
+			'time' => 1795536401
 		},
 		{
 			'more' => 0,
-			'name' => 'old',
-			'path' => 'pub/www/site/old/index.html',
+			'name' => 'siteconf',
+			'path' => 'pub/project/siteconf/index.html',
 			'refs' => [
 				{
-					'kind' => 'created',
-					'name' => 'main',
-					'note' => '(+86)',
+					'kind' => 'updated',
+					'name' => 'master',
+					'note' => '(+46)',
 					'type' => 'branch'
 				}
 			],
-			'time' => 1795260148
+			'time' => 1795536323
 		},
 		{
 			'more' => 0,
-			'name' => 'home',
-			'path' => 'pub/www/site/home/index.html',
+			'name' => 'man',
+			'path' => 'pub/www/site/man/index.html',
 			'refs' => [
 				{
-					'kind' => 'created',
-					'name' => 'main',
-					'note' => '(+97)',
+					'kind' => 'updated',
+					'name' => 'gh-pages',
+					'note' => '(+1)',
 					'type' => 'branch'
 				}
 			],
-			'time' => 1795257474
+			'time' => 1795535921
+		},
+		{
+			'more' => 0,
+			'name' => 'man',
+			'path' => 'pub/www/site/man/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'gh-pages',
+					'note' => '(-21+21)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795535542
+		},
+		{
+			'more' => 0,
+			'name' => 'man',
+			'path' => 'pub/www/site/man/index.html',
+			'refs' => [
+				{
+					'kind' => 'updated',
+					'name' => 'gh-pages',
+					'note' => '(+20)',
+					'type' => 'branch'
+				}
+			],
+			'time' => 1795535209
 		}
 	],
 	'recent' => [
 		{
-			'active' => 1795267036,
+			'active' => 1795538504,
+			'blurb' => 'man pages',
+			'dir' => 'pub/www/site',
+			'name' => 'man',
+			'path' => 'pub/www/site/man/index.html'
+		},
+		{
+			'active' => 1795538223,
+			'blurb' => 'just conf',
+			'dir' => 'pub/project',
+			'name' => 'siteconf',
+			'path' => 'pub/project/siteconf/index.html'
+		},
+		{
+			'active' => 1795267111,
 			'blurb' => 'git.rapidcow.org without cgit',
 			'dir' => 'pub/www/site',
 			'name' => 'git',
@@ -143,20 +187,6 @@
 			'dir' => 'pub/lib/perl5',
 			'name' => 'IPC-Unix',
 			'path' => 'pub/lib/perl5/IPC-Unix/index.html'
-		},
-		{
-			'active' => 1795260303,
-			'blurb' => 'www.yizx.net',
-			'dir' => 'pub/www/site',
-			'name' => 'blog',
-			'path' => 'pub/www/site/blog/index.html'
-		},
-		{
-			'active' => 1795260148,
-			'blurb' => '2024 rapidcow.org',
-			'dir' => 'pub/www/site',
-			'name' => 'old',
-			'path' => 'pub/www/site/old/index.html'
 		}
 	],
 	'roots' => [
@@ -168,12 +198,12 @@
 			'path' => 'our/index.html'
 		},
 		{
-			'active' => 1795267036,
+			'active' => 1795538504,
 			'count' => 21,
 			'intro' => 'Public projects',
 			'name' => 'pub',
 			'path' => 'pub/index.html'
 		}
 	],
-	'updated' => 1795267036
+	'updated' => 1795538504
 } -%]
