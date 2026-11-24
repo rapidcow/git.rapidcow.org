@@ -1,0 +1,3 @@
+#!/bin/sh
+./configure
+siteconf -g -S clean=clean
